@@ -1,7 +1,7 @@
 ec = {
 	level = 11,
 	name = "ec",
-	tag = "Stardust EC",
+	tag = "Afterlife EC",
 	skills = {
 		"admin_base",
 		"admin_debug_01",

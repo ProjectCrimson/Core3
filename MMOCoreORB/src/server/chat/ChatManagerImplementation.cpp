@@ -322,7 +322,7 @@ void ChatManagerImplementation::initiateRooms() {
 	generalRoom = createRoom("Galaxy", galaxyRoom);
 	generalRoom->setCanEnter(true);
 	generalRoom->setAllowSubrooms(true);
-	generalRoom->setTitle("Stardust Galaxy General Chat");
+	generalRoom->setTitle("Afterlife Galaxy General Chat");
 
 	auctionRoom = createRoom("Auction", galaxyRoom);
 	auctionRoom->setCanEnter(true);
@@ -966,7 +966,7 @@ void ChatManagerImplementation::broadcastGalaxy(const String& message, const Str
 }
 
 void ChatManagerImplementation::broadcastGalaxy(CreatureObject* player, const String& message) {
-	String firstName = "STARDUST-ADMIN";
+	String firstName = "AFTERLIFE-ADMIN";
 
 	if (player != NULL)
 		firstName = player->getFirstName();
