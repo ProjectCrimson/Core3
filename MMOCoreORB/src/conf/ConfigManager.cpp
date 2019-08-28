@@ -75,6 +75,8 @@ ConfigManager::ConfigManager() {
 	syncLogOutput = false;
 	pathfinderLogJSON = false;
 	luaLogJSON = false;
+
+	characterBuilderEnabled = true;
 }
 
 bool ConfigManager::loadConfigData() {
@@ -161,6 +163,8 @@ bool ConfigManager::loadConfigData() {
 
 	termsOfService = getGlobalString("TermsOfService");
 	tosVersion = getGlobalInt("TermsOfServiceVersion");
+
+	characterBuilderEnabled = getGlobalBoolean("CharacterBuilderEnabled");
 
 	return true;
 }

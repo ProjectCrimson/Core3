@@ -88,6 +88,8 @@ namespace conf {
 		String termsOfService;
 		int tosVersion;
 
+		bool characterBuilderEnabled = true;
+
 	public:
 
 		ConfigManager();
@@ -353,6 +355,10 @@ namespace conf {
 
 		inline bool getPathfinderLogJSON() const {
 			return pathfinderLogJSON;
+		}
+		
+		inline bool getCharacterBuilderEnabled() const {
+			return characterBuilderEnabled;
 		}
 	};
 }
