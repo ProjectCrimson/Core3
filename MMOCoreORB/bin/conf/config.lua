@@ -205,6 +205,9 @@ PathfinderLogJSON = 0
 TermsOfServiceVersion = 0
 TermsOfService = ""
 
+CharacterBuilderEnabled = "true" -- Enable character builder terminals by default
+
+
 local localFile = loadfile("conf/config-local.lua")
 
 if (localFile ~= nil) then
