@@ -148,7 +148,7 @@ ZonesEnabled = {
 TrePath = "/home/swgemu/Desktop/SWGEmu"
 
 TreFiles = {
-	
+	"afterlife_01.tre",
   	"stardust_s.tre",
   	"stardust_03.tre",
   	"stardust_02.tre",
