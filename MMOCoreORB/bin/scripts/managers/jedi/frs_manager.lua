@@ -3,7 +3,7 @@ frsEnabled = 0
 -- Object ID of Enclave buildings
 lightEnclaveID = 8525417
 darkEnclaveID = 3435626
-
+-- values are ms
 petitionInterval = 86400000 -- 1 day
 votingInterval = 86400000 -- 1 day
 acceptanceInterval = 86400000 -- 1 day
