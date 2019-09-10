@@ -1548,7 +1548,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			--begin miscellaneous
 			"Buffs and Debuffs",
 				{
-				"Doctor Buff - 1500 Health", "enhance_character",
+				"Doc and Ent Buff", "enhance_character",
 				"Remove Current Buffs", "reset_buffs",
 				"Heal Battle Wounds and Fatigue", "cleanse_character",
 				"Apply ALL DoTs", "apply_all_dots",
