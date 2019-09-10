@@ -1304,8 +1304,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			-- begin Jedi options
 			"Jedi Options",
 				{
-				"Note: Once you make a character Jedi", "",
-				"you can only drop the skills manually", "",
+				"Note: In order to make a Jedi", "",
 				"Do these Steps IN ORDER:", "",
 				"1 - Become Glowy", "become_glowy",
 				"2 - Unlock Jedi Initiate", "unlock_jedi_initiate",
@@ -1315,8 +1314,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Unlock FRS Light Side", "frs_light_side",
 					"Unlock FRS Dark Side", "frs_dark_side"
 					},				
-				"4 - MANUALLY drop whatever skills you don't want <ctrl-s>", "",
-				"5 - Select Jedi Profession Skills",
+				"4 - Select Jedi Profession Skills",
 					{
 					"Light Saber",
 						{
@@ -1582,7 +1580,18 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				"Color Crystal", "color_crystals",
 				"Krayt Pearl", "krayt_pearls",
 				"Dark Jedi Holocron", "object/tangible/jedi/jedi_holocron_dark.iff",
-				"Light Jedi Holocron", "object/tangible/jedi/jedi_holocron_light.iff"
+				"Light Jedi Holocron", "object/tangible/jedi/jedi_holocron_light.iff",
+				"Jedi Padawan Robe", "object/tangible/wearables/robe/robe_jedi_padawan.iff",
+				"Light Jedi Knight Robe", "object/tangible/wearables/robe/robe_jedi_light_s01.iff",
+				"Light Jedi Sentinel Robe", "object/tangible/wearables/robe/robe_jedi_light_s02.iff",
+				"Light Jedi Consular Robe", "object/tangible/wearables/robe/robe_jedi_light_s03.iff",
+				"Light Jedi Arbiter Robe", "object/tangible/wearables/robe/robe_jedi_light_s04.iff",
+				"Light Jedi Council Robe", "object/tangible/wearables/robe/robe_jedi_light_s05.iff",
+				"Dark Jedi Knight Robe", "object/tangible/wearables/robe/robe_jedi_dark_s01.iff",
+				"Dark Jedi Enforcer Robe", "object/tangible/wearables/robe/robe_jedi_dark_s02.iff",
+				"Dark Jedi Templar Robe", "object/tangible/wearables/robe/robe_jedi_dark_s03.iff",
+				"Dark Jedi Oppressor Robe", "object/tangible/wearables/robe/robe_jedi_dark_s04.iff",
+				"Dark Jedi Council Robe", "object/tangible/wearables/robe/robe_jedi_dark_s05.iff"
 				},
 			"Attachments",
 				{

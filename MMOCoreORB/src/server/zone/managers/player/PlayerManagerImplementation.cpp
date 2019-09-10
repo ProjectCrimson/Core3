@@ -5571,10 +5571,12 @@ void PlayerManagerImplementation::unlockFRSForTesting(CreatureObject* player, in
 
 	luaFrsTesting->callFunction();
 
+	/* --woohoori - 20190907 - removed the default template from populating on bluefrog
 	skillManager->awardSkill("force_discipline_light_saber_master", player, true, true, true);
 	skillManager->awardSkill("force_discipline_enhancements_master", player, true, true, true);
 	skillManager->awardSkill("force_discipline_healing_damage_04", player, true, true, true);
 	skillManager->awardSkill("force_discipline_healing_states_04", player, true, true, true);
+	*/
 
 	luaFrsTesting = lua->createFunction("JediTrials", "completeKnightForTesting", 0);
 	*luaFrsTesting << player;
