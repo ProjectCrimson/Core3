@@ -138,6 +138,15 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 						},
 					"Master", "crafting_armorsmith_master"
 					},
+				"Armorweaver",
+					{
+					"Novice", "crafting_armorweaver_novice",
+					"Intermediate Combination", "crafting_armorweaver_combine_01",
+					"Advanced Combination", "crafting_armorweaver_combine_02",
+					"Expert Combination", "crafting_armorweaver_combine_03",
+					"Master Combination", "crafting_armorweaver_combine_04",
+					"Master", "crafting_armorweaver_master"
+					},
 				"Artisan",
 					{
 					"Novice", "crafting_artisan_novice",
