@@ -1009,8 +1009,9 @@ int CreatureObjectImplementation::inflictDamage(TangibleObject* attacker, int da
 	int currentValue = hamList.get(damageType);
 
 	int action = getHAM(CreatureAttribute::ACTION);
-		if (action < 300)
-			setHAM(CreatureAttribute::ACTION, 6000); // increased from 300 in attempt to prevent action bleed on regular creatures
+		
+		if (action < 3000) // woohoori increased from 300
+			setHAM(CreatureAttribute::ACTION, 7000); // increased from 300 in attempt to prevent action bleed on regular creatures
 	// woohoori 20190916
 	int mind = getHAM(CreatureAttribute::MIND);
 		if (mind > 2000)
