@@ -36,8 +36,8 @@ junk = {
 		{itemTemplate = "used_ticket", weight = 287500},
 		{itemTemplate = "worklight", weight = 475500},
 		{itemTemplate = "magic_eight_ball", weight = 75500},
-		{groupTemplate = "coa_encoded_disk_fragments", weight = 80000},
-		{groupTemplate = "coa2_decoder_components", weight = 80000},
+		-- woohoori 20190916 moved to Faction loot group {groupTemplate = "coa_encoded_disk_fragments", weight = 80000}, 
+		-- woohoori 20190916 moved to Faction loot group {groupTemplate = "coa2_decoder_components", weight = 80000}, 
 		{groupTemplate = "data_storage_unit_parts", weight = 989500},
 	}
 }

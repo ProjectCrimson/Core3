@@ -13,7 +13,9 @@ neutral_corvette_loot = {
 		{itemTemplate = "one_handed_ryyk_blade", weight = 1000000},
 		{itemTemplate = "spice_crash_n_burn", weight = 1500000},
 		{itemTemplate = "spice_giggledust", weight = 1500000},
-		{itemTemplate = "bantha_doll", weight = 1500000}
+		{itemTemplate = "bantha_doll", weight = 1500000},
+		{groupTemplate = "coa_encoded_disk_fragments", weight = 3000000}, -- woohoori 20190916 added to loot table 
+		{groupTemplate = "coa2_decoder_components", weight = 3000000} -- woohoori 20190916 added to loot table 
 	}
 }
 
