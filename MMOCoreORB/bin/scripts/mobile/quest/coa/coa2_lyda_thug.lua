@@ -4,15 +4,25 @@ coa2_lyda_thug = Creature:new {
 	randomNameTag = true,
 	socialGroup = "thug",
 	faction = "thug",
-	level = 11,
-	chanceHit = 0.29,
-	damageMin = 120,
-	damageMax = 130,
-	baseXp = 514,
-	baseHAM = 1000,
-	baseHAMmax = 1200,
+	-- woohoori 20190916
+	--level = 11,
+	--chanceHit = 0.29,
+	--damageMin = 120,
+	--damageMax = 130,
+	--baseXp = 514,
+	--baseHAM = 1000,
+	--baseHAMmax = 1200,
+	--armor = 0,
+	--resists = {5,5,5,5,5,5,5,-1,-1},
+	level = 35,
+	chanceHit = 0.35,
+	damageMin = 250,
+	damageMax = 350,
+	baseXp = 4461,
+	baseHAM = 7500,
+	baseHAMmax = 10000,
 	armor = 0,
-	resists = {5,5,5,5,5,5,5,-1,-1},
+	resists = {30,30,10,10,10,10,10,10,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -55,7 +65,8 @@ coa2_lyda_thug = Creature:new {
 	},
 	weapons = {"pirate_weapons_medium"},
 	conversationTemplate = "",
-	attacks = merge(brawlermid,marksmanmid)
+	--attacks = merge(brawlermid,marksmanmid)
+	attacks = merge(brawlermaster,marksmanmaster)
 }
 
 CreatureTemplates:addCreatureTemplate(coa2_lyda_thug, "coa2_lyda_thug")

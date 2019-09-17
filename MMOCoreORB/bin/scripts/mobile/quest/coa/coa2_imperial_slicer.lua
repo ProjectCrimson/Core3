@@ -4,15 +4,27 @@ coa2_imperial_slicer = Creature:new {
 	randomNameTag = true,
 	socialGroup = "rebel",
 	faction = "rebel",
-	level = 14,
-	chanceHit = 0.3,
-	damageMin = 150,
-	damageMax = 160,
-	baseXp = 831,
-	baseHAM = 2000,
-	baseHAMmax = 2400,
+	-- woohoori 20190916 increased coa2 difficulty
+	--level = 14,
+	--chanceHit = 0.3,
+	--damageMin = 150,
+	--damageMax = 160,
+	--damageMin = 150,
+	--damageMax = 160,
+	--baseXp = 831,
+	--baseHAM = 2000,
+	--baseHAMmax = 2400,
+	--armor = 0
+	--resists = {10,10,10,10,10,10,10,10,-1},
+	level = 40,
+	chanceHit = 0.4,
+	damageMin = 300,
+	damageMax = 400,
+	baseXp = 4461,
+	baseHAM = 9600,
+	baseHAMmax = 11800,
 	armor = 0,
-	resists = {10,10,10,10,10,10,10,10,-1},
+	resists = {30,30,30,10,10,30,10,30,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -41,7 +53,8 @@ coa2_imperial_slicer = Creature:new {
 	},
 	weapons = {"pirate_weapons_heavy"},
 	conversationTemplate = "",
-	attacks = merge(brawlermid,marksmanmid)
+	--attacks = merge(brawlermid,marksmanmid)
+	attacks = merge(brawlermaster,marksmanmaster)
 }
 
 CreatureTemplates:addCreatureTemplate(coa2_imperial_slicer, "coa2_imperial_slicer")

@@ -15,6 +15,8 @@ rebel_corvette_loot = {
 		{itemTemplate = "shirt_s03_rebel", weight = 1500000},
 		{itemTemplate = "armor_marine_chest_plate_rebel", weight = 1500000},
 		{itemTemplate = "bantha_doll", weight = 1500000},
+		{groupTemplate = "coa_encoded_disk_fragments", weight = 3000000}, -- woohoori 20190916 added to loot table 
+		{groupTemplate = "coa2_decoder_components", weight = 3000000} -- woohoori 20190916 added to loot table 
 	}
 }
 addLootGroupTemplate("rebel_corvette_loot", rebel_corvette_loot)
