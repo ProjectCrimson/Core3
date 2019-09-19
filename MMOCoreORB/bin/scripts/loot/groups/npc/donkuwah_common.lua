@@ -5,12 +5,17 @@ donkuwah_common = {
 	minimumLevel = 0,
 	maximumLevel = 0,
 	lootItems = {
-		{itemTemplate = "donkuwah_bone_armor_segment", weight = 3000000},
-		{itemTemplate = "donkuwah_poison", weight = 2000000},
-		{itemTemplate = "painting_lando_poster", weight = 1000000},
-		{itemTemplate = "rifle_ewok_crossbow", weight = 1000000},
-		{itemTemplate = "knife_donkuwah", weight = 1000000},
-		{groupTemplate = "wearables_common", weight = 2000000},
+		-- 2019-09-19 (Perkins) - revert loot until the May 4 event is reinstated
+		-- {itemTemplate = "donkuwah_bone_armor_segment", weight = 3000000},
+		-- {itemTemplate = "donkuwah_poison", weight = 2000000},
+		-- {itemTemplate = "painting_lando_poster", weight = 1000000},
+		-- {itemTemplate = "rifle_ewok_crossbow", weight = 1000000},
+		-- {itemTemplate = "knife_donkuwah", weight = 1000000},
+		-- {groupTemplate = "wearables_common", weight = 2000000},
+		{itemTemplate = "rifle_ewok_crossbow", weight = 10000},
+		{itemTemplate = "knife_stone", weight = 4990000},
+		{groupTemplate = "wearables_common", weight = 1500000},
+		{groupTemplate = "decorative_theater_poster", weight = 500000},
 	}
 }
 

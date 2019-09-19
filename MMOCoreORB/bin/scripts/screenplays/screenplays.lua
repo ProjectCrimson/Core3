@@ -851,4 +851,9 @@ includeFile("heroics/tansarii_exit_teleporter.lua")
 includeFile("heroics/warren_information_officer.lua")
 
 -- Ewok Genocide
-includeFile("heroics/imperial_genocide_coordinator.lua")
+-- 2019-09-19 (Perkins) - disable until May 4 event
+--includeFile("heroics/imperial_genocide_coordinator.lua")
+
+-- Player Cities 2019-09-19 (Perkins)
+-- Screenplay for play city static objects
+--includeFile("player_cities/tatooine_mos_intrepidus.lua")
