@@ -66,7 +66,7 @@ Saber2hSweep3Command = {
 
 	animation = "lower_posture_2hmelee_3",
 
-	combatSpam = "saber2hsweep3",
+	combatSpam = "sabersweep3",
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 

@@ -55,7 +55,7 @@ Saber1hHeadHit3Command = {
 	animation = "combo_5a", 
 	animType = GENERATE_INTENSITY,
 
-	combatSpam = "saber1hheadhit3",
+	combatSpam = "saberheadhit3",
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 

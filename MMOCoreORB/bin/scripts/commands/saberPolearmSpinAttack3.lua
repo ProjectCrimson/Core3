@@ -69,7 +69,7 @@ SaberPolearmSpinAttack3Command = {
 	animation = "showoff_1", 
 	animType = GENERATE_INTENSITY,
 
-	combatSpam = "saberpolearmspinattack3",
+	combatSpam = "saberspinattack3",
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 

@@ -46,7 +46,7 @@ TransferForceCommand = {
 	
 	animation = "force_transfer_1",
 
-	combatSpam = "forcetransfer_hit",
+	combatSpam = "forcetransfer",
 	
 	minDamage = 200, --Force transferred
 	

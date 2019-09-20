@@ -46,7 +46,7 @@ DrainForceCommand = {
   
   animation = "force_drain_1",
 
-  combatSpam = "forcedrain_hit",
+  combatSpam = "forcedrain",
   
   poolsToDamage = NO_ATTRIBUTE,
 

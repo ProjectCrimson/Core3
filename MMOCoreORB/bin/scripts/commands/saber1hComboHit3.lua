@@ -65,7 +65,7 @@ Saber1hComboHit3Command = {
 	  )
 	},
 
-	combatSpam = "saber1hcombohit3",
+	combatSpam = "sabercombohit3",
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 

@@ -67,7 +67,7 @@ Saber2hSweep2Command = {
 	animation = "combo_4b", 
 	animType = GENERATE_INTENSITY,
 
-	combatSpam = "saber2hsweep2",
+	combatSpam = "sabersweep2",
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
