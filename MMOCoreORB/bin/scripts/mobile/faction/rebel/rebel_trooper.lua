@@ -4,15 +4,26 @@ rebel_trooper = Creature:new {
 --	randomNameTag = true,
 	socialGroup = "rebel",
 	faction = "rebel",
-	level = 25,
-  chanceHit = 0.36,
-  damageMin = 240,
-  damageMax = 250,
-  baseXp = 2637,
-  baseHAM = 7200,
-  baseHAMmax = 8800,
-  armor = 0,
-  resists = {15,15,40,15,15,15,15,-1,-1},
+	-- woohoori 20190920 balance faction pet 
+	--level = 25,
+	--chanceHit = 0.36,
+	--damageMin = 240,
+	--damageMax = 250,
+	--baseXp = 2637,
+	--baseHAM = 7200,
+	--baseHAMmax = 8800,
+	--armor = 0,
+	--resists = {15,15,40,15,15,15,15,-1,-1},
+		level = 35,
+	chanceHit = 0.4,
+	damageMin = 305,
+	damageMax = 320,
+	baseXp = 3465,
+	baseHAM = 9000,
+	baseHAMmax = 10000,
+	armor = 0,
+	resists = {40,20,20,50,50,50,50,-1,-1},
+
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -54,7 +65,8 @@ rebel_trooper = Creature:new {
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 	personalityStf = "@hireling/hireling_military",
-	attacks = merge(brawlermid,marksmanmid)
+	--attacks = merge(brawlermid,marksmanmid)
+	attacks = merge(riflemanmaster,marksmanmaster,fencermaster,brawlermaster)
 }
 
 CreatureTemplates:addCreatureTemplate(rebel_trooper, "rebel_trooper")

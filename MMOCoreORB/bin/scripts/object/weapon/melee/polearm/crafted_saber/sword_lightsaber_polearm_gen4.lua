@@ -101,7 +101,7 @@ object_weapon_melee_polearm_crafted_saber_sword_lightsaber_polearm_gen4 = object
 	healthAttackCost = 0,
 	actionAttackCost = 300,
 	mindAttackCost = 0,
-	forceCost = 12,
+	forceCost = 10,
 
 	pointBlankRange = 0,
 	pointBlankAccuracy = 20,
@@ -115,13 +115,13 @@ object_weapon_melee_polearm_crafted_saber_sword_lightsaber_polearm_gen4 = object
 	minDamage = 225,
 	maxDamage = 305,
 
-	attackSpeed = 1.0,
+	attackSpeed = 3.0,
 
 	woundsRatio = 37,
 
 	defenderToughnessModifiers = { "lightsaber_toughness" },
-
-	noTrade = 1,
+	-- woohoori 20190920 changed tradeable		
+	noTrade = 0,
 	
 	childObjects = {
 		{templateFile = "object/tangible/inventory/lightsaber_inventory_4.iff", x = 0, z = 0, y = 0, ox = 0, oy = 0, oz = 0, ow = 0, cellid = -1, containmentType = 4}
@@ -132,8 +132,8 @@ object_weapon_melee_polearm_crafted_saber_sword_lightsaber_polearm_gen4 = object
   experimentalWeights = {1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1},
   experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "expEffeciency", "expEffeciency", "expEffeciency", "expEffeciency"},
   experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "forcecost", "attackhealthcost", "attackactioncost", "attackmindcost"},
-  experimentalMin = {0, 0, 240, 330, 4.0, 25, 12, 0, 300, 0},
-  experimentalMax = {0, 0, 260, 370, 4.0, 50, 12, 0, 300, 0},
+  experimentalMin = {0, 0, 240, 330, 4.0, 25, 10, 0, 300, 0},
+  experimentalMax = {0, 0, 260, 370, 4.0, 50, 10, 0, 300, 0},
   experimentalPrecision = {0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
   experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1},
 }

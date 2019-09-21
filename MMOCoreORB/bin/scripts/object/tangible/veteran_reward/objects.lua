@@ -41,8 +41,9 @@
 --which carries forward this exception.
 
 
-object_tangible_veteran_reward_shared_antidecay = SharedTangibleObjectTemplate:new {
-	clientTemplateFileName = "object/tangible/veteran_reward/shared_antidecay.iff"
+-- woohoori 20190920 removed respec and antidecay kit
+--object_tangible_veteran_reward_shared_antidecay = SharedTangibleObjectTemplate:new {
+--	clientTemplateFileName = "object/tangible/veteran_reward/shared_antidecay.iff"
 	--Data below here is deprecated and loaded from the tres, keeping for easy lookups
 --[[
 	appearanceFilename = "appearance/eqp_tool_datapad.apt",
@@ -96,7 +97,7 @@ object_tangible_veteran_reward_shared_antidecay = SharedTangibleObjectTemplate:n
 	clientObjectCRC = 3168887145,
 	derivedFromTemplates = {"object/object/base/shared_base_object.iff", "object/tangible/base/shared_tangible_base.iff", "object/tangible/container/base/shared_base_container.iff", "object/tangible/container/base/shared_base_container_volume.iff"}
 ]]
-}
+--}
 
 ObjectTemplates:addClientTemplate(object_tangible_veteran_reward_shared_antidecay, "object/tangible/veteran_reward/shared_antidecay.iff")
 

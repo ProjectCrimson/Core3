@@ -1,8 +1,9 @@
 --New
-object_tangible_veteran_reward_shared_character_respec_reset_device = SharedTangibleObjectTemplate:new {
-	clientTemplateFileName = "object/tangible/veteran_reward/shared_character_respec_reset_device.iff"
-}
-ObjectTemplates:addClientTemplate(object_tangible_veteran_reward_shared_character_respec_reset_device, "object/tangible/veteran_reward/shared_character_respec_reset_device.iff")
+-- woohoori 20190920 removed respec kit
+--object_tangible_veteran_reward_shared_character_respec_reset_device = SharedTangibleObjectTemplate:new {
+--	clientTemplateFileName = "object/tangible/veteran_reward/shared_character_respec_reset_device.iff"
+--}
+--ObjectTemplates:addClientTemplate(object_tangible_veteran_reward_shared_character_respec_reset_device, "object/tangible/veteran_reward/shared_character_respec_reset_device.iff")
 --**********************************************************************************************************************************
 object_tangible_veteran_reward_shared_city_flag_kit = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/veteran_reward/shared_city_flag_kit.iff"
@@ -319,9 +320,10 @@ object_tangible_veteran_reward_shared_resource_supply_crate = SharedTangibleObje
 }
 ObjectTemplates:addClientTemplate(object_tangible_veteran_reward_shared_resource_supply_crate, "object/tangible/veteran_reward/shared_resource_supply_crate.iff")
 --**********************************************************************************************************************************
-object_tangible_veteran_reward_shared_respec_voucher_deed = SharedTangibleObjectTemplate:new {
-	clientTemplateFileName = "object/tangible/veteran_reward/shared_respec_voucher_deed.iff"
-}
+-- woohoori 20190920 removed respec kit
+--object_tangible_veteran_reward_shared_respec_voucher_deed = SharedTangibleObjectTemplate:new {
+--	clientTemplateFileName = "object/tangible/veteran_reward/shared_respec_voucher_deed.iff"
+--}
 ObjectTemplates:addClientTemplate(object_tangible_veteran_reward_shared_respec_voucher_deed, "object/tangible/veteran_reward/shared_respec_voucher_deed.iff")
 --**********************************************************************************************************************************
 object_tangible_veteran_reward_shared_structure_storage_increase_deed = SharedTangibleObjectTemplate:new {

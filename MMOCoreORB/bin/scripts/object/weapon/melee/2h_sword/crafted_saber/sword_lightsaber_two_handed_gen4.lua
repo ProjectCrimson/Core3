@@ -96,12 +96,15 @@ object_weapon_melee_2h_sword_crafted_saber_sword_lightsaber_two_handed_gen4 = ob
 	-- Leave blank for now
 	damageModifiers = { },
 
+	defenderToughnessModifiers = { "lightsaber_toughness" },
+	-- woohoori 20190920 changed tradeable
+	noTrade = 0,
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 95,
-	actionAttackCost = 50,
-	mindAttackCost = 45,
-	forceCost = 47,
+	healthAttackCost = 0,
+	actionAttackCost = 300,
+	mindAttackCost = 0,
+	forceCost = 10,
 
 	pointBlankRange = 0,
 	pointBlankAccuracy = 20,
@@ -112,30 +115,25 @@ object_weapon_melee_2h_sword_crafted_saber_sword_lightsaber_two_handed_gen4 = ob
 	maxRange = 5,
 	maxRangeAccuracy = 5,
 	
+	attackSpeed = 2.0,
 	minDamage = 185,
 	maxDamage = 265,
 
-	attackSpeed = 4.8,
-
 	woundsRatio = 37,
 
-	defenderToughnessModifiers = { "lightsaber_toughness" },
-			
-	noTrade = 1,
-	
 	childObjects = {
 		{templateFile = "object/tangible/inventory/lightsaber_inventory_4.iff", x = 0, z = 0, y = 0, ox = 0, oy = 0, oz = 0, ow = 0, cellid = -1, containmentType = 4}
 	},
 
 	numberExperimentalProperties = {1, 1, 2, 2, 2, 2, 2, 1, 1, 1},
-  experimentalProperties = {"XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "SR", "UT", "CD", "OQ", "OQ", "OQ", "OQ"},
-  experimentalWeights = {1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1},
-  experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "expEffeciency", "expEffeciency", "expEffeciency", "expEffeciency"},
-  experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "forcecost", "attackhealthcost", "attackactioncost", "attackmindcost"},
-  experimentalMin = {0, 0, 240, 330, 3.0, 25, 12, 0, 300, 0},
-  experimentalMax = {0, 0, 260, 370, 3.0, 50, 12, 0, 300, 0},
-  experimentalPrecision = {0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
-  experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1},
+  	experimentalProperties = {"XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "SR", "UT", "CD", "OQ", "OQ", "OQ", "OQ"},
+  	experimentalWeights = {1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1},
+  	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "expEffeciency", "expEffeciency", "expEffeciency", "expEffeciency"},
+  	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "forcecost", "attackhealthcost", "attackactioncost", "attackmindcost"},
+  	experimentalMin = {0, 0, 240, 330, 3.0, 25, 10, 0, 300, 0},
+  	experimentalMax = {0, 0, 260, 370, 3.0, 50, 10, 0, 300, 0},
+  	experimentalPrecision = {0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
+  	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1},
 }
 
 ObjectTemplates:addTemplate(object_weapon_melee_2h_sword_crafted_saber_sword_lightsaber_two_handed_gen4, "object/weapon/melee/2h_sword/crafted_saber/sword_lightsaber_two_handed_gen4.iff")

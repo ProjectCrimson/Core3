@@ -40,9 +40,9 @@
 --gives permission to release a modified version without this exception; 
 --this exception also makes it possible to release a modified version 
 
+-- woohoori 20190920 removed antidecay kit
+--object_tangible_veteran_reward_antidecay = object_tangible_veteran_reward_shared_antidecay:new {
+--	gameObjectType = 32781
+--}
 
-object_tangible_veteran_reward_antidecay = object_tangible_veteran_reward_shared_antidecay:new {
-	gameObjectType = 32781
-}
-
-ObjectTemplates:addTemplate(object_tangible_veteran_reward_antidecay, "object/tangible/veteran_reward/antidecay.iff")
+--ObjectTemplates:addTemplate(object_tangible_veteran_reward_antidecay, "object/tangible/veteran_reward/antidecay.iff")
