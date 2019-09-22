@@ -66,7 +66,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 
 	itemList = 
 		{
-		"Unlearn All non-Force Sensitive Skills", "unlearn_all_skills",
+		"Unlearn All Skills including Force Sensitive/Jedi", "unlearn_all_skills",
 		--begin character options
 		"Character Options",
 			{
@@ -1311,15 +1311,16 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				},
 			--end character options
 			-- begin Jedi options
+			-- woohoori 20190922 adjusted for dropping Skills
+			-- todo add force sensitive skills
 			"Jedi Options",
 				{
-				"Note: In order to make a Jedi", "",
+				"Note: In order to make a Jedi,", "",
 				"Do these Steps IN ORDER:", "",
 				"1 - Become Glowy", "become_glowy",
-				"2 - Unlock Jedi Initiate", "unlock_jedi_initiate",
-				"3 - Select Dark/Light FRS (Join a Faction First)",
+				"2 - Unlock Jedi Initiate. NOTE: Must REPEAT if you Unlearned All Skills", "unlock_jedi_initiate",
+				"3 - Select Dark/Light FRS",
 					{
-					"WARNING! JOIN A FACTION FIRST. WE WON'T COME RETRIEVE YOU FROM YAVIN4", "",
 					"Unlock FRS Light Side", "frs_light_side",
 					"Unlock FRS Dark Side", "frs_dark_side"
 					},				

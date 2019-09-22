@@ -40,7 +40,7 @@
 --this exception also makes it possible to release a modified version
 --which carries forward this exception.
 --true = 1, false = 0
-
+-- woohoori 20190922 Powers Balance
 ForceWeaken1Command = {
 	name = "forceweaken1",
 

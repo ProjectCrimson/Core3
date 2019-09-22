@@ -507,6 +507,8 @@ function JediTrials:completeKnightForTesting(pPlayer, councilType)
 			enclaveLoc = { -186, 43.2, 2450 }
 		end
 
-		SceneObject(pPlayer):switchZone("yavin4", enclaveLoc[1], enclaveLoc[2], enclaveLoc[3], 0)
+		-- woohoori 20190922 disabled port when joining FRS
+		-- golive consideration
+		-- SceneObject(pPlayer):switchZone("yavin4", enclaveLoc[1], enclaveLoc[2], enclaveLoc[3], 0)
 	end
 end
