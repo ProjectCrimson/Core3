@@ -849,7 +849,10 @@ void MissionManagerImplementation::randomizeGenericDestroyMission(CreatureObject
 	else
 		missionType = "_creature";
 
-	mission->setMissionTitle("mission/mission_destroy_neutral" + messageDifficulty + missionType, "m" + String::valueOf(randTexts) + "t");
+	// woohoori 20190921 set mission difficulty text in mission title
+	// mission->setMissionTitle("mission/mission_destroy_neutral" + messageDifficulty + missionType, "m" + String::valueOf(randTexts) + "t");
+	// mission->setMissionTitle("Destroy", " the " + mobileName.replaceAll("_", " ") + groupSuffix + " [CL" + String::valueOf(diffDisplay) + "]");
+	mission->setMissionTitle("lair_n", lairTemplateObject->getName() + " - CL" + String::valueOf(diffDisplay));
 	mission->setMissionDescription("mission/mission_destroy_neutral" +  messageDifficulty + missionType, "m" + String::valueOf(randTexts) + "d");
 
 	switch (faction) {
