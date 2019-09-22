@@ -44,8 +44,8 @@
 object_draft_schematic_weapon_lightsaber_lightsaber_two_hand_gen1 = object_draft_schematic_weapon_lightsaber_shared_lightsaber_two_hand_gen1:new {
 
    templateType = DRAFTSCHEMATIC,
-
-   customObjectName = "Two-Handed First Generation Lightsaber",
+   -- woohoori 20190921 updated name
+   customObjectName = "2H First Generation Lightsaber",
 
    craftingToolTab = 2048, -- (See DraftSchematicObjectTemplate.h)
    complexity = 1, 

@@ -97,14 +97,14 @@ object_weapon_melee_2h_sword_crafted_saber_sword_lightsaber_two_handed_gen5 = ob
 	damageModifiers = { },
 	
 	defenderToughnessModifiers = { "lightsaber_toughness" },
-	-- woohoori 20190920 changed tradeable		
-	noTrade = 0,
+	-- woohoori 20190920 reverted no trade		
+	noTrade = 1,
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
 	healthAttackCost = 0,
 	actionAttackCost = 300,
 	mindAttackCost = 0,
-	forceCost = 10,
+	forceCost = 14,
 	
 	pointBlankRange = 0,
 	pointBlankAccuracy = 20,
@@ -131,8 +131,9 @@ object_weapon_melee_2h_sword_crafted_saber_sword_lightsaber_two_handed_gen5 = ob
   	experimentalWeights = {1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1},
   	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "expEffeciency", "expEffeciency", "expEffeciency", "expEffeciency"},
   	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "forcecost", "attackhealthcost", "attackactioncost", "attackmindcost"},
-  	experimentalMin = {0, 0, 310, 400, 3.0, 30, 10, 0, 300, 0},
-  	experimentalMax = {0, 0, 330, 440, 3.0, 60, 10, 0, 300, 0},
+  	-- woohoori 20190921 upped force cost from 10
+  	experimentalMin = {0, 0, 310, 400, 3.0, 30, 14, 0, 300, 0},
+  	experimentalMax = {0, 0, 330, 440, 3.0, 60, 14, 0, 300, 0},
   	experimentalPrecision = {0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
   	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1},
 }
