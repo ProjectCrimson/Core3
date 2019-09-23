@@ -78,6 +78,10 @@ function TatooineMosEisleyScreenPlay:spawnSceneObjects()
 	spawnSceneObject(self.planet, "object/static/structure/general/droid_21bmedical_powerdown.iff", -24.2, 1.0, -9.2, 1188001, math.rad(70) )
 	
 	spawnSceneObject(self.planet, "object/tangible/terminal/terminal_event_buffs.iff", -13.2, 0.2, 0.0, 9655496, math.rad(90) )
+
+	-- Perkins 2019-09-22 Blue Frog for beta testing
+	spawnSceneObject(self.planet, "object/tangible/terminal/terminal_character_builder.iff", 3529, 5, -4803, 0, math.rad(270))
+
 end
 
 function TatooineMosEisleyScreenPlay:spawnMobiles()
@@ -641,4 +645,10 @@ function TatooineMosEisleyScreenPlay:spawnMobiles()
 	spawnMobile(self.planet, "trainer_scout",0,3519.76,5,-4786.9,77,0)
 	pNpc = spawnMobile(self.planet, "trainer_smuggler",0,3401,5,-4879,340,0)
 	self:setMoodString(pNpc, "worried")
+
+	-- Perkins 2019-09-22 Custom for SWG Afterlife
+	pNpc = spawnMobile("tatooine", "imperial_recruiter",0,3534,0,-4795,270,0)
+	self:setMoodString(pNpc, "npc_imperial")
+	
+	spawnMobile("tatooine", "rebel_recruiter", 0, 3534, 0, -4809, 270, 0)
 end
