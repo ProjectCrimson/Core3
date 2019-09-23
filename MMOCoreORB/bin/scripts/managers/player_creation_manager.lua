@@ -76,4 +76,4 @@ professionSpecificItems = {
 }
 
 --commonStartingItems = { Backpack01, marojMelon, survivalKnife, SwoopBike, boneBicep_l, boneBicep_r, boneBoots, boneBracer_l, boneBracer_r, boneChest, boneHelmet, boneGloves, boneLeggings }
-commonStartingItems = { Backpack01, marojMelon, survivalKnife }
+commonStartingItems = { Backpack01, marojMelon, survivalKnife, SwoopBike }
