@@ -371,17 +371,22 @@ bool ResourceSpawner::ghDumpAll() {
 	if(!scriptLoading)
 		return false;
 	planets =  new Vector<String> ();
+	planets->add("chandrila");
 	planets->add("corellia");
 	planets->add("dantooine");
 	planets->add("dathomir");
 	planets->add("endor");
+	planets->add("florrum");
+	planets->add("hutta");
+	planets->add("kaas");
 	planets->add("lok");
+	planets->add("lothal");
+	planets->add("moraband");	
 	planets->add("naboo");
 	planets->add("rori");
 	planets->add("talus");
 	planets->add("tatooine");
 	planets->add("yavin4");
-	//String planets = "corellia";
 
 	try {
 		File* ghfile = new File("scripts/managers/ghoutput.xml");
