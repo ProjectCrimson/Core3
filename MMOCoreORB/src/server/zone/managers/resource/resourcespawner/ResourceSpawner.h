@@ -8,6 +8,8 @@
  * \date 5-03-10
  */
 
+// 2019-09-23 Perkins - Generate XML file for Galaxy Harvester upload
+
 #ifndef RESOURCESPAWNER_H_
 #define RESOURCESPAWNER_H_
 
@@ -59,6 +61,7 @@ private:
 
 	Vector<String> jtlResources;
 	Vector<String> activeResourceZones;
+	Vector<String>* planets;	
 
 	MinimumPool* minimumPool;
 	FixedPool* fixedPool;
@@ -92,6 +95,7 @@ public:
 
 	void spawnScriptResources();
 	bool writeAllSpawnsToScript();
+	bool ghDumpAll();	
 
 	void start();
 	void shiftResources();
@@ -145,6 +149,11 @@ public:
 
 		return "Error Dumping resources";
 	}
+	String ghDump() {
+		if(ghDumpAll())
+			return "Galaxy Harvester Output Dumped";
+		return "Error Dumping Galaxy Harvester Output";
+	}	
 	String getPlanetByIndex(int index);
 private:
 
