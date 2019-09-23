@@ -42,7 +42,7 @@
 
 
 object_weapon_melee_2h_sword_2h_sword_maul = object_weapon_melee_2h_sword_shared_2h_sword_maul:new {
-
+  -- 2019-09-23 Perkins - Balance Pass
   playerRaces = { "object/creature/player/bothan_male.iff",
         "object/creature/player/bothan_female.iff",
         "object/creature/player/human_male.iff",
@@ -126,8 +126,8 @@ object_weapon_melee_2h_sword_2h_sword_maul = object_weapon_melee_2h_sword_shared
   experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
   experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "exp_durability", "expRange", "expRange", "null", "expRange", "null", "null", "null", "null"},
   experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "maxrange", "attackhealthcost", "attackactioncost", "attackmindcost"},
-  experimentalMin = {0, 0, 53, 235, 3, 11, 750, -46, -46, 3, -46, 7, 0, 300, 0},
-  experimentalMax = {0, 0, 98, 436, 3, 20, 1500, -25, -25, 3, -25, 7, 0, 300, 0},
+  experimentalMin = {0, 0, 150, 335, 3, 11, 750, -46, -46, 3, -46, 7, 0, 300, 0},
+  experimentalMax = {0, 0, 250, 450, 3, 20, 1500, -25, -25, 3, -25, 7, 0, 300, 0},
   experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
   experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }
