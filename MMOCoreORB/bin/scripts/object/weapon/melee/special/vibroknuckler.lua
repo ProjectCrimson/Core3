@@ -42,7 +42,7 @@
 
 
 object_weapon_melee_special_vibroknuckler = object_weapon_melee_special_shared_vibroknuckler:new {
-
+  -- 2019-09-23 Perkins - Balance Pass
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
 				"object/creature/player/human_male.iff",
@@ -114,8 +114,8 @@ object_weapon_melee_special_vibroknuckler = object_weapon_melee_special_shared_v
 	maxRange = 3,
 	maxRangeAccuracy = 0,
 
-	minDamage = 190,
-	maxDamage = 210,
+	minDamage = 125,
+	maxDamage = 175,
 
 	attackSpeed = 3,
 
@@ -126,8 +126,8 @@ object_weapon_melee_special_vibroknuckler = object_weapon_melee_special_shared_v
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "exp_durability", "expRange", "expRange", "null", "expRange", "null", "null", "null", "null"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "maxrange", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 37, 160, 1, 14, 750, 5, 5, 1, 5, 5, 0, 300, 0},
-	experimentalMax = {0, 0, 190, 200, 1, 26, 1500, 15, 15, 1, 15, 5, 0, 300, 0},
+	experimentalMin = {0, 0, 50, 125, 1, 14, 750, 5, 5, 1, 5, 5, 0, 300, 0},
+	experimentalMax = {0, 0, 125, 175, 1, 26, 1500, 15, 15, 1, 15, 5, 0, 300, 0},
 	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }
