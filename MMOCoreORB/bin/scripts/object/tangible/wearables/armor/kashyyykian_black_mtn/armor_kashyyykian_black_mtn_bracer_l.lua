@@ -65,15 +65,15 @@ object_tangible_wearables_armor_kashyyykian_black_mtn_armor_kashyyykian_black_mt
 
   -- LIGHT, MEDIUM, HEAVY
   rating = LIGHT,
-
-  kinetic = 70,
-  energy = 70,
-  electricity = 70,
-  stun = 70,
-  blast = 70,
-  heat = 70,
-  cold = 70,
-  acid = 70,
+  -- woohoori 20190922 adjusted for starter items grant
+  kinetic = 35,
+  energy = 35,
+  electricity = 35,
+  stun = 35,
+  blast = 35,
+  heat = 0,
+  cold = 35,
+  acid = 35,
   lightSaber = 0,
 
   numberExperimentalProperties = {1, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 2, 1},

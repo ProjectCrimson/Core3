@@ -58,7 +58,14 @@ object_creature_player_moncal_female = object_creature_player_shared_moncal_fema
 		{templateFile = "object/tangible/bank/character_bank.iff", x = 0, z = 0, y = 0, ox = 0, oy = 0, oz = 0, ow = 0, cellid = -1, containmentType = 4}
 	},
 	defaultLanguage = 1,
-	startingItems = { },
+	-- woohoori 20190922 added species specific starter items
+	startingItems = {
+		"object/tangible/wearables/armored_clothing/hat/hat_s04_armored.iff",
+		"object/tangible/wearables/armored_clothing/jacket/jacket_s36_armored.iff",
+		"object/tangible/wearables/armored_clothing/pants/pants_s04_armored.iff",
+		"object/tangible/wearables/armored_clothing/skirt/skirt_s07_armored.iff",
+		"object/tangible/wearables/armored_clothing/boots/boots_s04_armored.iff"
+		 },
 	startingSkills = { "species_moncal", "social_language_basic_comprehend", "social_language_basic_speak" , "social_language_moncalamari_comprehend", "social_language_moncalamari_speak" }
 }
 

@@ -59,7 +59,14 @@ object_creature_player_human_male = object_creature_player_shared_human_male:new
 		
 	},
 	defaultLanguage = 1,
-	startingItems = { },
+	-- woohoori 20190922 added species specific starter items
+	startingItems = {
+		"object/tangible/wearables/armored_clothing/hat/hat_s04_armored.iff",
+		"object/tangible/wearables/armored_clothing/jacket/jacket_s36_armored.iff",
+		"object/tangible/wearables/armored_clothing/pants/pants_s04_armored.iff",
+		"object/tangible/wearables/armored_clothing/skirt/skirt_s07_armored.iff",
+		"object/tangible/wearables/armored_clothing/boots/boots_s04_armored.iff"
+		 },
 	startingSkills = { "species_human", "social_language_basic_comprehend", "social_language_basic_speak" }
 }
 

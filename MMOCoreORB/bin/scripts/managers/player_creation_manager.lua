@@ -1,10 +1,11 @@
 --Should all created players start with God Mode? 1 = yes, 0 = no
 freeGodMode = 0;
 --How many cash credits new characters start with after creating a character (changed during test phase, normal value is 100)
-startingCash = 1000
+-- woohoori 20190922 updated starting cash
+startingCash = 10000
 --startingCash = 100000
 --How many bank credits new characters start with after creating a character (changed during test phase, normal value is 1000)
-startingBank = 1000
+startingBank = 10000
 --startingBank = 100000
 --How many skill points a new characters start with
 skillPoints = 250
@@ -48,26 +49,31 @@ marojMelon = "object/tangible/food/foraged/foraged_fruit_s1.iff"
 x31Speeder = "object/tangible/deed/vehicle_deed/landspeeder_x31_deed.iff"
 
 SwoopBike = "object/tangible/deed/vehicle_deed/speederbike_swoop_deed.iff"
+-- woohoori 20190922 added backpack to common items
+Backpack01 = "object/tangible/wearables/backpack/backpack_s01.iff"
 
+--woohoori 20190922 moved starter items to species specific lua files
+--boneBicep_l = "object/tangible/wearables/armor/bone/armor_bone_s01_bicep_l.iff"
+--boneBicep_r = "object/tangible/wearables/armor/bone/armor_bone_s01_bicep_r.iff"
+--boneBoots = "object/tangible/wearables/armor/bone/armor_bone_s01_boots.iff"
+--boneBracer_l = "object/tangible/wearables/armor/bone/armor_bone_s01_bracer_l.iff"
+--boneBracer_r = "object/tangible/wearables/armor/bone/armor_bone_s01_bracer_r.iff"
+--boneChest = "object/tangible/wearables/armor/bone/armor_bone_s01_chest_plate.iff"
+--boneHelmet = "object/tangible/wearables/armor/bone/armor_bone_s01_helmet.iff"
+--boneGloves = "object/tangible/wearables/armor/bone/armor_bone_s01_gloves.iff"
+--boneLeggings = "object/tangible/wearables/armor/bone/armor_bone_s01_leggings.iff"
 
-boneBicep_l = "object/tangible/wearables/armor/bone/armor_bone_s01_bicep_l.iff"
-boneBicep_r = "object/tangible/wearables/armor/bone/armor_bone_s01_bicep_r.iff"
-boneBoots = "object/tangible/wearables/armor/bone/armor_bone_s01_boots.iff"
-boneBracer_l = "object/tangible/wearables/armor/bone/armor_bone_s01_bracer_l.iff"
-boneBracer_r = "object/tangible/wearables/armor/bone/armor_bone_s01_bracer_r.iff"
-boneChest = "object/tangible/wearables/armor/bone/armor_bone_s01_chest_plate.iff"
-boneHelmet = "object/tangible/wearables/armor/bone/armor_bone_s01_helmet.iff"
-boneGloves = "object/tangible/wearables/armor/bone/armor_bone_s01_gloves.iff"
-boneLeggings = "object/tangible/wearables/armor/bone/armor_bone_s01_leggings.iff"
 
 professionSpecificItems = {
-	combat_brawler = { brawlerOneHander, brawlerTwoHander, brawlerPolearm },
-	combat_marksman = { marksmanPistol, marksmanCarbine, marksmanRifle },
+	-- woohoori 20190922 added genric crafting tool to all professions
+	combat_brawler = { genericTool, brawlerOneHander, brawlerTwoHander, brawlerPolearm },
+	combat_marksman = { genericTool, marksmanPistol, marksmanCarbine, marksmanRifle },
 	crafting_artisan = { genericTool, mineralTool, chemicalTool },
 	jedi = { },
 	outdoors_scout = { genericTool },
-	science_medic = { foodTool },
-	social_entertainer = { slitherhorn }
+	science_medic = { genericTool, foodTool },
+	social_entertainer = { genericTool, slitherhorn }
 }
 
-commonStartingItems = { marojMelon, survivalKnife, SwoopBike, boneBicep_l, boneBicep_r, boneBoots, boneBracer_l, boneBracer_r, boneChest, boneHelmet, boneGloves, boneLeggings }
+--commonStartingItems = { Backpack01, marojMelon, survivalKnife, SwoopBike, boneBicep_l, boneBicep_r, boneBoots, boneBracer_l, boneBracer_r, boneChest, boneHelmet, boneGloves, boneLeggings }
+commonStartingItems = { Backpack01, marojMelon, survivalKnife }
