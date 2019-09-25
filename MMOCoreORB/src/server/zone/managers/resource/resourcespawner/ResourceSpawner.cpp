@@ -978,7 +978,8 @@ void ResourceSpawner::sendSampleResults(CreatureObject* player, const float dens
 	}
 
 	Coordinate* richSampleLocation = session->getRichSampleLocation();
-
+	// woohoori 20190923 adjustments to sample rates
+	// float sampleRate = (surveySkill * density) + System::random(100) + player->getSkillMod("private_spec_samplerate");
 	float sampleRate = (surveySkill * density) + System::random(100) + player->getSkillMod("private_spec_samplerate");
 
 	// Was the sample successful or not
@@ -989,8 +990,10 @@ void ResourceSpawner::sendSampleResults(CreatureObject* player, const float dens
 
 		return;
 	}
-
-	int maxUnitsExtracted = (int) (density * (25 + System::random(3)));
+	// woohoori 20190923 adjustments to sample rates
+	// lowered the constant and increased the random for more variability
+	// int maxUnitsExtracted = (int) (density * (25 + System::random(3)));
+	int maxUnitsExtracted = (int) (density * (1 + System::random(4)));
 
 	float cityMultiplier = 1.f + player->getSkillMod("private_spec_samplesize") / 100.f;
 
