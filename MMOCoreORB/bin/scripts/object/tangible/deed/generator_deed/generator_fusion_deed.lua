@@ -53,8 +53,11 @@ object_tangible_deed_generator_deed_generator_fusion_deed = object_tangible_deed
 	experimentalWeights = {1, 1, 1, 1, 2, 1, 2, 1},
 	experimentalGroupTitles = {"null", "null", "expEffeciency", "expStorage", "null"},
 	experimentalSubGroupTitles = {"null", "null", "extractrate", "hoppersize", "hitpoints"},
-	experimentalMin = {0, 0, 13, 500000, 1000},
-	experimentalMax = {0, 0, 15.5, 1500000, 1000},
+	-- woohoori 20190923 adjusted BER values
+	--experimentalMin = {0, 0, 13, 500000, 1000},
+	--experimentalMax = {0, 0, 15.5, 1500000, 1000},
+	experimentalMin = {0, 0, 10, 500000, 1000},
+	experimentalMax = {0, 0, 20, 1500000, 1000},
 	experimentalPrecision = {0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 4},
 }

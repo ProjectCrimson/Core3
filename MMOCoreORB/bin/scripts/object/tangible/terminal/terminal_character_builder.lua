@@ -1984,7 +1984,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 						"Generator Deeds",
 							{
 							"Fusion Generator Deed", "object/tangible/deed/generator_deed/generator_fusion_deed.iff",
-							"Photo Bio Generator Deed", "object/tangible/deed/generator_deed/generator_photo_bio_deed.iff",
+							--"Photo Bio Generator Deed", "object/tangible/deed/generator_deed/generator_photo_bio_deed.iff",
 							"Solar Generator Deed", "object/tangible/deed/generator_deed/generator_solar_deed.iff",
 							"Wind Generator Deed", "object/tangible/deed/generator_deed/generator_wind_deed.iff",
 							},

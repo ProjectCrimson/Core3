@@ -43,7 +43,8 @@
 
 object_installation_mining_organic_mining_organic_creature_farm = object_installation_mining_organic_shared_mining_organic_creature_farm:new {
 	lotSize = 1,
-	baseMaintenanceRate = 30,
+	-- woohoori 20190923 adjusted power rates
+	baseMaintenanceRate = 35,
 	basePowerRate = 25,
 	width = 3,
 	length = 3,

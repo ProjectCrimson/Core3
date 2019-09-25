@@ -58,10 +58,13 @@ TreasuryWithdrawalCooldown = 1
 CityVotingCycles = 1
 
 --The number of city update cyles after which to lock the mayoral voting race registration.
-CityVotingCyclesUntilLocked = 1
-
+-- woohoori 20190923 updates
+--CityVotingCyclesUntilLocked = 1
+CityVotingCyclesUntilLocked = 3
 --The amount of time in minutes before the city performs an update.
-CityUpdateInterval = 5040
+-- woohoori 20190923 updates
+--CityUpdateInterval = 5040
+CityUpdateInterval = 10080
 
 --The amount of time in minutes a new city has to gain enough citizens to remain a city.
 NewCityGracePeriod = 1440
@@ -73,6 +76,8 @@ OldCityGracePeriod = 4320
 EnableCityWarn = false
 
 --The number of citizens required to achieve each city rank. (Outpost, Village, Township, City, Metropolis)
+-- woohoori 20190923 updates
+--CitizensPerRank = {2, 4, 6, 8, 10}
 CitizensPerRank = {2, 4, 6, 8, 10}
 --CitizensPerRank = {10, 20, 35, 55, 85}
 
