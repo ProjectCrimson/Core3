@@ -47,7 +47,9 @@ MindBlast2Command = {
 	minDamage = 1125,
 	maxDamage = 1700,
 	speed = 1.5,
-	forceCost = 60,
+	-- woohoori 20190924 adjusted force cost for powers balance
+	--forceCost = 60,
+	forceCost = 75,
 	visMod = 25,
 	accuracySkillMod = "mindblast_accuracy";
 	coneAngle = 40,

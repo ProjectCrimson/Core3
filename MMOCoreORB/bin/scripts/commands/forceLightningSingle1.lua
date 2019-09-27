@@ -47,7 +47,9 @@ ForceLightningSingle1Command = {
 	minDamage = 1250,
 	maxDamage = 2000,
 	speed = 2.0,
-	forceCost = 45,
+	-- woohoori 20190924 adjusted force cost for powers balance
+	--forceCost = 45,
+	forceCost = 40;
 	visMod = 25,
 	
 	accuracySkillMod = "forcelightning_accuracy",

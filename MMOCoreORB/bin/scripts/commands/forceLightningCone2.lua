@@ -47,7 +47,9 @@ ForceLightningCone2Command = {
   minDamage = 2000,
   maxDamage = 3000,
   speed = 2.5,
-  forceCost = 60,
+  -- woohoori 20190924 adjusted force cost for powers balance
+  --forceCost = 60,
+  forceCost = 85,
   forceCostMultiplier = 1,
   actionCostMultiplier = 1,
 	accuracySkillMod = "forcelightning_accuracy",

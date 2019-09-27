@@ -47,7 +47,9 @@ MindBlast1Command = {
 	minDamage = 750,
 	maxDamage = 1400,
 	speed = 2.0,
-	forceCost = 55,
+	-- woohoori 20190924 adjusted force cost for powers balance
+	--forceCost = 55,
+	forceCost = 45,
 	visMod = 25,
 	accuracySkillMod = "mindblast_accuracy";
 
