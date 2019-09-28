@@ -46,7 +46,9 @@ ForceKnockdown3Command = {
 
     damageMultiplier = 0,
 	speed = 1.0,
-	forceCost = 200,
+	-- woohoori 20190924 adjusted force cost for powers balance
+	--forceCost = 200,
+	forceCost = 100,
 	visMod = 25,
 	accuracySkillMod = "forceknockdown_accuracy",
 	areaAction = true,

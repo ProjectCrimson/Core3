@@ -46,7 +46,9 @@ ForceIntimidate2Command = {
 
 	damageMultiplier = 0,
 	speed = 1.0,
-	forceCost = 300,
+	-- woohoori 20190924 adjusted force cost for powers balance
+	--forceCost = 300,
+	forceCost = 85,
 	accuracySkillMod = "forceintimidate_accuracy",
 	forceAttack = true,
 	splashDamage = true,

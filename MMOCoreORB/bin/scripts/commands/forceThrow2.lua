@@ -47,7 +47,9 @@ ForceThrow2Command = {
 	minDamage = 750,
 	maxDamage = 1800,
 	speed = 1.5,
-	forceCost = 45,
+	-- woohoori 20190924 adjusted force cost for powers balance
+	--forceCost = 45,
+	forceCost = 75,
 	visMod = 25,
 	accuracySkillMod = "forcethrow_accuracy",
 

@@ -47,7 +47,9 @@ ForceChokeCommand = {
   minDamage = 600,
   maxDamage = 1000,
   speed = 1.0,
-  forceCost = 75,
+  -- woohoori 20190924 adjusted force cost for powers balance
+  --forceCost = 75,
+  forceCost = 100,
   visMod = 25,
   forceAttack = true,
   accuracyBonus = 95,
