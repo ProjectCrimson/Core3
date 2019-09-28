@@ -3,7 +3,7 @@
  *
  *  Created on: 24/02/2010
  *      Author: victor
- */ // woohoori 20190926 commented items in this file are comparisons to swgemu to understand lev's changes. commented are items changed or removed by lev
+ */
 
 #include "CombatManager.h"
 #include "CreatureAttackData.h"
@@ -26,7 +26,6 @@
 #include "server/zone/objects/creature/ai/AiAgent.h"
 #include "server/zone/objects/installation/InstallationObject.h"
 #include "server/zone/packets/object/ShowFlyText.h"
-// #include "server/zone/managers/frs/FrsManager.h"
 
 #define COMBAT_SPAM_RANGE 85
 
@@ -354,7 +353,7 @@ int CombatManager::doTargetCombatAction(CreatureObject* attacker, WeaponObject* 
 	damageMultiplier = 1.0f;
 
 	if (!data.isStateOnlyAttack()) {
-		hitVal = getHitChance(attacker, defender, weapon, damage, data.getAccuracyBonus() + attacker->getSkillMod(data.getCommand()->getAccuracySkillMod())); // woohoori 20190926 missing data
+		hitVal = getHitChance(attacker, defender, weapon, damage, data.getAccuracyBonus() + attacker->getSkillMod(data.getCommand()->getAccuracySkillMod()));
 
 		//Send Attack Combat Spam. For state-only attacks, this is sent in applyStates().
 		data.getCommand()->sendAttackCombatSpam(attacker, defender, hitVal, damage, data);
@@ -383,7 +382,7 @@ int CombatManager::doTargetCombatAction(CreatureObject* attacker, WeaponObject* 
 		break;}
 	case RICOCHET:
 		doLightsaberBlock(attacker, weapon, defender, damage);
-		damageMultiplier = 0.1f; //woohoori lev modified from 0.0f to 0.1f
+		damageMultiplier = 0.1f;
 		break;
 	default:
 		break;
@@ -454,7 +453,7 @@ int CombatManager::doTargetCombatAction(TangibleObject* attacker, WeaponObject* 
 		damage = calculateDamage(attacker, weapon, defenderObject, data) * damageMultiplier;
 
 	damageMultiplier = 1.0f;
-	int hitVal = getHitChance(attacker, defenderObject, weapon, damage, data.getAccuracyBonus()); // woohoori 20190926 missing data
+	int hitVal = getHitChance(attacker, defenderObject, weapon, damage, data.getAccuracyBonus());
 
 	uint8 hitLocation = 0;
 
@@ -485,7 +484,7 @@ int CombatManager::doTargetCombatAction(TangibleObject* attacker, WeaponObject* 
 		break;
 	case RICOCHET:
 		doLightsaberBlock(attacker, weapon, defenderObject, damage);
-		damageMultiplier = 0.1f; // woohoori 20190926 lev changed from 0.0f to 0.1f
+		damageMultiplier = 0.1f;
 		break;
 	default:
 		break;
@@ -579,7 +578,7 @@ void CombatManager::applyWeaponDots(CreatureObject* attacker, CreatureObject* de
 
 		int type = 0;
 		int resist = 0;
-		// utilizing this switch-block for easier *functionality* , present & future // woohoori 20190926 check for defense mods
+		// utilizing this switch-block for easier *functionality* , present & future
 		// SOE strings only provide this ONE specific type of mod (combat_bleeding_defense) and
 		// there's no evidence (yet) of other 3 WEAPON dot versions also being resistable.
 		switch (weapon->getDotType(i)) {
@@ -617,7 +616,7 @@ uint8 CombatManager::getPoolForDot(uint64 dotType, int poolsToDamage) {
 	uint8 pool = 0;
 
 	switch (dotType) {
-	case CreatureState::POISONED: // woohoori 20190926 lev mod (orig no dot)
+	case CreatureState::POISONED:
 		if (poolsToDamage & HEALTH) {
 					pool = CreatureAttribute::HEALTH;
 				} else if (poolsToDamage & ACTION) {
@@ -626,7 +625,7 @@ uint8 CombatManager::getPoolForDot(uint64 dotType, int poolsToDamage) {
 					pool = CreatureAttribute::HEALTH;
 				}
 				break;
-	case CreatureState::ONFIRE: // woohoori 20190926 lev mod (orig no dot)
+	case CreatureState::ONFIRE:
 		if (poolsToDamage & HEALTH) {
 					pool = CreatureAttribute::HEALTH;
 				} else if (poolsToDamage & ACTION) {
@@ -646,11 +645,11 @@ uint8 CombatManager::getPoolForDot(uint64 dotType, int poolsToDamage) {
 		break;
 	case CreatureState::DISEASED:
 		if (poolsToDamage & HEALTH) {
-			pool = CreatureAttribute::HEALTH; // woohoori 20190926 + System::random(2);
+			pool = CreatureAttribute::HEALTH;
 		} else if (poolsToDamage & ACTION) {
-			pool = CreatureAttribute::HEALTH; // woohoori 20190926 + System::random(2);
+			pool = CreatureAttribute::HEALTH;
 		} else if (poolsToDamage & MIND) {
-			pool = CreatureAttribute::HEALTH; // woohoori 20190926 + System::random(2);
+			pool = CreatureAttribute::HEALTH;
 		}
 		break;
 	default:
@@ -808,7 +807,7 @@ int CombatManager::getDefenderDefenseModifier(CreatureObject* defender, WeaponOb
 	//info("Base target defense is " + String::valueOf(targetDefense), true);
 
 	// defense hardcap
-	if (targetDefense > 25) // 20190926 woohoori - lev lowered hard cap from 125
+	if (targetDefense > 25)
 		targetDefense = 25;
 
 	if (attacker->isPlayerCreature())
@@ -843,7 +842,7 @@ int CombatManager::getDefenderSecondaryDefenseModifier(CreatureObject* defender)
 		targetDefense += defender->getSkillMod("private_" + mod);
 	}
 
-	if (targetDefense > 25) // 20190926 woohoori lev lowered the default of 125
+	if (targetDefense > 25)
 		targetDefense = 25;
 
 	return targetDefense;
@@ -857,16 +856,16 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
 	if (attackType == weapon->getAttackType()) {
 		for (int i = 0; i < defenseToughMods->size(); ++i) {
 			int toughMod = defender->getSkillMod(defenseToughMods->get(i));
-			if (toughMod > 0) damage *= 1.f - (toughMod / 300.f); // woohoori 20190926 lev lowered from 100.f
+			if (toughMod > 0) damage *= 1.f - (toughMod / 300.f);
 		}
 	}
-	// woohoori 20190926 lev added LS toughness. this IF did not exist outside of stardust
+
 	int lightsaberToughness = defender->getSkillMod("lightsaber_toughness");
 	if (lightsaberToughness > 0)
-		damage *= 1.f - (lightsaberToughness / 200.f); 
-	// woohoori 20190926 lev created a constant jedi toughness reduction
+		damage *= 1.f - (lightsaberToughness / 200.f);
+
 	int jediToughness = defender->getSkillMod("jedi_toughness");
-	if (jediToughness > 0) // woohoori if (damType != SharedWeaponObjectTemplate::LIGHTSABER && jediToughness >0)
+	if (jediToughness > 0)
 		damage *= 1.f - (jediToughness / 100.f);
 
 	return damage < 0 ? 0 : damage;
@@ -1185,28 +1184,25 @@ int CombatManager::getArmorReduction(TangibleObject* attacker, WeaponObject* wea
 		if (forceFeedback > 0 && (defender->hasBuff(BuffCRC::JEDI_FORCE_FEEDBACK_1) || defender->hasBuff(BuffCRC::JEDI_FORCE_FEEDBACK_2))) {
 			float feedbackDmg = rawDamage * (forceFeedback / 100.f);
 			float splitDmg = feedbackDmg / 3;
-			
-			// woohoori 20190926 lev modified this section; 
-			attacker->inflictDamage(defender, CreatureAttribute::HEALTH, feedbackDmg, true, true, true); // woohoorit 20190926 feedbackDmg = splitdmg
+
+			attacker->inflictDamage(defender, CreatureAttribute::HEALTH, feedbackDmg, true, true, true);
 			//attacker->inflictDamage(defender, CreatureAttribute::ACTION, splitDmg, true, true, true);
 			//attacker->inflictDamage(defender, CreatureAttribute::MIND, splitDmg, true, true, true);
-			broadcastCombatSpam(defender, attacker, NULL, feedbackDmg, "cbt_spam", "forcefeedback_hit", 1); // woohoori 20190926 original line: broadcastCombatSpam(defender, attacker, nullptr, feedbackDmg, "cbt_spam", "forcefeedback_hit", 1);
+			broadcastCombatSpam(defender, attacker, NULL, feedbackDmg, "cbt_spam", "forcefeedback_hit", 1);
 			defender->playEffect("clienteffect/pl_force_feedback_block.cef", "");
 		}
 
 		// Force Absorb
 		if (defender->getSkillMod("force_absorb") > 0 && defender->isPlayerCreature()) {
-		// woohoori 20190926 original code:	defender->notifyObservers(ObserverEventType::FORCEABSORB, attacker, data.getForceCost());
--		// woohoori 20190926 original code: }
-			ManagedReference<PlayerObject*> playerObject = defender->getPlayerObject();// woohoorit 20190926 added by Lev
-			if (playerObject != NULL) {// woohoorit 20190926 added by Lev
-				playerObject->setForcePower(playerObject->getForcePower() + (damage * 0.15));// woohoorit 20190926 added by Lev
-				sendMitigationCombatSpam(defender, NULL, (int)damage * 0.15, FORCEABSORB);// woohoorit 20190926 added by Lev
-				defender->playEffect("clienteffect/pl_force_absorb_hit.cef", "");// woohoorit 20190926 added by Lev
-			}// woohoorit 20190926 added by Lev
-		}// woohoorit 20190926 added by Lev
+			ManagedReference<PlayerObject*> playerObject = defender->getPlayerObject();
+			if (playerObject != NULL) {
+				playerObject->setForcePower(playerObject->getForcePower() + (damage * 0.15));
+				sendMitigationCombatSpam(defender, NULL, (int)damage * 0.15, FORCEABSORB);
+				defender->playEffect("clienteffect/pl_force_absorb_hit.cef", "");
+			}
+		}
 
-		defender->notifyObservers(ObserverEventType::FORCEBUFFHIT, attacker, jediBuffDamage);// woohoorit 20190926 added by Lev
+		defender->notifyObservers(ObserverEventType::FORCEBUFFHIT, attacker, jediBuffDamage);
 	}
 
 	// PSG
