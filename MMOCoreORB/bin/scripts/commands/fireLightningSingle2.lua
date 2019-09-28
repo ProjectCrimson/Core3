@@ -41,13 +41,14 @@
 --which carries forward this exception.
 --true = 1, false = 0
 
+-- Perkins 2019-09-28 Adjusted LLC lightningsingle 2 (was previously doing less damage than the L1 attack)
 FireLightningSingle2Command = {
         name = "firelightningsingle2",
 
-	damageMultiplier = 2.0,
+	damageMultiplier = 4.0,
   speedMultiplier = 1,
   healthCostMultiplier = 0,
-  actionCostMultiplier = 0.75,
+  actionCostMultiplier = 2,
   mindCostMultiplier = 0,
     visMod = 25,
   
