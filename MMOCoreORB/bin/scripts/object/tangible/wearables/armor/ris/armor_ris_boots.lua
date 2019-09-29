@@ -100,14 +100,14 @@ object_tangible_wearables_armor_ris_armor_ris_boots = object_tangible_wearables_
   -- LIGHT, MEDIUM, HEAVY
   rating = LIGHT,
 
-  kinetic = 70,
-  energy = 70,
-  electricity = 70,
-  stun = 70,
-  blast = 70,
-  heat = 70,
-  cold = 70,
-  acid = 70,
+  kinetic = 56,
+  energy = 56,
+  electricity = 56,
+  stun = 56,
+  blast = 56,
+  heat = 56,
+  cold = 56,
+  acid = 56,
   lightSaber = 0,
 
   numberExperimentalProperties = {1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 1, 2, 1},

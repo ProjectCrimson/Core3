@@ -102,14 +102,14 @@ object_tangible_wearables_armor_ubese_armor_ubese_bracer_l = object_tangible_wea
 	-- LIGHT, MEDIUM, HEAVY
 	rating = LIGHT,
 
-	kinetic = 70,
-	energy = 70,
-	electricity = 70,
-	stun = 70,
-	blast = 70,
-	heat = 70,
-	cold = 70,
-	acid = 70,
+	kinetic = 54,
+	energy = 54,
+	electricity = 54,
+	stun = 0,
+	blast = 54,
+	heat = 54,
+	cold = 54,
+	acid = 54,
 	lightSaber = 0,
 
 	numberExperimentalProperties = {1, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 2, 1},

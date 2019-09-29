@@ -98,14 +98,14 @@ object_tangible_wearables_armor_bone_armor_bone_s01_gloves = object_tangible_wea
   -- LIGHT, MEDIUM, HEAVY
   rating = LIGHT,
 
-  kinetic = 35,
-  energy = 35,
-  electricity = 35,
-  stun = 35,
-  blast = 35,
-  heat = 35,
-  cold = 35,
-  acid = 35,
+  kinetic = 45,
+  energy = 45,
+  electricity = 45,
+  stun = 45,
+  blast = 45,
+  heat = 45,
+  cold = 0,
+  acid = 0,
   lightSaber = 0,
 
 
