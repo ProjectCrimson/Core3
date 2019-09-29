@@ -45,25 +45,39 @@ SaberSlash2Command = {
         name = "saberslash2",
 
 
-	damageMultiplier = 3,
+	damageMultiplier = 2.5, -- woohoori 20190928 down from 3
 	speedMultiplier = 5,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 2,
 	mindCostMultiplier = 0,
-	forceCostMultiplier = 1.75,
+	forceCostMultiplier = 2, -- woohoori 20190928 up from 1.75
 	visMod = 25,
 
 	dotEffects = {
-    DotEffect(  
-    BLEEDING,
-    { "resistance_bleeding", "bleed_resist" },
-    ACTION,
-    true,
-    0,
-    400,
-    400, 
-    60
-    ),      
+	  	DotEffect(
+		BLEEDING,
+		{ "resistance_bleeding", "bleed_resist" },
+		ACTION,
+		true,
+		0,
+		100,
+		75,
+		60,
+		16.66,
+		16.66
+	  ),
+
+	-- woohoori 20190928 lowered power/duration of action bleed
+	-- DotEffect(  
+	-- BLEEDING,
+	-- { "resistance_bleeding", "bleed_resist" },
+	-- ACTION,
+	-- true,
+	-- 0,
+	-- 400,
+	-- 400, 
+	-- 60
+	-- ),      
   },
 
 	stateEffects = {

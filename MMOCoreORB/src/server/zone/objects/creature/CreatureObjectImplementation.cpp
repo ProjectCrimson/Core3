@@ -1009,10 +1009,13 @@ int CreatureObjectImplementation::inflictDamage(TangibleObject* attacker, int da
 	int currentValue = hamList.get(damageType);
 
 	int action = getHAM(CreatureAttribute::ACTION);
-		
-		if (action < 3000) // woohoori increased from 300
-			setHAM(CreatureAttribute::ACTION, 7000); // increased from 300 in attempt to prevent action bleed on regular creatures
-	// woohoori 20190916
+	// woohoori 20190916	
+	//	if (action < 3000) // woohoori increased from 300
+	//		setHAM(CreatureAttribute::ACTION, 7000); // increased from 300 in attempt to prevent action bleed on regular creatures
+	// woohoori TODO 20190927 adjust action bleed parameter to force players to renew action bleed and address variable of AiAgent Special action cost
+	 if (action <= (getMaxHAM(CreatureAttribute::ACTION) * 0.01))
+			setHAM(CreatureAttribute::ACTION, (getMaxHAM(CreatureAttribute::ACTION) * 0.03));
+
 	int mind = getHAM(CreatureAttribute::MIND);
 		if (mind > 2000)
 			setHAM(CreatureAttribute::MIND, 2000);

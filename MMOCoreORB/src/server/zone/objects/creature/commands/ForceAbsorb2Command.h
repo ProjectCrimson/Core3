@@ -15,7 +15,7 @@ public:
 
 		overrideableCRCs.add(BuffCRC::JEDI_FORCE_ABSORB_1);
 
-		singleUseEventTypes.add(ObserverEventType::FORCEBUFFHIT);
+		singleUseEventTypes.add(ObserverEventType::FORCEABSORB);// woohoori 20190927 changed FORCEBUFFHIT
 
 		skillMods.put("force_absorb", 2); // this is the same as force abosrb 1?
 	}
