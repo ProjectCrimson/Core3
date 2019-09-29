@@ -44,10 +44,10 @@
 Saber1hComboHit3Command = {
         name = "saber1hcombohit3",
 
-  damageMultiplier = 3,
+  damageMultiplier = 3,  -- woohoori TODO 20190928 maybe change back to original of 3.5
   speedMultiplier = 3,
   actionCostMultiplier = 1,  
-  forceCostMultiplier = 1.5,
+  forceCostMultiplier = 2.25,  -- woohoori 20190928 changed back to original from 1.5
 	visMod = 25,
 
 	animation = "showoff_1", 

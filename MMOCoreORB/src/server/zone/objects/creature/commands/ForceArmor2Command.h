@@ -17,7 +17,7 @@ public:
 
 		overrideableCRCs.add(BuffCRC::JEDI_FORCE_ARMOR_1);
 
-		singleUseEventTypes.add(ObserverEventType::FORCEBUFFHIT);
+		singleUseEventTypes.add(ObserverEventType::FORCEABSORB);// woohoori 20190927 changed FORCEBUFFHIT
 
 		skillMods.put("force_armor", 65);
 	}

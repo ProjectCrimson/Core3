@@ -383,7 +383,7 @@ int CombatManager::doTargetCombatAction(CreatureObject* attacker, WeaponObject* 
 		break;}
 	case RICOCHET:
 		doLightsaberBlock(attacker, weapon, defender, damage);
-		damageMultiplier = 0.1f; //woohoori lev modified from 0.0f to 0.1f
+		damageMultiplier = 0.0f; //woohoori lev modified from 0.0f to 0.1f - reset
 		break;
 	default:
 		break;
@@ -485,7 +485,7 @@ int CombatManager::doTargetCombatAction(TangibleObject* attacker, WeaponObject* 
 		break;
 	case RICOCHET:
 		doLightsaberBlock(attacker, weapon, defenderObject, damage);
-		damageMultiplier = 0.1f; // woohoori 20190926 lev changed from 0.0f to 0.1f
+		damageMultiplier = 0.0f; // woohoori 20190926 lev changed from 0.0f to 0.1f reset
 		break;
 	default:
 		break;
@@ -585,15 +585,15 @@ void CombatManager::applyWeaponDots(CreatureObject* attacker, CreatureObject* de
 		switch (weapon->getDotType(i)) {
 		case 1: //POISON
 			type = CreatureState::POISONED;
-			//resist = defender->getSkillMod("resistance_poison");
+			resist = defender->getSkillMod("resistance_poison"); // woohoori TODO 20190927 added back - may not work though
 			break;
 		case 2: //DISEASE
 			type = CreatureState::DISEASED;
-			//resist = defender->getSkillMod("resistance_disease");
+			resist = defender->getSkillMod("resistance_disease"); // woohoori 20190927 added back - may not work though
 			break;
 		case 3: //FIRE
 			type = CreatureState::ONFIRE;
-			//resist = defender->getSkillMod("resistance_fire");
+			resist = defender->getSkillMod("resistance_fire"); // woohoori 20190927 added back - may not work though
 			break;
 		case 4: //BLEED
 			type = CreatureState::BLEEDING;
@@ -646,11 +646,11 @@ uint8 CombatManager::getPoolForDot(uint64 dotType, int poolsToDamage) {
 		break;
 	case CreatureState::DISEASED:
 		if (poolsToDamage & HEALTH) {
-			pool = CreatureAttribute::HEALTH; // woohoori 20190926 + System::random(2);
+			pool = CreatureAttribute::HEALTH; // woohoori TODO 20190926 research HEALTH + System::random(2);
 		} else if (poolsToDamage & ACTION) {
-			pool = CreatureAttribute::HEALTH; // woohoori 20190926 + System::random(2);
+			pool = CreatureAttribute::ACTION; // woohoori TODO 20190926 research HEALTH and added + System::random(2);
 		} else if (poolsToDamage & MIND) {
-			pool = CreatureAttribute::HEALTH; // woohoori 20190926 + System::random(2);
+			pool = CreatureAttribute::HEALTH; // woohoori TODO research disable
 		}
 		break;
 	default:
@@ -808,8 +808,8 @@ int CombatManager::getDefenderDefenseModifier(CreatureObject* defender, WeaponOb
 	//info("Base target defense is " + String::valueOf(targetDefense), true);
 
 	// defense hardcap
-	if (targetDefense > 25) // 20190926 woohoori - lev lowered hard cap from 125
-		targetDefense = 25;
+	if (targetDefense > 125) // 20190926 woohoori - lev lowered hard cap from 125
+		targetDefense = 125; // 20190927 woohoori replaced orginal caps
 
 	if (attacker->isPlayerCreature())
 		targetDefense += defender->getSkillMod("private_defense");
@@ -843,11 +843,36 @@ int CombatManager::getDefenderSecondaryDefenseModifier(CreatureObject* defender)
 		targetDefense += defender->getSkillMod("private_" + mod);
 	}
 
-	if (targetDefense > 25) // 20190926 woohoori lev lowered the default of 125
-		targetDefense = 25;
+	if (targetDefense > 125) // 20190926 woohoori lev lowered the default of 125
+		targetDefense = 125; // 20190927 woohoori replaced orginal caps
 
 	return targetDefense;
 }
+
+/* original swgemu function for defendertoughness modifier
+
+float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int attackType, int damType, float damage) {
+	ManagedReference<WeaponObject*> weapon = defender->getWeapon();
+
+	const auto defenseToughMods = weapon->getDefenderToughnessModifiers();
+
+	if (attackType == weapon->getAttackType()) {
+		for (int i = 0; i < defenseToughMods->size(); ++i) {
+			int toughMod = defender->getSkillMod(defenseToughMods->get(i));
+			if (toughMod > 0) damage *= 1.f - (toughMod / 100.f);
+		}
+	}
+
+	int jediToughness = defender->getSkillMod("jedi_toughness");
+	if (damType != SharedWeaponObjectTemplate::LIGHTSABER && jediToughness > 0)
+		damage *= 1.f - (jediToughness / 100.f);
+
+	return damage < 0 ? 0 : damage;
+}
+
+*/
+
+// current functionality compiles
 
 float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int attackType, int damType, float damage) {
 	ManagedReference<WeaponObject*> weapon = defender->getWeapon();
@@ -857,20 +882,80 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
 	if (attackType == weapon->getAttackType()) {
 		for (int i = 0; i < defenseToughMods->size(); ++i) {
 			int toughMod = defender->getSkillMod(defenseToughMods->get(i));
-			if (toughMod > 0) damage *= 1.f - (toughMod / 300.f); // woohoori 20190926 lev lowered from 100.f
+			if (toughMod > 0) damage *= 1.f - (toughMod / 100.f); // woohoori 20190926 lev lowered from 100.f - reset base level
 		}
 	}
-	// woohoori 20190926 lev added LS toughness. this IF did not exist outside of stardust
+	// woohoori 20190926 Reduced defensive capabilities of lightsaber to encourage more tradeoff choices with defender tree
+	int lightsaberToughness = defender->getSkillMod("lightsaber_toughness");
+	 if (lightsaberToughness > 0)
+		damage *= 1.f - (lightsaberToughness / 200.f); 
+	
+	int jediToughness = defender->getSkillMod("jedi_toughness");
+
+	if (damType != SharedWeaponObjectTemplate::LIGHTSABER && jediToughness >0) // woohoori 20190927 replaced previous line (this is orginal swgemu defense calc)
+		damage *= 1.f - (jediToughness / 100.f);
+
+	if (damType == SharedWeaponObjectTemplate::LIGHTSABER && jediToughness >0) // woohoori 20190928 override jedi toughness for saber and reduce to compensate for lightsaber toughness
+		damage *= 1.f - (jediToughness / 200.f);
+
+	return damage < 0 ? 0 : damage;
+}
+
+/* original stardust toughness modifier
+
+float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int attackType, int damType, float damage) {
+	ManagedReference<WeaponObject*> weapon = defender->getWeapon();
+
+	Vector<String>* defenseToughMods = weapon->getDefenderToughnessModifiers();
+
+	if (attackType == weapon->getAttackType()) {
+		for (int i = 0; i < defenseToughMods->size(); ++i) {
+			int toughMod = defender->getSkillMod(defenseToughMods->get(i));
+			if (toughMod > 0) damage *= 1.f - (toughMod / 300.f);
+		}
+	}
+
 	int lightsaberToughness = defender->getSkillMod("lightsaber_toughness");
 	if (lightsaberToughness > 0)
-		damage *= 1.f - (lightsaberToughness / 200.f); 
-	// woohoori 20190926 lev created a constant jedi toughness reduction
+		damage *= 1.f - (lightsaberToughness / 200.f);
+
 	int jediToughness = defender->getSkillMod("jedi_toughness");
-	if (jediToughness > 0) // woohoori if (damType != SharedWeaponObjectTemplate::LIGHTSABER && jediToughness >0)
+	if (jediToughness > 0)
 		damage *= 1.f - (jediToughness / 100.f);
 
 	return damage < 0 ? 0 : damage;
 }
+
+*/
+
+// proposed Afterlife toughness modifier
+/*
+float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int attackType, int damType, float damage) {
+	ManagedReference<WeaponObject*> weapon = defender->getWeapon();
+
+	Vector<String>* defenseToughMods = weapon->getDefenderToughnessModifiers();
+
+	if (attackType == weapon->getAttackType()) {
+		for (int i = 0; i < defenseToughMods->size(); ++i) {
+			int toughMod = defender->getSkillMod(defenseToughMods->get(i));
+			if (toughMod > 0) damage *= 1.f - (toughMod / 100.f); // woohoori 20190928 changed from 300.f - need to test against non-jedi with defense mod on weapon
+		}
+	}
+
+	int lightsaberToughness = defender->getSkillMod("lightsaber_toughness");
+	if (lightsaberToughness > 0)
+		damage *= 1.f - (lightsaberToughness / 200.f); // woohoori 20190928 overrides the / 100.f 1:1 reduction from the above for/next loop for lightsaber_toughness TODO review reducing lightsaber_toughness skill mod
+
+	if (damType != SharedWeaponObjectTemplate::LIGHTSABER && jediToughness > 0) {
+		damage *= 1.f - (jediToughness / 100.f);
+	} else {
+		damage *= 1.f - (jediToughness / 200.f);
+		}
+
+	return damage < 0 ? 0 : damage;
+}*/
+
+
 
 float CombatManager::hitChanceEquation(float attackerAccuracy, float attackerRoll, float targetDefense, float defenderRoll) {
 	float roll = (attackerRoll - defenderRoll)/50;
@@ -1166,7 +1251,7 @@ int CombatManager::getArmorReduction(TangibleObject* attacker, WeaponObject* wea
 		int forceArmor = defender->getSkillMod("force_armor");
 		if (forceArmor > 0) {
 			float dmgAbsorbed = rawDamage - (damage *= 1.f - (forceArmor / 100.f));
-			defender->notifyObservers(ObserverEventType::FORCEBUFFHIT, attacker, dmgAbsorbed);
+			defender->notifyObservers(ObserverEventType::FORCEARMOR, attacker, dmgAbsorbed); // woohoori test forceARMOR instead of forcebuffhit
 			sendMitigationCombatSpam(defender, NULL, (int)dmgAbsorbed, FORCEARMOR);
 		}
 	} else {
@@ -1177,36 +1262,39 @@ int CombatManager::getArmorReduction(TangibleObject* attacker, WeaponObject* wea
 		int forceShield = defender->getSkillMod("force_shield");
 		if (forceShield > 0) {
 			jediBuffDamage = rawDamage - (damage *= 1.f - (forceShield / 100.f));
+			defender->notifyObservers(ObserverEventType::FORCESHIELD, attacker, jediBuffDamage); // woohoori added observer event from origina swgemu
 			sendMitigationCombatSpam(defender, NULL, (int)jediBuffDamage, FORCESHIELD);
 		}
 
-		// Force Feedback
+		// Force Feedback // woohoori TODO 20190928 review for reducing to 2 pools to handle no mind pool
 		int forceFeedback = defender->getSkillMod("force_feedback");
 		if (forceFeedback > 0 && (defender->hasBuff(BuffCRC::JEDI_FORCE_FEEDBACK_1) || defender->hasBuff(BuffCRC::JEDI_FORCE_FEEDBACK_2))) {
 			float feedbackDmg = rawDamage * (forceFeedback / 100.f);
 			float splitDmg = feedbackDmg / 3;
-			
-			// woohoori 20190926 lev modified this section; 
-			attacker->inflictDamage(defender, CreatureAttribute::HEALTH, feedbackDmg, true, true, true); // woohoorit 20190926 feedbackDmg = splitdmg
+
+			attacker->inflictDamage(defender, CreatureAttribute::HEALTH, feedbackDmg, true, true, true);
 			//attacker->inflictDamage(defender, CreatureAttribute::ACTION, splitDmg, true, true, true);
 			//attacker->inflictDamage(defender, CreatureAttribute::MIND, splitDmg, true, true, true);
-			broadcastCombatSpam(defender, attacker, NULL, feedbackDmg, "cbt_spam", "forcefeedback_hit", 1); // woohoori 20190926 original line: broadcastCombatSpam(defender, attacker, nullptr, feedbackDmg, "cbt_spam", "forcefeedback_hit", 1);
+			broadcastCombatSpam(defender, attacker, NULL, feedbackDmg, "cbt_spam", "forcefeedback_hit", 1);
 			defender->playEffect("clienteffect/pl_force_feedback_block.cef", "");
 		}
 
-		// Force Absorb
-		if (defender->getSkillMod("force_absorb") > 0 && defender->isPlayerCreature()) {
-		// woohoori 20190926 original code:	defender->notifyObservers(ObserverEventType::FORCEABSORB, attacker, data.getForceCost());
--		// woohoori 20190926 original code: }
-			ManagedReference<PlayerObject*> playerObject = defender->getPlayerObject();// woohoorit 20190926 added by Lev
-			if (playerObject != NULL) {// woohoorit 20190926 added by Lev
-				playerObject->setForcePower(playerObject->getForcePower() + (damage * 0.15));// woohoorit 20190926 added by Lev
-				sendMitigationCombatSpam(defender, NULL, (int)damage * 0.15, FORCEABSORB);// woohoorit 20190926 added by Lev
-				defender->playEffect("clienteffect/pl_force_absorb_hit.cef", "");// woohoorit 20190926 added by Lev
-			}// woohoorit 20190926 added by Lev
-		}// woohoorit 20190926 added by Lev
+		// woohoori TODO 20190928 Orginal code errors due to getForceCost call; need to research
+		/*if (defender->getSkillMod("force_absorb") > 0 && defender->isPlayerCreature()) {
+			defender->notifyObservers(ObserverEventType::FORCEABSORB, attacker, data.getForceCost());
+		}*/
 
-		defender->notifyObservers(ObserverEventType::FORCEBUFFHIT, attacker, jediBuffDamage);// woohoorit 20190926 added by Lev
+		// woohoori Force Absorb by Lev
+		if (defender->getSkillMod("force_absorb") > 0 && defender->isPlayerCreature()) {
+			ManagedReference<PlayerObject*> playerObject = defender->getPlayerObject();
+			if (playerObject != NULL) {
+				playerObject->setForcePower(playerObject->getForcePower() + (damage * 0.15));
+				sendMitigationCombatSpam(defender, NULL, (int)damage * 0.15, FORCEABSORB);
+				defender->playEffect("clienteffect/pl_force_absorb_hit.cef", "");
+			}
+		}
+
+		// defender->notifyObservers(ObserverEventType::FORCEBUFFHIT, attacker, jediBuffDamage);
 	}
 
 	// PSG
@@ -1228,7 +1316,7 @@ int CombatManager::getArmorReduction(TangibleObject* attacker, WeaponObject* wea
 
 		Locker plocker(psg);
 
-		psg->inflictDamage(psg, 0, damage * 0.1, true, true);
+		psg->inflictDamage(psg, 0, damage * 0.2, true, true); // woohoori 20190927 modified damage * const from 0.1 to 0.2 (original)
 
 	}
 
@@ -1294,7 +1382,7 @@ float CombatManager::getArmorPiercing(TangibleObject* defender, int armorPiercin
 float CombatManager::calculateDamage(CreatureObject* attacker, WeaponObject* weapon, TangibleObject* defender, const CreatureAttackData& data) {
 	float damage = 0;
 	int diff = 0;
-
+	// woohoori TODO 20190927 diff this section if re-enabling FRS Damage Mult
 	if (data.getMinDamage() > 0 || data.getMaxDamage() > 0) { // this is a special attack (force, etc)
 		float mod = attacker->isAiAgent() ? cast<AiAgent*>(attacker)->getSpecialDamageMult() : 1.f;
 		damage = data.getMinDamage() * mod;
@@ -1435,11 +1523,12 @@ float CombatManager::doDroidDetonation(CreatureObject* droid, CreatureObject* de
 		return 0;
 	}
 }
+// woohoori TODO 20190927 FRS Damage Mult function goes here
 
 float CombatManager::calculateDamage(CreatureObject* attacker, WeaponObject* weapon, CreatureObject* defender, const CreatureAttackData& data) {
 	float damage = 0;
 	int diff = 0;
-
+	// woohoori TODO 20190927 review this section if re-enabling FRS Damage Mult
 	if (data.getMinDamage() > 0 || data.getMaxDamage() > 0) { // this is a special attack (force, etc)
 		float mod = attacker->isAiAgent() ? cast<AiAgent*>(attacker)->getSpecialDamageMult() : 1.f;
 		damage = data.getMinDamage() * mod;
@@ -1461,23 +1550,48 @@ float CombatManager::calculateDamage(CreatureObject* attacker, WeaponObject* wea
 	damage = applyDamageModifiers(attacker, weapon, damage, data);
 
 	damage += defender->getSkillMod("private_damage_susceptibility");
-
+	// woohoori TODO 20190927 review force powers modifications (replace the original calcs and modifiers)
+	/* if (attacker->isPlayerCreature()) {
+		if (data.isForceAttack() && !defender->isPlayerCreature())
+			damage *= 2 + System::random(1);
+		else if (!data.isForceAttack())
+			damage *= 1.5;
+	}*/
+	// removing next IF when resetting powers
 	if (attacker->isPlayerCreature())
 		damage *= 1.5;
 
 	if (!data.isForceAttack() && weapon->getAttackType() == SharedWeaponObjectTemplate::MELEEATTACK)
 		damage *= 1.25;
-
-	if (defender->isKnockedDown())
+	// woohoori 20190927 repleaced original choke mechanic
+	if (defender->isKnockedDown()) {
 		damage *= 1.5f;
+	} else if (data.isForceAttack() && data.getCommandName().hashCode() == STRING_HASHCODE("forcechoke")) {
+		if  (defender->isProne())
+			damage *= 1.5f;
+		else if (defender->isKneeling())
+			damage *= 1.25f;
+	}
+	// woohoori 20190927 replaced original choke multiplier
+	/* if (defender->isKnockedDown())
+		damage *= 1.5f;
+		*/
 
 	// Toughness reduction
 	if (data.isForceAttack())
 		damage = getDefenderToughnessModifier(defender, SharedWeaponObjectTemplate::FORCEATTACK, data.getDamageType(), damage);
 	else
 		damage = getDefenderToughnessModifier(defender, weapon->getAttackType(), weapon->getDamageType(), damage);
+	// woohoori 20190927 re-added force defense reduction
+	// Force Defense skillmod damage reduction
+	if (data.isForceAttack()) {
+		int forceDefense = defender->getSkillMod("force_defense");
 
+		if (forceDefense > 0)
+			damage *= 1.f / (1.f + ((float)forceDefense / 100.f));
+	}
 	// PvP Damage Reduction.
+	// woohoori TODO 20190927 next line needs to be modified if powers damage is reset re-add && !data.isForceAttack()
 	if (attacker->isPlayerCreature() && defender->isPlayerCreature()) {
 
 		if (weapon->getDamageType() == SharedWeaponObjectTemplate::LIGHTSABER)
@@ -1512,7 +1626,7 @@ float CombatManager::calculateDamage(TangibleObject* attacker, WeaponObject* wea
 
 	return damage;
 }
-
+// woohoori TODO 20190927 re-visit hit chance calculation (original swgemu line 1547)
 int CombatManager::getHitChance(TangibleObject* attacker, CreatureObject* targetCreature, WeaponObject* weapon, int damage, int accuracyBonus) {
 	int hitChance = 0;
 	int attackType = weapon->getAttackType();
@@ -1826,6 +1940,9 @@ void CombatManager::applyStates(CreatureObject* creature, CreatureObject* target
 
 			targetDefense /= 1.5;
 			targetDefense += playerLevel;
+			// woohoori 20190927 re-added original targetDefense cap
+			if (targetDefense > 90)
+				targetDefense = 90.f;
 
 			if (System::random(100) > accuracyMod - targetDefense)
 				failed = true;
@@ -1833,10 +1950,27 @@ void CombatManager::applyStates(CreatureObject* creature, CreatureObject* target
 			// no reason to apply jedi defenses if primary defense was successful
 			// and only perform second roll if the character is a Jedi
 			if (!failed && targetCreature->isPlayerCreature() && targetCreature->getPlayerObject()->isJedi()) {
-				targetDefense = 0.f;
+				// woohoori 20190927 removed lev reset targetDefense = 0.f;
 				const Vector<String>& jediMods = effect.getDefenderJediStateDefenseModifiers();
 				// second chance for jedi, roll against their special defense "jedi_state_defense"
-				for (int j = 0; j < jediMods.size(); j++)
+				// woohoori 20190927 replaced original mechanic
+				for (int j = 0; j < jediMods.size(); j++) {
+					targetDefense = targetCreature->getSkillMod(jediMods.get(j));
+
+					targetDefense /= 1.5;
+					targetDefense += playerLevel;
+
+					if (targetDefense > 90)
+						targetDefense = 90.f;
+
+					if (System::random(100) > accuracyMod - targetDefense) {
+						failed = true;
+						break;
+					}	
+				}
+			}
+		}
+				/*for (int j = 0; j < jediMods.size(); j++)
 					targetDefense += targetCreature->getSkillMod(jediMods.get(j));
 
 				targetDefense /= 1.5;
@@ -1845,7 +1979,7 @@ void CombatManager::applyStates(CreatureObject* creature, CreatureObject* target
 				if (System::random(100) > accuracyMod - targetDefense)
 					failed = true;
 			}
-		}
+		}*/
 
 		if (!failed) {
 			if (effectType == CommandEffect::NEXTATTACKDELAY) {
@@ -1913,10 +2047,10 @@ void CombatManager::applyStates(CreatureObject* creature, CreatureObject* target
 int CombatManager::calculatePoolsToDamage(int poolsToDamage) {
 	if (poolsToDamage & RANDOM) {
 		int rand = System::random(100);
-
-		if (rand <= 100) {
+		// woohoori 20190927 not sure of original code here. lev forced the calculate to always go to health
+		if (rand <= 75) { // woohoori change from 100 to 75
 			poolsToDamage = HEALTH;
-		} else if (rand < 99) {
+		} else if (rand <= 100) { // woohoori change from <99 to <=100
 			poolsToDamage = ACTION;
 		} else {
 			poolsToDamage = MIND;
@@ -1952,12 +2086,13 @@ int CombatManager::applyDamage(TangibleObject* attacker, WeaponObject* weapon, C
 
 	bool healthDamaged = (!!(poolsToDamage & HEALTH) && data.getHealthDamageMultiplier() > 0.0f);
 	bool actionDamaged = (!!(poolsToDamage & ACTION) && data.getActionDamageMultiplier() > 0.0f);
-	bool mindDamaged   = (!!(poolsToDamage & MIND)   && data.getMindDamageMultiplier()   > 0.0f);
+	// woohoori 20190927 removed unused Mind damage calc
+	// bool mindDamaged   = (!!(poolsToDamage & MIND)   && data.getMindDamageMultiplier()   > 0.0f);
 
-	int numberOfPoolsDamaged = (healthDamaged ? 1 : 0) + (actionDamaged ? 1 : 0) + (mindDamaged ? 1 : 0);
+	int numberOfPoolsDamaged = (healthDamaged ? 1 : 0) + (actionDamaged ? 1 : 0); // woohoori removed + (mindDamaged ? 1 : 0);
 	Vector<int> poolsToWound;
 
-	int numSpillOverPools = 3 - numberOfPoolsDamaged;
+	int numSpillOverPools = 2 - numberOfPoolsDamaged; // woohoori 20190927 changed 3 to 2
 
 	float spillMultPerPool = (0.1f * numSpillOverPools) / Math::max(numberOfPoolsDamaged, 1);
 	int totalSpillOver = 0; // Accumulate our total spill damage
@@ -2012,12 +2147,12 @@ int CombatManager::applyDamage(TangibleObject* attacker, WeaponObject* weapon, C
 		actionDamage -= spilledDamage;
 		totalSpillOver += spilledDamage;
 
-		defender->inflictDamage(attacker, CreatureAttribute::HEALTH, (int)actionDamage, true, xpType, true, true);
+		defender->inflictDamage(attacker, CreatureAttribute::ACTION, (int)actionDamage, true, xpType, true, true); // woohoori changed from HEALTH to ACTION
 
-		poolsToWound.add(CreatureAttribute::HEALTH);
+		poolsToWound.add(CreatureAttribute::ACTION); // woohoori changed from HEALTH to ACTION
 	}
-
-	if (mindDamaged) {
+	// woohoori 20190927 removed mind damage calc
+	/*if (mindDamaged) {
 		hitLocation = HIT_HEAD;
 		mindDamage = getArmorReduction(attacker, weapon, defender, damage * data.getMindDamageMultiplier(), hitLocation, data) * damageMultiplier;
 
@@ -2038,7 +2173,7 @@ int CombatManager::applyDamage(TangibleObject* attacker, WeaponObject* weapon, C
 		defender->inflictDamage(attacker, CreatureAttribute::HEALTH, (int)mindDamage, true, xpType, true, true);
 
 		poolsToWound.add(CreatureAttribute::HEALTH);
-	}
+	}*/
 
 	if (numSpillOverPools > 0) {
 		int spillDamagePerPool = (int)(totalSpillOver / numSpillOverPools); // Split the spill over damage between the pools damaged
@@ -2048,14 +2183,16 @@ int CombatManager::applyDamage(TangibleObject* attacker, WeaponObject* weapon, C
 		if ((poolsToDamage ^ 0x7) & HEALTH)
 			defender->inflictDamage(attacker, CreatureAttribute::HEALTH, (numSpillOverPools-- > 1 ? spillDamagePerPool : spillOverRemainder), true, xpType, true, true);
 		if ((poolsToDamage ^ 0x7) & ACTION)
+			defender->inflictDamage(attacker, CreatureAttribute::ACTION, (numSpillOverPools-- > 1 ? spillDamagePerPool : spillOverRemainder), true, xpType, true, true); // woohoori changed from HEALTH to ACTION
+		// woohoori 20190927 removed MIND calc
+		/*if ((poolsToDamage ^ 0x7) & MIND)
 			defender->inflictDamage(attacker, CreatureAttribute::HEALTH, (numSpillOverPools-- > 1 ? spillDamagePerPool : spillOverRemainder), true, xpType, true, true);
-		if ((poolsToDamage ^ 0x7) & MIND)
-			defender->inflictDamage(attacker, CreatureAttribute::HEALTH, (numSpillOverPools-- > 1 ? spillDamagePerPool : spillOverRemainder), true, xpType, true, true);
+			*/
 	}
 
 	int totalDamage =  (int) (healthDamage + actionDamage + mindDamage);
 	defender->notifyObservers(ObserverEventType::DAMAGERECEIVED, attacker, totalDamage);
-
+	// woohoori TODO 20190927 review
 	if (poolsToWound.size() > 0 && System::random(100) < ratio) {
 		int poolToWound = poolsToWound.get(System::random(poolsToWound.size() - 1));
 		defender->addWounds(poolToWound,     1, true);

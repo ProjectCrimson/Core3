@@ -16,7 +16,7 @@ public:
 
 		blockingCRCs.add(BuffCRC::JEDI_FORCE_ARMOR_2);
 
-		singleUseEventTypes.add(ObserverEventType::FORCEBUFFHIT);
+		singleUseEventTypes.add(ObserverEventType::FORCEABSORB);// woohoori 20190927 changed FORCEBUFFHIT
 
 		skillMods.put("force_armor", 35);
 	}

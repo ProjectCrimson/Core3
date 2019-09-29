@@ -14,7 +14,7 @@ public:
 
 		blockingCRCs.add(BuffCRC::JEDI_FORCE_ABSORB_2);
 
-		singleUseEventTypes.add(ObserverEventType::FORCEBUFFHIT);
+		singleUseEventTypes.add(ObserverEventType::FORCEABSORB); // woohoori 20190927 changed FORCEBUFFHIT
 
 		// Skill mods.
 		skillMods.put("force_absorb", 1);
