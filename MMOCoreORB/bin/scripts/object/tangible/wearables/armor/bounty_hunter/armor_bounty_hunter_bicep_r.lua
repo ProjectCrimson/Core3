@@ -104,14 +104,14 @@ object_tangible_wearables_armor_bounty_hunter_armor_bounty_hunter_bicep_r = obje
   -- LIGHT, MEDIUM, HEAVY
   rating = LIGHT,
 
-  kinetic = 70,
-  energy = 70,
-  electricity = 70,
-  stun = 70,
-  blast = 70,
-  heat = 70,
-  cold = 70,
-  acid = 70,
+  kinetic = 58,
+  energy = 58,
+  electricity = 58,
+  stun = 58,
+  blast = 58,
+  heat = 0,
+  cold = 0,
+  acid = 58,
   lightSaber = 0,
 
   --[[
