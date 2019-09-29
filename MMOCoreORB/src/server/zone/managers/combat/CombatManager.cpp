@@ -885,15 +885,15 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
 	}
 	// woohoori 20190926 Reduced defensive capabilities of lightsaber to encourage more tradeoff choices with defender tree
 	// default lightsaber toughness is 55 for MSaber - calc = 1.0 for /55, .75 for /74, .50 reduction for /110, .25 reduction for /220, 
-	// default jedi toughness is 45 for MDef - calc = 1.0 for /45, .50 reduction for /90, .25 reduction for /180, 
+	// default jedi toughness is 45 for MDef - calc = 1.0 for /45, .75 reduction for /60, .50 reduction for /90, .25 reduction for /180, 
 	int lightsaberToughness = defender->getSkillMod("lightsaber_toughness");
 	  if (lightsaberToughness > 0)
-		damage *= 1.f - (lightsaberToughness / 220.f); 
+		damage *= 1.f - (lightsaberToughness / 110.f); 
 	
 	int jediToughness = defender->getSkillMod("jedi_toughness");
 
 	if (damType != SharedWeaponObjectTemplate::LIGHTSABER && jediToughness >0) 
-		damage *= 1.f - (jediToughness / 110.f);
+		damage *= 1.f - (jediToughness / 60.f);
 
 	if (damType == SharedWeaponObjectTemplate::LIGHTSABER && jediToughness >0) 
 		damage *= 1.f - (jediToughness / 180.f); 
