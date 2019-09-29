@@ -271,7 +271,7 @@ lootableClothingAttachmentStatMods = {
   "force_failure_reduction",
   "force_repair_bonus",
   "lightsaber_toughness",
-  "jedi_toughness", -- woohoori 20190916 added back into table
+  --"jedi_toughness", -- woohoori 20190916 added back into table
   "forceintimidate_accuracy",
   "forceknockdown_accuracy",
   "forcelightning_accuracy",

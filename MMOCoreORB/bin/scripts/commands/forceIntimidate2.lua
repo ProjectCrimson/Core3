@@ -62,9 +62,9 @@ ForceIntimidate2Command = {
 		{},
 		{},
 		{ "force_defense" },
-		100,
+		85, -- woohoori reduced from 100
 		0,
-		45
+		30 -- reduced from 45
 	  )
 	},
 

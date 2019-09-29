@@ -880,23 +880,28 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
 	if (attackType == weapon->getAttackType()) {
 		for (int i = 0; i < defenseToughMods->size(); ++i) {
 			int toughMod = defender->getSkillMod(defenseToughMods->get(i));
-			if (toughMod > 0) damage *= 1.f - (toughMod / 300.f); // woohoori 20190926 default is /100 (higher reduction)
+			if (toughMod > 0) damage *= 1.f - (toughMod / 300.f); // woohoori 20190926 default is /100 (higher reduction) -
 		}
 	}
 	// woohoori 20190926 Reduced defensive capabilities of lightsaber to encourage more tradeoff choices with defender tree
 	// default lightsaber toughness is 55 for MSaber - calc = 1.0 for /55, .75 for /74, .50 reduction for /110, .25 reduction for /220, 
 	// default jedi toughness is 45 for MDef - calc = 1.0 for /45, .75 reduction for /60, .50 reduction for /90, .25 reduction for /180, 
+	// in the following calculations, jedi toughness stats are penalized by lightsaber toughness stats, but still allow a MSaber/MDef to reach 
 	int lightsaberToughness = defender->getSkillMod("lightsaber_toughness");
 	  if (lightsaberToughness > 0)
-		damage *= 1.f - (lightsaberToughness / 110.f); 
+		damage *= 1.f - (lightsaberToughness / 440.f); // woohoori LS toughness equates to 12.5% DR capped at 18.2% mitigation with tape
 	
+	// woohoori jedi toughness is balanced to compensate for saber defense
 	int jediToughness = defender->getSkillMod("jedi_toughness");
-
+	// woohoori if the jedi is not using a saber, JT gives approx. 17.33% mitigation at Novice, 10.67% per tree, and resullting in a cap of 60% mitigation. 
+	// Can be capped at 73.33% with robes +10 to JT
 	if (damType != SharedWeaponObjectTemplate::LIGHTSABER && jediToughness >0) 
-		damage *= 1.f - (jediToughness / 60.f);
+		damage *= 1.f - (jediToughness / 75.f); 
 
-	if (damType == SharedWeaponObjectTemplate::LIGHTSABER && jediToughness >0) 
-		damage *= 1.f - (jediToughness / 180.f); 
+	// woohoori JT with a saber equipped equates to 15% mitigation at Novice, adds 9.75% mitigation per tree, and resulting in approx 55% mitigation at Master. 
+	// Can be capped at 67% with robes +10 to JT
+	if (damType == SharedWeaponObjectTemplate::LIGHTSABER && jediToughness >0)  
+		damage *= 1.f - (jediToughness / 82.f); 
 
 	return damage < 0 ? 0 : damage;
 }
@@ -917,44 +922,16 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
 
 	int lightsaberToughness = defender->getSkillMod("lightsaber_toughness");
 	if (lightsaberToughness > 0)
-		damage *= 1.f - (lightsaberToughness / 200.f);
+		damage *= 1.f - (lightsaberToughness / 200.f); // woohoori equates to 27.5% reduction
 
 	int jediToughness = defender->getSkillMod("jedi_toughness");
 	if (jediToughness > 0)
-		damage *= 1.f - (jediToughness / 100.f);
+		damage *= 1.f - (jediToughness / 100.f); // woohoori equates to 45% reduction
 
 	return damage < 0 ? 0 : damage;
 }
 
 */
-
-// proposed Afterlife toughness modifier
-/*
-float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int attackType, int damType, float damage) {
-	ManagedReference<WeaponObject*> weapon = defender->getWeapon();
-
-	Vector<String>* defenseToughMods = weapon->getDefenderToughnessModifiers();
-
-	if (attackType == weapon->getAttackType()) {
-		for (int i = 0; i < defenseToughMods->size(); ++i) {
-			int toughMod = defender->getSkillMod(defenseToughMods->get(i));
-			if (toughMod > 0) damage *= 1.f - (toughMod / 100.f); // woohoori 20190928 changed from 300.f - need to test against non-jedi with defense mod on weapon
-		}
-	}
-
-	int lightsaberToughness = defender->getSkillMod("lightsaber_toughness");
-	if (lightsaberToughness > 0)
-		damage *= 1.f - (lightsaberToughness / 200.f); // woohoori 20190928 overrides the / 100.f 1:1 reduction from the above for/next loop for lightsaber_toughness TODO review reducing lightsaber_toughness skill mod
-
-	if (damType != SharedWeaponObjectTemplate::LIGHTSABER && jediToughness > 0) {
-		damage *= 1.f - (jediToughness / 100.f);
-	} else {
-		damage *= 1.f - (jediToughness / 200.f);
-		}
-
-	return damage < 0 ? 0 : damage;
-}*/
-
 
 
 float CombatManager::hitChanceEquation(float attackerAccuracy, float attackerRoll, float targetDefense, float defenderRoll) {

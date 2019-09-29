@@ -55,13 +55,13 @@ ForceKnockdown3Command = {
 	areaRange = 15,
 
 	stateEffects = {
-	  StateEffect(
-		KNOCKDOWN_EFFECT,
-		{ "knockdownRecovery", "lastKnockdown" },
-		{ "force_defense" },
-		{},
-		90,
-		0,
+	   StateEffect( 
+		KNOCKDOWN_EFFECT, 
+		{ "knockdownRecovery", "lastKnockdown" }, 
+		{ "knockdown_defense" }, 
+		{}, 
+		85, 
+		0, 
 		0
 	  )
 	},
