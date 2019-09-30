@@ -1501,7 +1501,7 @@ float CombatManager::doDroidDetonation(CreatureObject* droid, CreatureObject* de
 	}
 }
 // woohoori TODO 20190927 FRS Damage Mult function goes here
-
+// woohoori damage calculation for pvp and pve (npc)
 float CombatManager::calculateDamage(CreatureObject* attacker, WeaponObject* weapon, CreatureObject* defender, const CreatureAttackData& data) {
 	float damage = 0;
 	int diff = 0;
@@ -1527,6 +1527,7 @@ float CombatManager::calculateDamage(CreatureObject* attacker, WeaponObject* wea
 	damage = applyDamageModifiers(attacker, weapon, damage, data);
 
 	damage += defender->getSkillMod("private_damage_susceptibility");
+	// woohoori TODO 20190929 global damage modifiers
 	// woohoori TODO 20190927 review force powers modifications (replace the original calcs and modifiers)
 	/* if (attacker->isPlayerCreature()) {
 		if (data.isForceAttack() && !defender->isPlayerCreature())
@@ -1572,9 +1573,9 @@ float CombatManager::calculateDamage(CreatureObject* attacker, WeaponObject* wea
 	if (attacker->isPlayerCreature() && defender->isPlayerCreature()) {
 
 		if (weapon->getDamageType() == SharedWeaponObjectTemplate::LIGHTSABER)
-			damage *= 0.25;
+			damage *= 0.5; // woohoori 20190929 upped PVP damage from .25 to prevent forever fights
 		else
-			damage *= 0.25;
+			damage *= 0.5; // woohoori 20190929 upped PVP damage from .25 to prevent forever fights
 	}
 
 	if (damage < 1) damage = 1;
@@ -1583,7 +1584,7 @@ float CombatManager::calculateDamage(CreatureObject* attacker, WeaponObject* wea
 
 	return damage;
 }
-
+// woohoori damage calculation for non-npc object (e.g. turret)
 float CombatManager::calculateDamage(TangibleObject* attacker, WeaponObject* weapon, CreatureObject* defender, const CreatureAttackData& data) {
 	float damage = 0;
 
@@ -1718,7 +1719,7 @@ int CombatManager::getHitChance(TangibleObject* attacker, CreatureObject* target
 
 	return HIT;
 }
-
+// woohoori TODO 20190929 weapon speed
 float CombatManager::calculateWeaponAttackSpeed(CreatureObject* attacker, WeaponObject* weapon, float skillSpeedRatio) {
 	int speedMod = getSpeedModifier(attacker, weapon);
 	float jediSpeed = attacker->getSkillMod("combat_haste") / 100.0f;
@@ -2024,7 +2025,7 @@ void CombatManager::applyStates(CreatureObject* creature, CreatureObject* target
 int CombatManager::calculatePoolsToDamage(int poolsToDamage) {
 	if (poolsToDamage & RANDOM) {
 		int rand = System::random(100);
-		// woohoori 20190927 not sure of original code here. lev forced the calculate to always go to health
+		// woohoori TODO 20190927 not sure of original code here. lev forced the calculate to always go to health; need to research
 		if (rand <= 75) { // woohoori change from 100 to 75
 			poolsToDamage = HEALTH;
 		} else if (rand <= 100) { // woohoori change from <99 to <=100
