@@ -5531,9 +5531,8 @@ void PlayerManagerImplementation::unlockFRSForTesting(CreatureObject* player, in
 
 	SkillManager* skillManager = SkillManager::instance();
 
-	int glowyBadgeIds[] = { 12, 14, 15, 16, 17, 19, 20, 21, 23, 30, 38, 39, 71, 105, 106, 107 };
-
-	for (int i = 0; i < 16; i++) {
+	int glowyBadgeIds[] = {12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27, 28, 29, 30, 31, 38, 39, 75, 76, 77, 105, 106, 107, 108, 122, 123, 153, 156};  // woohoori 20191008 updated glowy badges for frog
+	for (int i = 0; i < 32; i++) { // woohoori 20191008 updated glowy badges for frog
 		ghost->awardBadge(glowyBadgeIds[i]);
 	}
 

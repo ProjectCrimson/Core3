@@ -70,7 +70,7 @@ public:
 
 		if (target == leader)
 			return true;
-
+		// woohoori TODO 20191008 review this code for Squad Leader Zone command
 		if (leader->getZone() != target->getZone())
 			return false;
 

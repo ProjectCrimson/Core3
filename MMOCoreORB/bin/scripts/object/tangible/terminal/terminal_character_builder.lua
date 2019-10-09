@@ -54,7 +54,16 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 	gameObjectType = 16400,
 	maxCondition = 0,
 	templateType = CHARACTERBUILDERTERMINAL,
-	glowyBadgeIds = {12, 14, 15, 16, 17, 19, 20, 21, 23, 30, 38, 39, 71, 105, 106, 107},
+	--glowyBadgeIds = {12, 14, 15, 16, 17, 19, 20, 21, 23, 30, 38, 39, 71, 105, 106, 107},
+	glowyBadgeIds = {12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27, 28, 29, 30, 31, 38, 39, 75, 76, 77, 105, 106, 107, 108, 122, 123, 153, 156},  -- woohoori 20191008 updated glowy badges for frog
+	-- 1 profession: 42-74, 129-138 -- using 45, 53
+	-- 5 content: 38, 39, 105-108, 112-120, 152, 154, 157 -- using 38, 39, 105, 106, 107
+	-- 3 Jedi POI's: 12, 23, 30, 156 -- using 12, 23, 30
+	-- 15 Easy POI's: 15, 17, 19-22, 24, 27-29, 31, 75-99, 140-146, 148-150 -- using 15, 17, 19, 20, 21, 22, 24, 27, 28, 29, 31, 75, 76, 77
+	-- 5 Dangerous POI's: 13, 14, 16, 18, 26, 153 -- using 13, 14, 16, 18, 26, 153
+	-- 2 Event: 32-37, 40-41, 109-111, 121-139, 147, 151, 155 -- using 122, 123
+
+
 	villageBranchUnlocks = {
 		"force_sensitive_combat_prowess_ranged_accuracy",
 		"force_sensitive_combat_prowess_ranged_speed",
