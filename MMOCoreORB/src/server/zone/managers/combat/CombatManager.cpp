@@ -2025,10 +2025,11 @@ void CombatManager::applyStates(CreatureObject* creature, CreatureObject* target
 int CombatManager::calculatePoolsToDamage(int poolsToDamage) {
 	if (poolsToDamage & RANDOM) {
 		int rand = System::random(100);
-		// woohoori TODO 20190927 not sure of original code here. lev forced the calculate to always go to health; need to research
-		if (rand <= 75) { // woohoori change from 100 to 75
+		// woohoori 20190927 not sure of original code here. lev forced the calculate to always go to health; need to research
+		// woohoori 20191008 result of change creates scenario where damage pool can result in action and player dies after taking action damage. reverting to Lev code
+		if (rand <= 100) { 
 			poolsToDamage = HEALTH;
-		} else if (rand <= 100) { // woohoori change from <99 to <=100
+		} else if (rand < 99) { // woohoori this line seems unnecessary as condition will never exist. leaving in place for future review
 			poolsToDamage = ACTION;
 		} else {
 			poolsToDamage = MIND;
@@ -2125,9 +2126,9 @@ int CombatManager::applyDamage(TangibleObject* attacker, WeaponObject* weapon, C
 		actionDamage -= spilledDamage;
 		totalSpillOver += spilledDamage;
 
-		defender->inflictDamage(attacker, CreatureAttribute::ACTION, (int)actionDamage, true, xpType, true, true); // woohoori changed from HEALTH to ACTION
+		defender->inflictDamage(attacker, CreatureAttribute::HEALTH, (int)actionDamage, true, xpType, true, true); // woohoori 20191008 reverted to HEALTH damage due to players dieing from action damage
 
-		poolsToWound.add(CreatureAttribute::ACTION); // woohoori changed from HEALTH to ACTION
+		poolsToWound.add(CreatureAttribute::HEALTH); // reverted to HEALTH
 	}
 	// woohoori 20190927 removed mind damage calc
 	/*if (mindDamaged) {
@@ -2161,7 +2162,7 @@ int CombatManager::applyDamage(TangibleObject* attacker, WeaponObject* weapon, C
 		if ((poolsToDamage ^ 0x7) & HEALTH)
 			defender->inflictDamage(attacker, CreatureAttribute::HEALTH, (numSpillOverPools-- > 1 ? spillDamagePerPool : spillOverRemainder), true, xpType, true, true);
 		if ((poolsToDamage ^ 0x7) & ACTION)
-			defender->inflictDamage(attacker, CreatureAttribute::ACTION, (numSpillOverPools-- > 1 ? spillDamagePerPool : spillOverRemainder), true, xpType, true, true); // woohoori changed from HEALTH to ACTION
+			defender->inflictDamage(attacker, CreatureAttribute::HEALTH, (numSpillOverPools-- > 1 ? spillDamagePerPool : spillOverRemainder), true, xpType, true, true); // woohoori reverted to health
 		// woohoori 20190927 removed MIND calc
 		/*if ((poolsToDamage ^ 0x7) & MIND)
 			defender->inflictDamage(attacker, CreatureAttribute::HEALTH, (numSpillOverPools-- > 1 ? spillDamagePerPool : spillOverRemainder), true, xpType, true, true);

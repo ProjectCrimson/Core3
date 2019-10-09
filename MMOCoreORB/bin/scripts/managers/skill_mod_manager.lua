@@ -67,5 +67,5 @@ disabledWearableSkillMods = {
 	"healing_ability",
 	"keep_creature",
 	"stored_pets",
-	"combat_medic_effectiveness",
+	-- "combat_medic_effectiveness", -- woohoori 20190929 re-enabled
 }

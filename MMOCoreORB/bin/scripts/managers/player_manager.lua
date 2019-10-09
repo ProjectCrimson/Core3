@@ -43,8 +43,8 @@
 -----------------------------------
 --GENERAL PLAYER SETTINGS
 -----------------------------------
--- woohoori 20190922 uppded from 6
-onlineCharactersPerAccount = 8 --How many characters are allowed online from a single account.
+-- woohoori 20190922 returned to original setting
+onlineCharactersPerAccount = 6 --How many characters are allowed online from a single account.
 allowSameAccountPvpRatingCredit = 0
 
 --Blue frog / GM buff values

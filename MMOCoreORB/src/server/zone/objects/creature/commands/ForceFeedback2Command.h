@@ -16,8 +16,8 @@ public:
 		overrideableCRCs.add(BuffCRC::JEDI_FORCE_FEEDBACK_1);
 
 		singleUseEventTypes.add(ObserverEventType::FORCEABSORB);// woohoori 20190927 changed FORCEBUFFHIT
-
-		skillMods.put("force_feedback", 25);
+		// woohoori TODO review
+		skillMods.put("force_feedback", 95); // woohoori 20191008 original value is 95, upped from 25
 
 	}
 

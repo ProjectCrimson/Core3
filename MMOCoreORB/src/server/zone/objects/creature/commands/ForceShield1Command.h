@@ -17,8 +17,8 @@ public:
 		blockingCRCs.add(BuffCRC::JEDI_FORCE_SHIELD_2);
 
 		singleUseEventTypes.add(ObserverEventType::FORCEABSORB);// woohoori 20190927 changed FORCEBUFFHIT
-
-		skillMods.put("force_shield", 55);
+		// woohoori TODO review
+		skillMods.put("force_shield", 25); // woohoori 20191008 reduced to original value from 55
 
 	}
 

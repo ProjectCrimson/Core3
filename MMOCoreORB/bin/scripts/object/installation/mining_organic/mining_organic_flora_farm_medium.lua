@@ -42,7 +42,7 @@
 
 
 object_installation_mining_organic_mining_organic_flora_farm_medium = object_installation_mining_organic_shared_mining_organic_flora_farm_medium:new {
-	lotSize = 2,
+	lotSize = 1,
 	-- woohoori 20190923 adjusted power rates
 	baseMaintenanceRate = 65,
 	-- SOLAR = 1; CHEMICAL = 2; FLORA = 3; GAS = 4; GEOTHERMAL = 5; MINERAL = 6; WATER = 7; WIND = 8; FUSION = 9;

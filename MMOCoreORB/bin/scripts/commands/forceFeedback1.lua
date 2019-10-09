@@ -43,8 +43,8 @@
 
 ForceFeedback1Command = {
     name = "forcefeedback1",
-    forceCost = 750,
-    duration = 20,
+    forceCost = 50, -- woohoori 20191008 changed lev value 750
+    duration = 30, -- woohoori 20191008 lev value 20
     --animationCRC = hashCode()
     clientEffect = "clienteffect/pl_force_feedback_self.cef",
     buffClass = SINGLE_USE_BUFF

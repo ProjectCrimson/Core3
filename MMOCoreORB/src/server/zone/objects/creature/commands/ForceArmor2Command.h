@@ -18,8 +18,8 @@ public:
 		overrideableCRCs.add(BuffCRC::JEDI_FORCE_ARMOR_1);
 
 		singleUseEventTypes.add(ObserverEventType::FORCEABSORB);// woohoori 20190927 changed FORCEBUFFHIT
-
-		skillMods.put("force_armor", 65);
+		// woohoori TODO review
+		skillMods.put("force_armor", 45); // woohoori 20191008 reduced to original value from 65
 	}
 
 	int doQueueCommand(CreatureObject* creature, const uint64& target, const UnicodeString& arguments) const {

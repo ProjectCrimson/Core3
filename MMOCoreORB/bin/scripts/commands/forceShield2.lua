@@ -43,8 +43,8 @@
 
 ForceShield2Command = {
         name = "forceshield2",
-        forceCost = 10,
-        duration = 1800,
+    	forceCost = 300, -- 20191008 woohoori upped from default of 150
+    	duration = 900, -- 20191008 reduced from default of 1800
         --animationCRC = hashCode()
         clientEffect = "clienteffect/pl_force_shield_self.cef",
         buffClass = SINGLE_USE_BUFF

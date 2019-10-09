@@ -18,8 +18,8 @@ public:
 		overrideableCRCs.add(BuffCRC::JEDI_FORCE_SHIELD_1);
 
 		singleUseEventTypes.add(ObserverEventType::FORCEABSORB);
-
-		skillMods.put("force_shield", 75);
+		// woohoori TODO review
+		skillMods.put("force_shield", 45);// woohoori 20191008 reduced to original value from 75
 
 	}
 

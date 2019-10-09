@@ -56,8 +56,8 @@ object_tangible_deed_generator_deed_generator_solar_deed = object_tangible_deed_
 	-- woohoori 20190923 adjusted BER values
 	--experimentalMin = {0, 0, 6.5, 150000, 1000},
 	--experimentalMax = {0, 0, 10, 200000, 1000},
-	experimentalMin = {0, 0, 5, 150000, 1000},
-	experimentalMax = {0, 0, 12, 200000, 1000},
+	experimentalMin = {0, 0, 10, 150000, 1000},
+	experimentalMax = {0, 0, 20, 200000, 1000},
 	experimentalPrecision = {0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 4},
 }
