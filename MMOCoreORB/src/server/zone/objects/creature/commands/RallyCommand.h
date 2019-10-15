@@ -76,6 +76,11 @@ public:
 			if (!isValidGroupAbilityTarget(leader, member, true))
 				continue;
 
+			// woohoori TODO 20191009 testing rally command on players not in range
+			// if (groupLeader->hasSkill("outdoors_squadleader_novice") && pos.distanceTo(attacker->getWorldPosition()) <= ZoneServer::CLOSEOBJECTRANGE)
+			// if (leader->distanceTo(member->getWorldPosition()) >= ZoneServer::CLOSEOBJECTRANGE)
+			//	continue;
+
 			Locker clocker(member, leader);
 
 			if (member != leader){

@@ -510,8 +510,8 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 							uint32 sec = res->getUnsignedInt(0);
 
 							Time timeVal(sec);
-
-							if (timeVal.miliDifference() < 3600000) {
+							// woohoori 20191014 adjusted character creation down from 1 hour (3600000) to 1 min
+							if (timeVal.miliDifference() < 60000) {
 								ErrorMessage* errMsg = new ErrorMessage("Create Error", "You are only permitted to create one character per hour. Repeat attempts prior to 1 hour elapsing will reset the timer.", 0x0);
 								client->sendMessage(errMsg);
 
@@ -528,8 +528,8 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 
 					if (lastCreatedCharacter.containsKey(accID)) {
 						Time lastCreatedTime = lastCreatedCharacter.get(accID);
-
-						if (lastCreatedTime.miliDifference() < 3600000) {
+						// woohoori 20191014 adjusted character creation down from 1 hour (3600000) to 1 min
+						if (lastCreatedTime.miliDifference() < 60000) {
 							ErrorMessage* errMsg = new ErrorMessage("Create Error", "You are only permitted to create one character per hour. Repeat attempts prior to 1 hour elapsing will reset the timer.", 0x0);
 							client->sendMessage(errMsg);
 
