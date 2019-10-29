@@ -1,4 +1,4 @@
-f-- 2019-02-24 Perkins - added Armorweaver Trainer to Mos Intrepidus,
+-- 2019-02-24 Perkins - added Armorweaver Trainer to Mos Intrepidus,
 --	and split mobile and scene objects
 TatooineMosIntrepidusScreenPlay = ScreenPlay:new {
 	numberOfActs = 1,
