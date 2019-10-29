@@ -33,8 +33,10 @@ end
 function TatooineMosIntrepidusScreenPlay:spawnMobiles()	
 	spawnMobile("tatooine", "trainer_armorweaver",1,-3013,0,-5690,270,0)
 	
+	pNpc = spawnMobile("tatooine", "imperial_recruiter",0,-3105,0,-5692,90,0)
+	self:setMoodString(pNpc, "npc_imperial")
+	
 	spawnMobile("tatooine", "rebel_recruiter", 0, -3105, 0, -5707, 90, 0)
-	spawnMobile("tatooine", "imperial_recruiter", 0, -3105, 0, -5693, 90, 0)	
 
 
 end
