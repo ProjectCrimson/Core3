@@ -1,4 +1,4 @@
--- 2019-02-24 Perkins - added Armorweaver Trainer to Mos Intrepidus,
+f-- 2019-02-24 Perkins - added Armorweaver Trainer to Mos Intrepidus,
 --	and split mobile and scene objects
 TatooineMosIntrepidusScreenPlay = ScreenPlay:new {
 	numberOfActs = 1,
@@ -33,7 +33,8 @@ end
 function TatooineMosIntrepidusScreenPlay:spawnMobiles()	
 	spawnMobile("tatooine", "trainer_armorweaver",1,-3013,0,-5690,270,0)
 	
-	spawnMobile("tatooine", "rebel_recruiter", 0, -3105, 0, -5707, 90, 0)	
+	spawnMobile("tatooine", "rebel_recruiter", 0, -3105, 0, -5707, 90, 0)
+	spawnMobile("tatooine", "imperial_recruiter", 0, -3105, 0, -5693, 90, 0)	
 
 
 end
