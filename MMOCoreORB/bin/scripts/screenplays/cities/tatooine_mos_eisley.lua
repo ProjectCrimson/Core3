@@ -1,3 +1,5 @@
+-- 2019-11-22 Perkins - removed character builder terminal
+
 TatooineMosEisleyScreenPlay = CityScreenPlay:new {
 	numberOfActs = 1,
 
@@ -77,10 +79,6 @@ function TatooineMosEisleyScreenPlay:spawnSceneObjects()
 	spawnSceneObject(self.planet, "object/static/structure/general/droid_21bmedical_powerdown.iff", -24.2, 1.0, -9.2, 1188001, math.rad(70) )
 	
 	spawnSceneObject(self.planet, "object/tangible/terminal/terminal_event_buffs.iff", -13.2, 0.2, 0.0, 9655496, math.rad(90) )
-
-	-- Perkins 2019-09-22 Blue Frog for beta testing
-	spawnSceneObject(self.planet, "object/tangible/terminal/terminal_character_builder.iff", 3529, 5, -4803, 0, math.rad(270))
-
 end
 
 function TatooineMosEisleyScreenPlay:spawnMobiles()

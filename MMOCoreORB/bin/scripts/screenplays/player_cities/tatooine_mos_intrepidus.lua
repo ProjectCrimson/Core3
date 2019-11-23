@@ -1,5 +1,6 @@
--- 2019-02-24 Perkins - added Armorweaver Trainer to Mos Intrepidus,
+-- 2019-09-24 Perkins - added Armorweaver Trainer to Mos Intrepidus,
 --	and split mobile and scene objects
+-- 2019-11-22 Perkins - removed character terminal
 TatooineMosIntrepidusScreenPlay = ScreenPlay:new {
 	numberOfActs = 1,
 	screenplayName = "TatooineMosIntrepidusScreenPlay"
@@ -15,7 +16,6 @@ function TatooineMosIntrepidusScreenPlay:start()
 end
 
 function TatooineMosIntrepidusScreenPlay:spawnSceneObjects()	
-	spawnSceneObject("tatooine", "object/tangible/terminal/terminal_character_builder.iff", -3090, 0, -5700, 0, math.rad(90) )
 	-- woohoori 20192027 added spawns for lucky despot cantina elevator terminals
 	-- Despot Cantina Lower Floor
 	spawnSceneObject("tatooine", "object/tangible/terminal/terminal_elevator_down.iff", -7.5, 9, -21.4, 9995581, 1, 0, 0, 0) --Right side
