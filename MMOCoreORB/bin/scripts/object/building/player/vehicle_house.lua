@@ -42,12 +42,12 @@
 
 
 object_building_player_vehicle_house = object_building_player_shared_vehicle_house:new {
-	lotSize = 5,
+	lotSize = 2,
 	constructionMarker = "object/building/player/construction/construction_player_house_corellia_large_style_01.iff",
 	length = 5,
 	width = 7,
-	baseMaintenanceRate = 50,
-	allowedZones = {"dantooine", "lok", "tatooine", "naboo", "rori", "corellia", "talus", "chandrila", "kaas", "moraband", "hutta"},
+	baseMaintenanceRate = 20,
+	allowedZones = {"dantooine", "lok", "tatooine", "naboo", "rori", "corellia", "talus", "chandrila", "kaas", "moraband", "hutta", "lothal"},
 	publicStructure = 0,
 	skillMods = {
 		{"private_medical_rating", 100},

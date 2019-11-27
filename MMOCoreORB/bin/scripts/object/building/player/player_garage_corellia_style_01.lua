@@ -44,9 +44,9 @@
 object_building_player_player_garage_corellia_style_01 = object_building_player_shared_player_garage_corellia_style_01:new {
 	gameObjectType = 4102,
 	planetMapCategory = "garage",
-	lotSize = 0,
-	baseMaintenanceRate = 0,
-	allowedZones = {"dantooine", "lok", "tatooine", "naboo", "rori", "corellia", "talus", "chandrila", "kaas", "moraband", "hutta"},
+	lotSize = 2,
+	baseMaintenanceRate = 20,
+	allowedZones = {"dantooine", "lok", "tatooine", "naboo", "rori", "corellia", "talus", "chandrila", "kaas", "moraband", "hutta", "lothal"},
 	cityRankRequired = 2,
 	abilityRequired = "place_garage",
 	uniqueStructure = true,

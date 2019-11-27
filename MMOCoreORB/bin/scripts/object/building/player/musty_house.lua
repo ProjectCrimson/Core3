@@ -42,11 +42,11 @@
 
 
 object_building_player_musty_house = object_building_player_shared_musty_house:new {
-lotSize = 5,
+lotSize = 4,
 	constructionMarker = "object/building/player/construction/construction_player_house_corellia_large_style_01.iff",
 	length = 5,
 	width = 7,
-	baseMaintenanceRate = 50,
+	baseMaintenanceRate = 35,
 	allowedZones = {"dantooine", "lok", "tatooine", "naboo", "rori", "corellia", "talus", "chandrila", "kaas", "moraband", "hutta", "lothal"},
 	publicStructure = 0,
 	skillMods = {
