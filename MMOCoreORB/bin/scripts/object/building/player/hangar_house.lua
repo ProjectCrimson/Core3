@@ -42,9 +42,9 @@
 
 
 object_building_player_hangar_house = object_building_player_shared_hangar_house:new {
-  lotSize = 2,
-  baseMaintenanceRate = 10,
-  allowedZones = {"dantooine", "lok", "tatooine", "naboo", "rori", "corellia", "talus", "chandrila", "kaas", "moraband", "hutta"},
+  lotSize = 5,
+  baseMaintenanceRate = 50,
+  allowedZones = {"dantooine", "lok", "tatooine", "naboo", "rori", "corellia", "talus", "chandrila", "kaas", "moraband", "hutta", "lothal"},
   publicStructure = 0,
   skillMods = {
     {"private_medical_rating", 100},

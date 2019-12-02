@@ -42,8 +42,8 @@
 
 
 object_building_player_city_cantina_corellia = object_building_player_city_shared_cantina_corellia:new {
-	lotSize = 5,
-	baseMaintenanceRate = 50,
+	lotSize = 4,
+	baseMaintenanceRate = 40,
 	allowedZones = {"dantooine", "lok", "tatooine", "naboo", "rori", "corellia", "talus", "chandrila", "kaas", "moraband", "hutta", "lothal"},
 	length = 7,
 	width = 7,
