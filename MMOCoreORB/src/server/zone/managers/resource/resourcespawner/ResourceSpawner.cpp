@@ -1158,7 +1158,7 @@ void ResourceSpawner::sendSampleResults(CreatureObject* player, const float dens
 	}
 	// woohoori 20191202 reducted the minimum for trace amounts to support novice surveyors
 	//  if (unitsExtracted < 2) {
-	if (unitsExtracted < 1) {}
+	if (unitsExtracted < 1) {
 		// Send message to player about trace amounts
 		StringIdChatParameter message("survey", "trace_amount");
 		message.setTO(resname);
