@@ -27,11 +27,15 @@ function TatooineMosIntrepidusScreenPlay:spawnSceneObjects()
 	-- Despot Cantina Upper Floor
 	spawnSceneObject("tatooine", "object/tangible/terminal/terminal_elevator_up.iff", 13.5, 7, -17.95, 9995584, 1, 0, 0, 0)
 	spawnSceneObject("tatooine", "object/tangible/terminal/terminal_elevator_down.iff", 13.5, 15, -17.95, 9995584, 1, 0, 0, 0)
+	-- woohoori 20191105 test buff terminal
+	-- Buff Terminal
+	spawnSceneObject("tatooine", "object/tangible/terminal/terminal_event_buffs.iff", -3109, 0, -5644, 0, math.rad(45) )
 
 end
 
 function TatooineMosIntrepidusScreenPlay:spawnMobiles()	
 	spawnMobile("tatooine", "trainer_armorweaver",1,-3013,0,-5690,270,0)
+
 	
 	pNpc = spawnMobile("tatooine", "imperial_recruiter",0,-3105,0,-5692,90,0)
 	self:setMoodString(pNpc, "npc_imperial")
