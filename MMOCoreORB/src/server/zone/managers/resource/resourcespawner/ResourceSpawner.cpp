@@ -1126,7 +1126,17 @@ void ResourceSpawner::sendSampleResults(CreatureObject* player, const float dens
 	float cityMultiplier = 1.f + player->getSkillMod("private_spec_samplesize") / 100.f;
 
 	// woohoori 20191202 reduced the novice surveyor penalty for unit extraction calculations
-	int unitsExtracted = maxUnitsExtracted * (float(surveySkill) / 50.0f) * samplingMultiplier * cityMultiplier;
+	int unitsExtracted = 0;
+	if (surveySkill < 36 ) {
+		unitsExtracted = maxUnitsExtracted * (float(surveySkill) / 30.0f) * samplingMultiplier * cityMultiplier;
+	} else {
+		if (surveySkill < 76 ) {
+		unitsExtracted = maxUnitsExtracted * (float(surveySkill) / 60.0f) * samplingMultiplier * cityMultiplier;
+		} else {
+			unitsExtracted = maxUnitsExtracted * (float(surveySkill) / 100.0f) * samplingMultiplier * cityMultiplier;
+		}
+	}
+	
 	// int unitsExtracted = maxUnitsExtracted * (float(surveySkill) / 100.0f) * samplingMultiplier * cityMultiplier;
 	int xpcap = 40;
 
