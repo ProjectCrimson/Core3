@@ -1,6 +1,7 @@
 -- 2019-09-24 Perkins - added Armorweaver Trainer to Mos Intrepidus,
 --	and split mobile and scene objects
 -- 2019-11-22 Perkins - removed character terminal
+-- 2019-12-03 Perkins - setup more NPCs
 TatooineMosIntrepidusScreenPlay = ScreenPlay:new {
 	numberOfActs = 1,
 	screenplayName = "TatooineMosIntrepidusScreenPlay"
@@ -34,13 +35,23 @@ function TatooineMosIntrepidusScreenPlay:spawnSceneObjects()
 end
 
 function TatooineMosIntrepidusScreenPlay:spawnMobiles()	
+	-- Armorweaver trainer
 	spawnMobile("tatooine", "trainer_armorweaver",1,-3013,0,-5690,270,0)
-
 	
-	pNpc = spawnMobile("tatooine", "imperial_recruiter",0,-3105,0,-5692,90,0)
+	-- Imperial recruiter
+	pNpc = spawnMobile("tatooine", "imperial_recruiter",0,-3103,0,-5686,90,0)
 	self:setMoodString(pNpc, "npc_imperial")
 	
-	spawnMobile("tatooine", "rebel_recruiter", 0, -3105, 0, -5707, 90, 0)
+	-- Rebel recruiter
+	spawnMobile("tatooine", "rebel_recruiter",0,-3103,0,-5729,90,0)
 
+	-- Spynet operatives
+	spawnMobile("tatooine", "informant_npc_lvl_1",0,-2947,0,-5717,270,0)
 
+	-- Perkins - put the L2 guy on the Lucky Despot roof until I figure
+	-- out how to position the NPC in the parent cell
+	spawnMobile("tatooine", "informant_npc_lvl_2",0,-3028,15,-5605,270,0)		
+	--spawnMobile("tatooine", "informant_npc_lvl_2",0,8,-14,8,0,9995537)	
+
+	spawnMobile("tatooine", "informant_npc_lvl_3",0,-3126,0,-5694,90,0)	
 end
