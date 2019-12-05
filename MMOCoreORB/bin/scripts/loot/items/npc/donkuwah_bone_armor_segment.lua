@@ -7,7 +7,9 @@ donkuwah_bone_armor_segment = {
 	directObjectTemplate = "object/tangible/component/armor/armor_segment_bone_donkuwah.iff",
 	craftingValues = {
 	    {"armor_special_type",0,0,0},
-	    {"armor_effectiveness",1,8,10},
+	    -- woohoori 12052019 updated to support armor revamp
+	    -- {"armor_effectiveness",1,8,10},
+	    {"armor_effectiveness",20,28,10},
 	    {"armor_integrity",100,500,0},
 		{"heateffectiveness",2,7,10},
 		{"coldeffectiveness",2,8,10},
@@ -15,7 +17,8 @@ donkuwah_bone_armor_segment = {
 		{"armor_health_encumbrance",15,0,0},
 		{"armor_action_encumbrance",15,0,0},
 		{"armor_mind_encumbrance",15,0,0},
-		{"useCount",1,10,0},
+		-- {"useCount",1,10,0},
+		{"useCount",7,12,0},
 	},
 	customizationStringNames = {},
 	customizationValues = {}
