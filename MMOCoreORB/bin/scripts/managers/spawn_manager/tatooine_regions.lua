@@ -13,6 +13,10 @@
 require("scripts.managers.spawn_manager.regions")
 
 tatooine_regions = {
+	-- woohoori 12042019 adding nobuildzone around Mos Intrpedius Lucky Despot and hotel 
+	{"Mos_Intrepidus_Cantina", -3037, -5595, {1, 90}, NOSPAWNAREA + NOBUILDZONEAREA},
+	{"Mos_Intrepidus_Hotel", -2895, -5700, {1, 50}, NOSPAWNAREA + NOBUILDZONEAREA},
+
 	{"alkhara_camp", -1260, 5463, {1, 30}, NOSPAWNAREA + NOBUILDZONEAREA},
 	{"anchorhead", 0, 0, {1, 0}, UNDEFINEDAREA},
 	{"anchorhead_easy_newbie", 0, -5350, {1, 700}, SPAWNAREA + NOWORLDSPAWNAREA, {"tatooine_easy"}, 96},
