@@ -15,7 +15,7 @@ fambaa_hide_segment = {
 		{"armor_action_encumbrance",0,0,0},
 		{"armor_mind_encumbrance",0,0,0},
 		-- {"useCount",1,10,0},
-		{"useCount",4,8,0},
+		{"useCount",7,12,0},
 	},
 	customizationStringNames = {},
 	customizationValues = {}
