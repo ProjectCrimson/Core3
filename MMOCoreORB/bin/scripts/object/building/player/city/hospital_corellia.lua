@@ -51,7 +51,7 @@ object_building_player_city_hospital_corellia = object_building_player_city_shar
     {"private_safe_logout", 1}
 	},
 	lotSize = 3,
-	baseMaintenanceRate = 50,
+	baseMaintenanceRate = 40,
 	planetMapCategory = "medicalcenter",
 	allowedZones = {"dantooine", "lok", "tatooine", "naboo", "rori", "corellia", "talus", "chandrila", "kaas", "moraband", "hutta", "lothal"},
 	length = 5,

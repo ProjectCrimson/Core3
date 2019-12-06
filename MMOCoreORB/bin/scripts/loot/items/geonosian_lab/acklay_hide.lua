@@ -7,12 +7,15 @@ acklay_hide = {
 	directObjectTemplate = "object/tangible/component/armor/armor_segment_padded_acklay.iff",
 	craftingValues = {
 		{"armor_special_type",0,0,0},
-		{"armor_effectiveness",8,20,10},
+		-- woohoori 12052019 adjusted armor effectiveness and qty for armor revamp
+		-- {"armor_effectiveness",8,20,10},
+		{"armor_effectiveness",20,30,10},
 		{"armor_integrity",15000,25000,0},
 		{"heateffectiveness",8,19,10},
 		{"energyeffectiveness",8,19,10},
 		{"hitpoints",0,0,0,0},
-		{"useCount",4,12,0},
+		-- {"useCount",4,12,0},
+		{"useCount",7,12,0},
 	},
 	customizationStringNames = {},
 	customizationValues = {}

@@ -7,7 +7,9 @@ rancor_hides = {
 	directObjectTemplate = "object/tangible/component/armor/armor_segment_enhancement_rancor.iff",
 	craftingValues = {
 		{"armor_special_type",0,0,0},
+		-- woohoori 12052019 adjusted armor effectiveness and qty for armor revamp
 		{"armor_effectiveness",1,5,10},
+		-- {"armor_effectiveness",20,25,10},
 		{"armor_integrity",1500,3000,0},		
 		{"heateffectiveness",1,6,10},
 		{"coldeffectiveness",1,6,10},
@@ -15,6 +17,7 @@ rancor_hides = {
 		{"armor_action_encumbrance",0,0,0},
 		{"armor_mind_encumbrance",0,0,0},
 		{"useCount",1,10,0},
+		-- {"useCount",7,12,0},
 	},
 	customizationStringNames = {},
 	customizationValues = {}

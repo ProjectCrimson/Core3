@@ -7,14 +7,17 @@ sharnaff_plating_segment = {
 	directObjectTemplate = "object/tangible/component/armor/armor_segment_chitin_sharnaff.iff",
 	craftingValues = {
 		{"armor_special_type",0,0,0},
-		{"armor_effectiveness",7,15,10},
+		-- woohoori 12052019 adjusted armor effectiveness and qty for armor revamp
+		-- {"armor_effectiveness",7,15,10},
+		{"armor_effectiveness",20,30,10},
 		{"armor_integrity",800,1500,0},
 		{"acideffectiveness",3,11,10},
 		{"heateffectiveness",3,11,10},
 		{"coldeffectiveness",3,11,10},
 		{"armor_action_encumbrance",0,0,0},
 		{"armor_mind_encumbrance",0,0,0},
-		{"useCount",1,10,0},
+		-- {"useCount",1,10,0},
+		{"useCount",7,12,0},
 	},
 	customizationStringNames = {},
 	customizationValues = {}

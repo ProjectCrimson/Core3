@@ -7,13 +7,16 @@ kimogila_bone_segment = {
 	directObjectTemplate = "object/tangible/component/armor/armor_segment_bone_kimogila.iff",
 	craftingValues = {
 		{"armor_special_type",0,0,0},
-		{"armor_effectiveness",3,15,10},
+		-- woohoori 12052019 adjusted armor effectiveness and qty for armor revamp
+		-- {"armor_effectiveness",3,15,10},
+		{"armor_effectiveness",20,30,10},
 		{"heateffectiveness",3,12,10},
 		{"coldeffectiveness",3,12,10},
 		{"armor_integrity",700,1400,0},
 		{"armor_action_encumbrance",0,0,0},
 		{"armor_mind_encumbrance",0,0,0},
-		{"useCount",1,10,0},
+		-- {"useCount",1,10,0},
+		{"useCount",4,8,0},
 	},
 	customizationStringNames = {},
 	customizationValues = {}

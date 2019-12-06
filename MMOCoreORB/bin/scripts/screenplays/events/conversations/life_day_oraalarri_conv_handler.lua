@@ -12,8 +12,8 @@ function lifeDayOraalarriConvoHandler:getInitialScreen(pPlayer, pNpc, pConvTempl
 		return convoTemplate:getScreen("greetings")
 	elseif readData(playerID .. ":lifeDayState") == 3 then
 		local pGhost = CreatureObject(pPlayer):getPlayerObject()
-
-		if pGhost ~= nil and PlayerObject(pGhost):getCharacterAgeInDays() >= 30  then
+		-- woohoori 12052019 reduced minimum life day character age to 3 from default of 30
+		if pGhost ~= nil and PlayerObject(pGhost):getCharacterAgeInDays() >= 3  then
 			return convoTemplate:getScreen("have_spoken")
 		else
 			return convoTemplate:getScreen("no_gift")

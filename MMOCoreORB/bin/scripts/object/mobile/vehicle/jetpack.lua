@@ -43,7 +43,8 @@
 
 object_mobile_vehicle_jetpack = object_mobile_vehicle_shared_jetpack:new {
 	templateType = VEHICLE,
-	decayRate = 35, -- Damage tick per decay cycle
+	-- woohoori 12042019 decay rate moved to Tier 3
+	decayRate = 5, -- Damage tick per decay cycle
 	decayCycle = 600 -- Time in seconds per cycle
 }
 

@@ -1,7 +1,7 @@
 object_building_player_city_barn_no_planet_restriction = object_building_player_city_shared_barn_no_planet_restriction:new {
 	lotSize = 2,
-	baseMaintenanceRate = 50,
-	allowedZones = {"corellia", "dantooine", "lok", "naboo", "rori", "talus", "tatooine"},
+	baseMaintenanceRate = 10,
+	allowedZones = {"dantooine", "lok", "tatooine", "naboo", "rori", "corellia", "talus", "chandrila", "kaas", "moraband", "hutta", "lothal"},
 	publicStructure = 0,
 	skillMods = {
 		{"private_medical_rating", 100},

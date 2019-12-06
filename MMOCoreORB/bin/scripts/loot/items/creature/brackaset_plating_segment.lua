@@ -7,10 +7,13 @@ brackaset_plating_segment = {
 	directObjectTemplate = "object/tangible/component/armor/armor_segment_chitin_brackaset.iff",
 	craftingValues = {
 		{"armor_special_type",0,0,0},
-		{"armor_effectiveness",9,24,10},
+		-- woohoori 12052019 adjusted armor effectiveness and qty for armor revamp
+		-- {"armor_effectiveness",9,24,10},
+		{"armor_effectiveness",20,30,10},
 		{"coldeffectiveness",4,14,10},
 		{"armor_integrity",10000,15000,0},
-		{"useCount",5,18,0},
+		-- {"useCount",5,18,0},
+		{"useCount",7,12,0},
 	},
 	customizationStringNames = {},
 	customizationValues = {}

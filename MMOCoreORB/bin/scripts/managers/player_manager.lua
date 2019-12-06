@@ -49,7 +49,8 @@ allowSameAccountPvpRatingCredit = 0
 
 --Blue frog / GM buff values
 performanceBuff = 2000
-medicalBuff = 2000
+-- woohoori 20191105 reduced base buff from buff bot
+medicalBuff = 1750
 performanceDuration = 7200 -- in seconds
 medicalDuration = 7200 -- in seconds
 

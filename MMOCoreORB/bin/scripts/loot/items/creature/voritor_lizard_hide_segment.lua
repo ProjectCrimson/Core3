@@ -7,12 +7,15 @@ voritor_lizard_hide_segment = {
 	directObjectTemplate = "object/tangible/component/armor/armor_segment_bone_voritor_lizard.iff",
 	craftingValues = {
 		{"armor_special_type",0,0,0},
-		{"armor_effectiveness",2,14,10},
+		-- woohoori 12052019 adjusted armor effectiveness and qty for armor revamp
+		-- {"armor_effectiveness",2,14,10},
+		{"armor_effectiveness",20,25,10},
 		{"energyeffectiveness",2,14,10},
 		{"kineticeffectiveness",2,14,10},
 		{"armor_action_encumbrance",0,0,0},
 		{"armor_mind_encumbrance",0,0,0},
-		{"useCount",1,10,0},
+		-- {"useCount",1,10,0},
+		{"useCount",7,12,0},
 	},
 	customizationStringNames = {},
 	customizationValues = {}

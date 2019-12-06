@@ -7,9 +7,12 @@ krayt_composite_segment = {
 	directObjectTemplate = "object/tangible/component/armor/armor_segment_composite_krayt.iff",
 	craftingValues = {
 		{"armor_special_type",0,0,0},
-		{"armor_effectiveness",9,24,10},
+		-- woohoori 12052019 adjusted armor effectiveness and qty for armor revamp
+		-- {"armor_effectiveness",9,24,10},
+		{"armor_effectiveness",20,35,10},
 		{"armor_integrity",10000,15000,0},
-		{"useCount",5,18,0},
+		-- {"useCount",5,18,0},
+		{"useCount",4,8,0},
 	},
 	customizationStringNames = {},
 	customizationValues = {}

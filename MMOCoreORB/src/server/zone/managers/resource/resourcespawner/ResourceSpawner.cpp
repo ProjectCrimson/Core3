@@ -1125,7 +1125,19 @@ void ResourceSpawner::sendSampleResults(CreatureObject* player, const float dens
 
 	float cityMultiplier = 1.f + player->getSkillMod("private_spec_samplesize") / 100.f;
 
-	int unitsExtracted = maxUnitsExtracted * (float(surveySkill) / 100.0f) * samplingMultiplier * cityMultiplier;
+	// woohoori 20191202 reduced the novice surveyor penalty for unit extraction calculations
+	int unitsExtracted = 0;
+	if (surveySkill < 36 ) {
+		unitsExtracted = maxUnitsExtracted * (float(surveySkill) / 30.0f) * samplingMultiplier * cityMultiplier;
+	} else {
+		if (surveySkill < 76 ) {
+		unitsExtracted = maxUnitsExtracted * (float(surveySkill) / 60.0f) * samplingMultiplier * cityMultiplier;
+		} else {
+			unitsExtracted = maxUnitsExtracted * (float(surveySkill) / 100.0f) * samplingMultiplier * cityMultiplier;
+		}
+	}
+	
+	// int unitsExtracted = maxUnitsExtracted * (float(surveySkill) / 100.0f) * samplingMultiplier * cityMultiplier;
 	int xpcap = 40;
 
 	if (session->tryGamble()) {
@@ -1154,9 +1166,9 @@ void ResourceSpawner::sendSampleResults(CreatureObject* player, const float dens
 		session->clearRichSampleLocation();
 		xpcap = 50;
 	}
-
-	if (unitsExtracted < 2) {
-
+	// woohoori 20191202 reducted the minimum for trace amounts to support novice surveyors
+	//  if (unitsExtracted < 2) {
+	if (unitsExtracted < 1) {
 		// Send message to player about trace amounts
 		StringIdChatParameter message("survey", "trace_amount");
 		message.setTO(resname);

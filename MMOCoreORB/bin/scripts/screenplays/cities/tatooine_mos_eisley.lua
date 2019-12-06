@@ -1,3 +1,5 @@
+-- 2019-11-22 Perkins - removed character builder terminal
+
 TatooineMosEisleyScreenPlay = CityScreenPlay:new {
 	numberOfActs = 1,
 
@@ -60,13 +62,12 @@ function TatooineMosEisleyScreenPlay:spawnSceneObjects()
 	spawnSceneObject(self.planet, "object/tangible/crafting/station/public_space_station.iff", 3520.67, 5, -4822.73, 0, math.rad(40) )
 
 	--Lower Floor
+	spawnSceneObject(self.planet, "object/tangible/terminal/terminal_elevator_down.iff", -7.5, 9, -21.4, 1076969, 1, 0, 0, 0) --Right side
+	spawnSceneObject(self.planet, "object/tangible/terminal/terminal_elevator_up.iff", -7.5, 0, -21.4, 1076969, 1, 0, 0, 0)
 	spawnSceneObject(self.planet, "object/tangible/terminal/terminal_elevator_down.iff", -3.5, 9, -21.4, 1076970, 1, 0, 0, 0) --Middle
 	spawnSceneObject(self.planet, "object/tangible/terminal/terminal_elevator_up.iff", -3.5, 0, -21.4, 1076970, 1, 0, 0, 0)
 	spawnSceneObject(self.planet, "object/tangible/terminal/terminal_elevator_down.iff", .5, 9, -21.4, 1076971, 1, 0, 0, 0) --Left side
 	spawnSceneObject(self.planet, "object/tangible/terminal/terminal_elevator_up.iff", .5, 0, -21.4, 1076971, 1, 0, 0, 0)
-	spawnSceneObject(self.planet, "object/tangible/terminal/terminal_elevator_down.iff", -7.5, 9, -21.4, 1076969, 1, 0, 0, 0) --Right side
-	spawnSceneObject(self.planet, "object/tangible/terminal/terminal_elevator_up.iff", -7.5, 0, -21.4, 1076969, 1, 0, 0, 0)
-
 	--Upper Floor
 	spawnSceneObject(self.planet, "object/tangible/terminal/terminal_elevator_up.iff", 13.5, 7, -17.95, 1076972, 1, 0, 0, 0)
 	spawnSceneObject(self.planet, "object/tangible/terminal/terminal_elevator_down.iff", 13.5, 15, -17.95, 1076972, 1, 0, 0, 0)
@@ -78,10 +79,6 @@ function TatooineMosEisleyScreenPlay:spawnSceneObjects()
 	spawnSceneObject(self.planet, "object/static/structure/general/droid_21bmedical_powerdown.iff", -24.2, 1.0, -9.2, 1188001, math.rad(70) )
 	
 	spawnSceneObject(self.planet, "object/tangible/terminal/terminal_event_buffs.iff", -13.2, 0.2, 0.0, 9655496, math.rad(90) )
-
-	-- Perkins 2019-09-22 Blue Frog for beta testing
-	spawnSceneObject(self.planet, "object/tangible/terminal/terminal_character_builder.iff", 3529, 5, -4803, 0, math.rad(270))
-
 end
 
 function TatooineMosEisleyScreenPlay:spawnMobiles()
