@@ -1,21 +1,15 @@
+-- 2019-12-07 Perkins - adjusted badge requirement for village unlock
 local ObjectManager = require("managers.object.object_manager")
 local Logger = require("utils.logger")
 
 Glowing = ScreenPlay:new {
 	requiredBadges = {
-		-- woohoori 12052019 these are not the actual unlock values on live
-		-- { type = "exploration_jedi", amount = 3 },
-		-- { type = "exploration_dangerous", amount = 5 },
-		-- { type = "exploration_easy", amount = 15 },
-		-- { type = "master", amount = 1 },
-		-- { type = "content", amount = 5 },
-		-- { type = "events", amount = 2 },
-		{ type = "exploration_jedi", amount = 10 },
-		{ type = "exploration_dangerous", amount = 25 },
-		{ type = "exploration_easy", amount = 60 },
-		{ type = "master", amount = 30 },
-		{ type = "content", amount = 20 },
-		{ type = "events", amount = 15 },
+		{ type = "exploration_jedi", amount = 4 },
+		{ type = "exploration_dangerous", amount = 5 },
+		{ type = "exploration_easy", amount = 20 },
+		{ type = "master", amount = 3 },
+		{ type = "content", amount = 10 },
+		{ type = "events", amount = 5 },
 	}
 }
 
