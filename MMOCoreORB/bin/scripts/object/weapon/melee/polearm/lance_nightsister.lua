@@ -40,7 +40,7 @@
 --gives permission to release a modified version without this exception; 
 --this exception also makes it possible to release a modified version 
 
-
+-- 2019-12-08 Perkins - Adjusted damage range to be in-line with other melee weapons
 object_weapon_melee_polearm_lance_nightsister = object_weapon_melee_polearm_shared_lance_nightsister:new {
 
 	playerRaces = { "object/creature/player/bothan_male.iff",
@@ -114,8 +114,8 @@ object_weapon_melee_polearm_lance_nightsister = object_weapon_melee_polearm_shar
 	maxRange = 6,
 	maxRangeAccuracy = 7,
 
-	minDamage = 110,
-	maxDamage = 414,
+	minDamage = 480,
+	maxDamage = 560,
 
 	attackSpeed = 1,
 
@@ -126,8 +126,8 @@ object_weapon_melee_polearm_lance_nightsister = object_weapon_melee_polearm_shar
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "exp_durability", "expRange", "expRange", "null", "expRange", "null", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "maxrange", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 123, 213, 4, 11, 750, -5, -5, 6, -5, 6, 0, 300, 0},
-	experimentalMax = {0, 0, 135, 425, 4, 25, 1500, 10, 10, 6, 10, 6, 0, 300, 0},
+	experimentalMin = {0, 0, 400, 480, 4, 11, 750, -5, -5, 6, -5, 6, 0, 300, 0},
+	experimentalMax = {0, 0, 460, 560, 4, 25, 1500, 10, 10, 6, 10, 6, 0, 300, 0},
 	experimentalPrecision = {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }
