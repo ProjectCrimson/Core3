@@ -40,6 +40,7 @@
 --gives permission to release a modified version without this exception; 
 --this exception also makes it possible to release a modified version 
 
+-- 2019-12-11 - Perkins - small typo
 
 object_tangible_wearables_armor_bounty_hunter_armor_bounty_hunter_boots = object_tangible_wearables_armor_bounty_hunter_shared_armor_bounty_hunter_boots:new {
 	templateType = ARMOROBJECT,
@@ -115,7 +116,7 @@ object_tangible_wearables_armor_bounty_hunter_armor_bounty_hunter_boots = object
   experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
   experimentalGroupTitles = {"null", "null", "null", "exp_durability", "exp_quality", "exp_resistance", "null", "null", "null", "null", "null", "exp_resistance", "null"},
   experimentalSubGroupTitles = {"null", "null", "sockets", "hit_points", "armor_effectiveness", "armor_integrity", "armor_health_encumbrance", "armor_action_encumbrance", "armor_mind_encumbrance", "armor_rating", "armor_special_type", "armor_special_effectiveness", "armor_special_integrity"},
-  experimentalMin = {0, 0, 0, 1000, 10 30000, 0, 0, 0, 1, 16, 0, 0},
+  experimentalMin = {0, 0, 0, 1000, 10, 30000, 0, 0, 0, 1, 16, 0, 0},
   experimentalMax = {0, 0, 0, 1000, 24, 50000, 0, 0, 0, 1, 16, 0, 0},
   experimentalPrecision = {0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0},
   experimentalCombineType = {0, 0, 4, 1, 1, 1, 1, 1, 1, 4, 4, 4, 1},
