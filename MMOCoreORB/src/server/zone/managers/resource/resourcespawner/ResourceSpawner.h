@@ -162,6 +162,7 @@ private:
 	int randomizeValue(int min, int max);
 	long getRandomExpirationTime(ResourceTreeEntry* resourceEntry);
 	long getRandomUnixTimestamp(int min, int max);
+	bool isValidResource(const String& resourceType);
 
 	Vector<String>& getJtlResources();
 	Vector<String>& getActiveResourceZones();

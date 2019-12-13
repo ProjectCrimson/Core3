@@ -3,6 +3,7 @@
 		See file COPYING for copying conditions. */
 
 // 2019-09-23 Perkins - Generate XML file for Galaxy Harvester upload
+// 2019-12-11 Perkins - Don't output impossible-to-harvest resources to XML file
 
 #include "ResourceSpawner.h"
 #include "server/zone/Zone.h"
@@ -366,6 +367,114 @@ bool ResourceSpawner::writeAllSpawnsToScript() {
 	return true;
 }
 
+bool ResourceSpawner::isValidResource(const String& resourceType) {
+	/* Checks to see if the resource is a type that actually spawns */
+
+	return !(
+		// Chandrila
+		resourceType == "bone_horn_chandrila"
+		|| resourceType == "meat_wild_chandrila"
+		|| resourceType == "milk_domesticated_chandrila"
+
+		// Corellia
+		|| resourceType == "bone_horn_chandrila"
+		|| resourceType == "meat_reptilian_corellia"
+
+		// Dantooine
+		|| resourceType == "bone_avian_dantooine"
+		|| resourceType == "bone_horn_dantooine"
+		|| resourceType == "hide_bristley_dantooine"
+		|| resourceType == "meat_avian_dantooine"
+		|| resourceType == "meat_domesticated_dantooine"
+		|| resourceType == "meat_insect_dantooine"
+		|| resourceType == "meat_reptilian_dantooine"
+		|| resourceType == "milk_domesticated_dantooine"
+
+		// Dathomir
+		|| resourceType == "bone_horn_dathomir"
+		|| resourceType == "hide_wooly_dathomir"
+		|| resourceType == "meat_avian_dathomir"
+		|| resourceType == "meat_domesticated_dathomir"
+		|| resourceType == "meat_reptilian_dathomir"
+		|| resourceType == "milk_domesticated_dathomir"
+
+		// Endor
+		|| resourceType == "bone_horn_endor"
+		|| resourceType == "hide_scaley_endor"
+		|| resourceType == "meat_avian_endor"
+		|| resourceType == "meat_domesticated_endor"
+		|| resourceType == "meat_reptilian_endor"
+		|| resourceType == "milk_domesticated_endor"
+		|| resourceType == "milk_wild_endor"
+
+		// Florrum
+		|| resourceType == "bone_avian_florrum"
+		|| resourceType == "bone_horn_florrum"
+		|| resourceType == "hide_bristley_florrum"
+		|| resourceType == "hide_scaley_florrum"
+		|| resourceType == "hide_wooly_florrum"
+		|| resourceType == "meat_avian_florrum"
+		|| resourceType == "meat_carnivore_florrum"
+		|| resourceType == "meat_domesticated_florrum"
+		|| resourceType == "meat_egg_florrum"
+		|| resourceType == "meat_insect_florrum"
+		|| resourceType == "meat_reptilian_florrum"
+		|| resourceType == "meat_wild_florrum"
+		|| resourceType == "milk_domesticated_florrum"
+
+		// Kaas
+		|| resourceType == "bone_horn_kaas"
+		|| resourceType == "hide_bristley_kaas"
+		|| resourceType == "hide_wooly_kaas"
+		|| resourceType == "meat_domesticated_kaas"
+		|| resourceType == "meat_insect_kaas"
+		|| resourceType == "meat_reptilian_kaas"
+		|| resourceType == "meat_wild_kaas"
+		|| resourceType == "milk_domesticated_kaas"
+		|| resourceType == "milk_wild_kaas"
+
+		// Lok
+		|| resourceType == "bone_horn_lok"
+		|| resourceType == "hide_scaley_lok"
+		|| resourceType == "meat_domesticated_lok"
+		|| resourceType == "meat_insect_lok"
+		|| resourceType == "meat_wild_lok"
+		|| resourceType == "milk_domesticated_lok"
+
+		// Lothal
+		|| resourceType == "bone_avian_lothal"
+		|| resourceType == "bone_horn_lothal"
+		|| resourceType == "hide_scaley_lothal"
+		|| resourceType == "meat_avian_lothal"
+		|| resourceType == "meat_domesticated_lothal"
+		|| resourceType == "meat_egg_lothal"
+		|| resourceType == "meat_insect_lothal"
+		|| resourceType == "meat_reptilian_lothal"
+		|| resourceType == "milk_domesticated_lothal"
+		|| resourceType == "milk_wild_lothal"
+
+		// Moraband
+		|| resourceType == "bone_horn_moraband"
+		|| resourceType == "hide_bristley_moraband"
+		|| resourceType == "hide_wooly_moraband"
+		|| resourceType == "meat_avian_moraband"
+		|| resourceType == "meat_domesticated_moraband"
+		|| resourceType == "meat_reptilian_moraband"
+		|| resourceType == "meat_wild_moraband"
+		|| resourceType == "milk_domesticated_moraband"
+		|| resourceType == "milk_wild_moraband"
+
+		// Talus
+		|| resourceType == "bone_horn_talus"
+		|| resourceType == "meat_wild_talus"
+
+		// Rori
+		|| resourceType == "bone_horn_rori"
+		|| resourceType == "meat_reptilian_rori"
+		|| resourceType == "milk_domesticated_rori"
+	);
+}
+
 bool ResourceSpawner::ghDumpAll() {
 	/* This is custom code written to export resources in a way that an additional script can easily push them to Galaxy Harvester -c0pp3r */
 	if(!scriptLoading)
@@ -414,18 +523,15 @@ bool ResourceSpawner::ghDumpAll() {
 			}
 			if(String::valueOf(inPhase) == "1") {
 				for(int j = 0; j < planets->size(); ++j){
-					ZoneResourceMap* zoneMap = resourceMap->getZoneResourceList(planets->get(j));
+					String planet = planets->get(j);
+					ZoneResourceMap* zoneMap = resourceMap->getZoneResourceList(planet);
 					ManagedReference<ResourceSpawn*> resourceSpawn;
 					
 					for (int b = 0; b< zoneMap->size(); ++b) {
 						resourceSpawn = zoneMap->get(b);
 						if (spawn->getName() == resourceSpawn->getName()){
-							ghwriter->writeLine("<resource>");
-							
-							ghwriter->write("<SpawnName>");
-							ghwriter->write(spawn->getName());
-							ghwriter->writeLine("</SpawnName>");
-							ghwriter->write("<resType>");
+
+							// Get the resource type
 							for(int i = 0; i < 8; ++i) {
 								String spawnClass = spawn->getClass(i);
 								if(spawnClass != "") {
@@ -433,48 +539,36 @@ bool ResourceSpawner::ghDumpAll() {
 									String spawnClass2 = spawn->getStfClass(i);
 								}
 							}
-							ghwriter->write(spawn->getStfClass(last));
-							ghwriter->writeLine("</resType>");
-							//ghwriter->writeLine("<attributes>");
-							for(int i = 0; i < 12; ++i) {
-								String attribute = "";
-								int value = spawn->getAttributeAndValue(attribute, i);
-								if(attribute != "") {
-									ghwriter->writeLine("<attribute name=\"" + attribute + "\">" + String::valueOf(value) + "</attribute>");
+							String resourceType = spawn->getStfClass(last);
+
+							// Verify that the resource type is valid before writing it to the file
+							if (isValidResource(resourceType)) {
+								ghwriter->writeLine("<resource>");
+								
+								ghwriter->write("<SpawnName>");
+								ghwriter->write(spawn->getName());
+								ghwriter->writeLine("</SpawnName>");
+								ghwriter->write("<resType>");
+								ghwriter->write(resourceType);
+								ghwriter->writeLine("</resType>");
+
+								for(int i = 0; i < 12; ++i) {
+									String attribute = "";
+									int value = spawn->getAttributeAndValue(attribute, i);
+									if(attribute != "") {
+										ghwriter->writeLine("<attribute name=\"" + attribute + "\">" + String::valueOf(value) + "</attribute>");
+									}
 								}
+
+								ghwriter->write("<planet>");
+								ghwriter->write(planet);
+								ghwriter->writeLine("</planet>");
+								ghwriter->writeLine("</resource>");
+								ghwriter->writeLine("");
 							}
-							//ghwriter->writeLine("</attributes>");
-							ghwriter->write("<planet>");
-							ghwriter->write(planets->get(j));
-							ghwriter->writeLine("</planet>");
-							ghwriter->writeLine("</resource>");
-							ghwriter->writeLine("");
 						}
 					}
-				}
-				/*ZoneResourceMap* zoneMap = resourceMap->getZoneResourceList(planets);
-				ManagedReference<ResourceSpawn*> resourceSpawn;
-				for (int i = 0; i < zoneMap->size(); ++i) {
-					resourceSpawn = zoneMap->get(i);
-					if (spawn->getName() == resourceSpawn->getName())
-						ghwriter->write(planets + ",");
-				}
-				for(int i = 0; i < 8; ++i) {
-				String spawnClass = spawn->getClass(i);
-				if(spawnClass != "") {
-					last = i;
-				}
-			}
-				
-				ghwriter->write(spawn->getClass(last));
-				for(int i = 0; i < 12; ++i) {
-					String attribute = "";
-					int value = spawn->getAttributeAndValue(attribute, i);
-					if(attribute != "") {
-						ghwriter->write("," + attribute + ":" + String::valueOf(value));
-					}
-				}*/
-				
+				}				
 			}
 			
 		}
