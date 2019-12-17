@@ -475,6 +475,17 @@ bool ResourceSpawner::isValidResource(const String& resourceType) {
 	);
 }
 
+String ResourceSpawner::getScrubbedGalaxyHarvesterName(const String& currentValue) {
+	/* Scrubs the planet name in case the local server's planet name differs from that of GalaxyHarvester */
+	String newValue = currentValue;
+
+	if (currentValue.contains("hutta") && !currentValue.contains("nalhutta"))	{
+		newValue = currentValue.replaceFirst("hutta", "nalhutta");
+	}
+
+	return newValue;
+}
+
 bool ResourceSpawner::ghDumpAll() {
 	/* This is custom code written to export resources in a way that an additional script can easily push them to Galaxy Harvester -c0pp3r */
 	if(!scriptLoading)
@@ -549,7 +560,8 @@ bool ResourceSpawner::ghDumpAll() {
 								ghwriter->write(spawn->getName());
 								ghwriter->writeLine("</SpawnName>");
 								ghwriter->write("<resType>");
-								ghwriter->write(resourceType);
+
+								ghwriter->write(getScrubbedGalaxyHarvesterName(resourceType));
 								ghwriter->writeLine("</resType>");
 
 								for(int i = 0; i < 12; ++i) {
@@ -561,7 +573,7 @@ bool ResourceSpawner::ghDumpAll() {
 								}
 
 								ghwriter->write("<planet>");
-								ghwriter->write(planet);
+								ghwriter->write(getScrubbedGalaxyHarvesterName(planet));
 								ghwriter->writeLine("</planet>");
 								ghwriter->writeLine("</resource>");
 								ghwriter->writeLine("");
