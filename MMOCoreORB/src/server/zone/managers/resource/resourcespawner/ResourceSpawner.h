@@ -163,6 +163,7 @@ private:
 	long getRandomExpirationTime(ResourceTreeEntry* resourceEntry);
 	long getRandomUnixTimestamp(int min, int max);
 	bool isValidResource(const String& resourceType);
+	String getScrubbedGalaxyHarvesterName(const String& currentValue);
 
 	Vector<String>& getJtlResources();
 	Vector<String>& getActiveResourceZones();
