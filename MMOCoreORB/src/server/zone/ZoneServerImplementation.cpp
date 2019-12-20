@@ -2,6 +2,8 @@
 				Copyright <SWGEmu>
 		See file COPYING for copying conditions.*/
 
+// 2019-12-20 - Perkins - Adjust MOTD to remove GitHub revisions
+
 #include "server/zone/ZoneServer.h"
 
 #include "server/zone/ZoneClientSession.h"
@@ -784,9 +786,6 @@ void ZoneServerImplementation::loadLoginMessage() {
 		file = NULL;
 		reader = NULL;
 	}
-
-	loginMessage += "\nLatest Commits:\n";
-	loginMessage += ConfigManager::instance()->getRevision();
 
 	delete reader;
 	delete file;
