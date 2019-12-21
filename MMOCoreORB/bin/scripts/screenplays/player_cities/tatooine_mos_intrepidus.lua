@@ -32,7 +32,7 @@ function TatooineMosIntrepidusScreenPlay:spawnSceneObjects()
 	-- Buff Terminal
 	-- Perkins 20191220 - Temporarily move the buffbot outside the med center
 	--spawnSceneObject("tatooine", "object/tangible/terminal/terminal_event_buffs.iff", -3117, 0, -5636, 0, math.rad(45) )
-	spawnSceneObject("tatooine", "object/tangible/terminal/terminal_event_buffs.iff", -3102, 0, -5646, 0, math.rad(180) )
+	spawnSceneObject("tatooine", "object/tangible/terminal/terminal_event_buffs.iff", -3104, 0, -5645, 0, math.rad(180) )
 
 end
 
