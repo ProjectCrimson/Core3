@@ -11,7 +11,7 @@ rancor_padded_armor_segment = {
 		{"armor_special_type",0,0,0},
 		-- woohoori 12052019 adjusted armor effectiveness and qty for armor revamp
 		--{"armor_effectiveness",5,15,10},
-		{"armor_effectiveness",15,20,10},
+		{"armor_effectiveness",15,30,10},
 		{"armor_integrity",2500,5000,0},
 		{"heateffectiveness",9,17,10},
 		{"coldeffectiveness",9,17,10},
