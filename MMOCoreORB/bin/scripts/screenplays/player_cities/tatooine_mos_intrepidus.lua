@@ -30,7 +30,9 @@ function TatooineMosIntrepidusScreenPlay:spawnSceneObjects()
 	spawnSceneObject("tatooine", "object/tangible/terminal/terminal_elevator_down.iff", 13.5, 15, -17.95, 9995584, 1, 0, 0, 0)
 	-- woohoori 20191105 test buff terminal
 	-- Buff Terminal
-	spawnSceneObject("tatooine", "object/tangible/terminal/terminal_event_buffs.iff", -3117, 0, -5636, 0, math.rad(45) )
+	-- Perkins 20191220 - Temporarily move the buffbot outside the med center
+	--spawnSceneObject("tatooine", "object/tangible/terminal/terminal_event_buffs.iff", -3117, 0, -5636, 0, math.rad(45) )
+	spawnSceneObject("tatooine", "object/tangible/terminal/terminal_event_buffs.iff", -3104, 0, -5645, 0, math.rad(180) )
 
 end
 

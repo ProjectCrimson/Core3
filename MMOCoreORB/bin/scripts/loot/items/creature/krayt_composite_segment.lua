@@ -8,8 +8,8 @@ krayt_composite_segment = {
 	craftingValues = {
 		{"armor_special_type",0,0,0},
 		-- woohoori 12052019 adjusted armor effectiveness and qty for armor revamp
-		-- {"armor_effectiveness",9,24,10},
-		{"armor_effectiveness",20,35,10},
+		-- perkins	12212019 reduced to stardust setting
+		{"armor_effectiveness",9,24,10},
 		{"armor_integrity",10000,15000,0},
 		-- {"useCount",5,18,0},
 		{"useCount",4,8,0},

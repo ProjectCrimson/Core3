@@ -40,6 +40,8 @@
 --gives permission to release a modified version without this exception; 
 --this exception also makes it possible to release a modified version 
 
+--2019-12-20 - Perkins - Adjusted unarmed TKA specials cost to be inline with the other weapons.
+--                       Action cost ratio (unarmed vs weapons) is comparable to that of vanilla SWGEMU
 
 object_weapon_melee_unarmed_unarmed_default_player = object_weapon_melee_unarmed_shared_unarmed_default_player:new {
 
@@ -103,9 +105,9 @@ object_weapon_melee_unarmed_unarmed_default_player = object_weapon_melee_unarmed
 	       
 	
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 10,
-	actionAttackCost = 10,
-        mindAttackCost = 10,
+	healthAttackCost = 0,
+	actionAttackCost = 100,
+    mindAttackCost = 0,
 	forceCost = 0,
 	
 	pointBlankAccuracy = 0,
