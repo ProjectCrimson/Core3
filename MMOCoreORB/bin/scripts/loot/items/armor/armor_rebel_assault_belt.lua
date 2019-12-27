@@ -4,8 +4,8 @@ armor_rebel_assault_belt= {
 	customObjectName = "New Republic Trooper Armor Belt",
 	directObjectTemplate = "object/tangible/wearables/armor/rebel_assault/armor_rebel_assault_belt.iff",
 	craftingValues = {
-		{"armor_rating",1,1,0},
-     {"armor_effectiveness",40,50,10},
+	--	{"armor_rating",1,1,0},
+    -- {"armor_effectiveness",40,50,10},
     {"armor_integrity",30000, 55000,0},
     {"armor_health_encumbrance",0,0,0},
     {"armor_action_encumbrance",0,0,0},
