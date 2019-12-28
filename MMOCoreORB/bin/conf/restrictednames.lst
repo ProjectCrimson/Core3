@@ -40,6 +40,8 @@
 --this exception also makes it possible to release a modified version 
 --which carries forward this exception.
 
+-- 2019-12-28 - Perkins - Alter restricted name listing
+
 [profane]
 --These is where the profane words go.  If any of these words are in a part of the name, it will be filtered.
 anal
@@ -197,7 +199,6 @@ seamans
 seeman
 seemen
 semen
-Sith
 skank
 skanq
 Skywalker
@@ -256,8 +257,6 @@ Palpatin
 DARKLORD
 DerkLord
 Lord
-Sith
-Siith
 Sithlord
 
 [developer]
