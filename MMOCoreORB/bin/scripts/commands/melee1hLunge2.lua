@@ -61,14 +61,14 @@ Melee1hLunge2Command = {
 
 	weaponType = ONEHANDMELEEWEAPON,
 
-	stateEffects = {
-    StateEffect( 
-    POSTUREDOWN_EFFECT,
-    { "postureDownRecovery" },
-    { "posture_change_down_defense" },
+  stateEffects = {
+    StateEffect(
+    KNOCKDOWN_EFFECT,
+    { "knockdownRecovery", "lastKnockdown" },
+    { "knockdown_defense" },
     {},
     75,
-    75,
+    0,
     0
     )
   }
