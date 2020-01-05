@@ -1670,3 +1670,5 @@ includeFile("items/creature/ewok_tooth.lua")
 
 includeFile("items/furniture/xeno_desk.lua") 
 
+-- Afterlife loot_schematic
+includeFile("items/npc/xris_acid_sword_schematic.lua")

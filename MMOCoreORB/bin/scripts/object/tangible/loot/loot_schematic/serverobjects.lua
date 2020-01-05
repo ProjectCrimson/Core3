@@ -144,3 +144,6 @@ includeFile("tangible/loot/loot_schematic/ns_pants_s01_schematic.lua")
 includeFile("tangible/loot/loot_schematic/ns_pants_s02_schematic.lua")
 includeFile("tangible/loot/loot_schematic/ns_dress_schematic.lua")
 includeFile("tangible/loot/loot_schematic/ns_boots_schematic.lua")
+
+-- Afterlife Schematics
+includeFile("tangible/loot/loot_schematic/sword_acid_schematic.lua")

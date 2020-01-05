@@ -140,5 +140,5 @@ includeFile("draft_schematic/weapon/rifle_ld1.lua")
 includeFile("draft_schematic/weapon/rifle_tc22_blaster.lua")
 includeFile("draft_schematic/weapon/sword_marauder.lua")
 
-
-
+-- Afterlife schematics
+includeFile("draft_schematic/weapon/sword_acid.lua")

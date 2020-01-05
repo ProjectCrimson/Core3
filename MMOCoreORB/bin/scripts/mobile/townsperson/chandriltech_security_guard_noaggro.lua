@@ -29,7 +29,7 @@ chandriltech_security_guard_noaggro = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "chandriltech_weapons", chance = 200000},		
+				{group = "chandriltech_weapons", chance = 1000000},		
 				{group = "junk", chance = 1000000}
 			}
 		}
