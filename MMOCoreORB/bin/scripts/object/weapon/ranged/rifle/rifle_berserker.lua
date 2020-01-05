@@ -112,8 +112,8 @@ object_weapon_ranged_rifle_rifle_berserker = object_weapon_ranged_rifle_shared_r
 	idealRange = 35,
 	idealAccuracy = 0,
 	
-	minDamage = 160,
-	maxDamage = 352,
+	minDamage = 350,
+	maxDamage = 400,
 
 	maxRange = 65,
 	maxRangeAccuracy = 0,
@@ -127,8 +127,8 @@ object_weapon_ranged_rifle_rifle_berserker = object_weapon_ranged_rifle_shared_r
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "expEffeciency", "exp_durability", "null", "null", "null", "expRange", "null", "null", "null"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "roundsused", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 65, 145, 4, 8, 30, 750, -20, -80, 25, 14, 0, 300, 0},
-	experimentalMax = {0, 0, 95, 345, 4, 25, 65, 1500, -20, -80, 25, 26, 0, 300, 0},
+	experimentalMin = {0, 0, 80, 300, 4, 8, 30, 800, -20, -80, 25, 14, 0, 300, 0},
+	experimentalMax = {0, 0, 115, 600, 4, 25, 65, 1500, -20, -80, 25, 26, 0, 300, 0},
 	experimentalPrecision = {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }
