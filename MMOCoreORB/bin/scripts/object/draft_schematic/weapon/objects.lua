@@ -4123,7 +4123,8 @@ object_draft_schematic_weapon_shared_sword_marauder = SharedDraftSchematicObject
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_weapon_shared_sword_marauder, "object/draft_schematic/weapon/shared_sword_marauder.iff")
 
-
-
-
-
+-- Afterlife schematics
+object_draft_schematic_weapon_shared_sword_acid = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/weapon/shared_sword_acid.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_weapon_shared_sword_acid, "object/draft_schematic/weapon/shared_sword_acid.iff")

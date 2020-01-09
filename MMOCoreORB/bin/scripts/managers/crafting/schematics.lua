@@ -2111,6 +2111,8 @@ schematics = {
   
   --Weapons
   {path="object/draft_schematic/weapon/carbine_charric.iff"},
-  
+
+  -- Afterlife Schematics
+  {path="object/draft_schematic/weapon/sword_acid.iff"},
   
 }
