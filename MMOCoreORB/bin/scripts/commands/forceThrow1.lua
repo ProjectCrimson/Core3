@@ -41,27 +41,67 @@
 --which carries forward this exception.
 --true = 1, false = 0
 
+-- woohoori 20200109 force powers balancing
 ForceThrow1Command = {
 	name = "forcethrow1",
 
-	minDamage = 375,
-	maxDamage = 1000,
+	minDamage = 1500, -- 375
+	maxDamage = 3000, -- 1000
 	speed = 2.0,
-	forceCost = 28,
+	forceCost = 45, -- 28
 	visMod = 25,
 	accuracySkillMod = "forcethrow_accuracy",
 
-	stateEffects = {
-	  StateEffect(
-		STUN_EFFECT,
-		{},
-		{ "jedi_state_defense" },
-		{},
-		65,
+	dotEffects = {
+	-- woohoori 20190928 lowered power/duration of action bleed
+	--  DotEffect(
+	--	BLEEDING,
+	--	{ "resistance_bleeding", "bleed_resist" },
+	--	ACTION,
+	--	true,
+	--	0,
+    --100,
+    --100, 
+    --60
+	--  ),	  	
+	
+	DotEffect(
+		BLEEDING,
+		{ "resistance_bleeding", "bleed_resist" },
+		HEALTH,
+		true,
 		0,
-		10
+		25,
+		50,
+		30,
+      	8.33,
+      	8.33
+	  )
+
+	},
+
+	stateEffects = {
+	--  StateEffect(
+	--	STUN_EFFECT,
+	--	{},
+	--	{ "jedi_state_defense" },
+	--	{},
+	--	65,
+	--	0,
+	--	10 
+	--  ),
+
+	  StateEffect( 
+		POSTUREDOWN_EFFECT, 
+		{ "postureDownRecovery" }, 
+		{ "posture_change_down_defense" }, 
+		{}, 
+		50, -- 40 
+		0, 
+		0 
 	  )
 	},
+
 
 	animation = "force_throw_1_particle_level_1",
 	animType = GENERATE_INTENSITY,

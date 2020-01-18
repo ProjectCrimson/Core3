@@ -40,31 +40,38 @@
 --this exception also makes it possible to release a modified version
 --which carries forward this exception.
 --true = 1, false = 0
--- woohoori 20190922 Powers Balance
+-- woohoori 20200109 force powers balancing
 ForceLightningSingle2Command = {
 	name = "forcelightningsingle2",
   
-  minDamage = 2700,
-  maxDamage = 3150,
+  minDamage = 2000, -- 2700
+  maxDamage = 4000, -- 3150
   speed = 1.75,
-  -- woohoori 20190924 adjusted force cost for powers balance
-  --forceCost = 50,
-  forceCost = 75,
+  forceCost = 65, -- 50
   actionCostMultiplier = 1,
   forceCostMultiplier = 1,
 	visMod = 25,
 	accuracySkillMod = "forcelightning_accuracy",
 
-	stateEffects = {
-    StateEffect(
-    STUN_EFFECT,
-    {},
-    {},
-    { "jedi_state_defense" },
-    30,
-    0,
+  stateEffects = {
+    StateEffect( 
+    DIZZY_EFFECT, 
+    {}, 
+    { "dizzy_defense", "resistance_states" }, 
+    { "jedi_state_defense" }, 
+    85, 
+    0, 
     10
-    ),   
+    ),
+    StateEffect( 
+    STUN_EFFECT, 
+    {}, 
+    { "stun_defense", "resistance_states" }, 
+    { "jedi_state_defense" }, 
+    85, 
+    0, 
+    60
+    )
   },
 
 	animation = "force_lightning_1_particle_level_3",

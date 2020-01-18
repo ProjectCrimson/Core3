@@ -40,16 +40,15 @@
 --this exception also makes it possible to release a modified version
 --which carries forward this exception.
 --true = 1, false = 0
--- woohoori 20190922 Powers Balance
+
+-- woohoori 20200109 force powers balancing
 ForceChokeCommand = {
   name = "forcechoke",
 
-  minDamage = 600,
-  maxDamage = 1000,
-  speed = 1.0,
-  -- woohoori 20190924 adjusted force cost for powers balance
-  --forceCost = 75,
-  forceCost = 100,
+  minDamage = 1800, -- 600
+  maxDamage = 3400, -- 1000
+  speed = 1.5, -- 2.5
+  forceCost = 75, -- 75
   visMod = 25,
   forceAttack = true,
   accuracyBonus = 95,

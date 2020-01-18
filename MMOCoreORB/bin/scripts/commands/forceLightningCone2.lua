@@ -40,46 +40,44 @@
 --this exception also makes it possible to release a modified version
 --which carries forward this exception.
 --true = 1, false = 0
--- woohoori 20190922 Powers Balance
+-- woohoori 20200109 force powers balancing
 ForceLightningCone2Command = {
 	name = "forcelightningcone2",
-
-  minDamage = 2000,
-  maxDamage = 3000,
-  speed = 2.5,
-  -- woohoori 20190924 adjusted force cost for powers balance
-  --forceCost = 60,
-  forceCost = 85,
-  forceCostMultiplier = 1,
-  actionCostMultiplier = 1,
+	minDamage = 2000, -- 2000
+  	maxDamage = 3000, -- 5000
+  	speed = 2.5, 
+	forceCost = 65, -- 85
+  	forceCostMultiplier = 1,
+  	actionCostMultiplier = 1,
 	accuracySkillMod = "forcelightning_accuracy",
-	coneAngle = 180,
+	coneAngle = 135, -- 180
 	coneAction = true,
 	visMod = 25,
-
+	
 	stateEffects = {
-	  StateEffect(
-    STUN_EFFECT,
-    {},
-    {},
-    { "jedi_state_defense" },
-    30,
-    0,
-    10
-    ), 
-	  StateEffect(
-		DIZZY_EFFECT,
-		{},
-		{},
-		{ "jedi_state_defense" },
-		30,
-		0,
+	  StateEffect( 
+		DIZZY_EFFECT, 
+		{}, 
+		{ "dizzy_defense", "resistance_states" }, 
+		{ "jedi_state_defense" }, 
+		85, 
+		0, 
 		10
+	  ),
+	  StateEffect( 
+		STUN_EFFECT, 
+		{}, 
+		{ "stun_defense", "resistance_states" }, 
+		{ "jedi_state_defense" }, 
+		85, 
+		0, 
+		60
 	  )
 	},
 
-	animation = "force_knockdown_1_arc_particle_level_1",
---	animType = GENERATE_INTENSITY,
+
+	animation = "force_lightning_1_arc_particle_level_1",
+	animType = GENERATE_INTENSITY,
 
 	combatSpam = "forcelightningcone2",
 

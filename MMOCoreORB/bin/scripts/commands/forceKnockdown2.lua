@@ -40,15 +40,15 @@
 --this exception also makes it possible to release a modified version
 --which carries forward this exception.
 --true = 1, false = 0
+-- woohoori 20200109 force powers balancing
 
 ForceKnockdown2Command = {
 	name = "forceknockdown2",
-
-    damageMultiplier = 0,
-	speed = 2.0,
-	-- woohoori 20190924 adjusted force cost for powers balance
-	--forceCost = 35,
-	forceCost = 85,
+  	minDamage = 600, -- 0
+  	maxDamage = 1000, -- 0
+  	-- damageMultiplier = 0,
+    speed = 2.0,
+	forceCost = 60, -- 85
 	visMod = 25,
 	accuracySkillMod = "forceknockdown_accuracy",
 	coneAngle = 40,
@@ -60,7 +60,7 @@ ForceKnockdown2Command = {
 		{ "knockdownRecovery", "lastKnockdown" },
 		{ "force_defense" },
 		{},
-		65,
+		75,
 		0,
 		0
 	  )
@@ -70,9 +70,10 @@ ForceKnockdown2Command = {
 
 	combatSpam = "forceknockdown2",
 
-	poolsToDamage = NO_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	forceAttack = true,
+	damageType = STUN_DAMAGE,
 
 	range = 32
 }

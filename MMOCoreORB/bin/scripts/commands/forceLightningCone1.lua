@@ -40,20 +40,30 @@
 --this exception also makes it possible to release a modified version
 --which carries forward this exception.
 --true = 1, false = 0
--- woohoori 20190922 Powers Balance
+-- woohoori 20200109 force powers balancing
 ForceLightningCone1Command = {
 	name = "forcelightningcone1",
 
-	minDamage = 1200,
-	maxDamage = 2000,
-	speed = 4.0,
-	-- woohoori 20190924 adjusted force cost for powers balance
-	--forceCost = 75,
-	forceCost = 60,
-	accuracySkillMod = "forcelightning_accuracy",
+	minDamage = 1200, -- 1200
+	maxDamage = 2000, -- 2000
+	speed = 3, -- 4
+	forceCost = 45, -- 75
 	coneAngle = 90,
 	coneAction = true,
 	visMod = 25,
+	accuracySkillMod = "forcelightning_accuracy",
+
+	stateEffects = {
+	  StateEffect( 
+		STUN_EFFECT, 
+		{}, 
+		{ "stun_defense", "resistance_states" }, 
+		{ "jedi_state_defense" }, 
+		75, 
+		0, 
+		45
+	  )
+	},
 
 	animation = "force_lightning_1_arc_particle_level_1",
 	animType = GENERATE_INTENSITY,

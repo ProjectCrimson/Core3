@@ -48,7 +48,7 @@ ForceWeaken2Command = {
 	speed = 1.0,
 	-- woohoori 20190924 adjusted force cost for powers balance
 	--forceCost = 300,
-	forceCost = 75,
+	forceCost = 65,
 	forceCostMultiplier = 2,
 	visMod = 25,
 	accuracySkillMod = "forceweaken_accuracy",

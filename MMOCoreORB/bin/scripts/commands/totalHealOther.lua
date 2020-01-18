@@ -51,13 +51,13 @@ TotalHealOtherCommand = {
 	healBleedingCost = 50,
 	bleedHealIterations = 2,
 	healStateCost = 50,
-	forceCost = 300,
+	forceCost = 80,
 	healAmount = -1,
 	attributesToHeal = HEALTH_ATTRIBUTE,
 	woundAttributesToHeal = HEALTH_ATTRIBUTE,
 	healBattleFatigue = -1,
 	healWoundAmount = -1,
-	forceCostMultiplier = 0.05,
+	forceCostMultiplier = 0.1,
 	range = 32
 }
 

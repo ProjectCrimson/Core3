@@ -48,7 +48,7 @@ ForceIntimidate1Command = {
 	speed = 1.0,
 	-- woohoori 20190924 adjusted force cost for powers balance
 	--forceCost = 300,
-	forceCost = 50,
+	forceCost = 100,
 	accuracySkillMod = "forceintimidate_accuracy",
 	coneAngle = 30,
 	coneAction = true,

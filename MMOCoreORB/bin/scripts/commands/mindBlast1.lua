@@ -40,49 +40,27 @@
 --this exception also makes it possible to release a modified version
 --which carries forward this exception.
 --true = 1, false = 0
--- woohoori 20190922 Powers Balance
+-- woohoori 20200109 force powers balancing
 MindBlast1Command = {
 	name = "mindblast1",
 
-	minDamage = 750,
-	maxDamage = 1400,
+	minDamage = 1500, -- 750
+	maxDamage = 3000, -- 1400
 	speed = 2.0,
-	-- woohoori 20190924 adjusted force cost for powers balance
-	--forceCost = 55,
-	forceCost = 45,
+	forceCost = 45, -- 45
 	visMod = 25,
 	accuracySkillMod = "mindblast_accuracy";
 
 	stateEffects = {
-	  StateEffect(
-		STUN_EFFECT,
-		{},
-		{ "jedi_state_defense" },
-		{},
-		55,
-		0,
-		10
+	   StateEffect( 
+		BLIND_EFFECT, 
+		{}, 
+		{ "blind_defense", "resistance_states" }, 
+		{ "jedi_state_defense" }, 
+		65, 
+		0, 
+		30
 	  ),
-
-	  StateEffect(
-		BLIND_EFFECT,
-		{},
-		{ "jedi_state_defense" },
-		{},
-		55,
-		0,
-		10
-	  ),
-
-	  StateEffect(
-		DIZZY_EFFECT,
-		{},
-		{ "jedi_state_defense" },
-		{},
-		55,
-		0,
-		10
-	  )
 	},
 
 	animation = "force_mind_blast_1_particle_level_1", 

@@ -43,7 +43,7 @@
 
 ForceArmor1Command = {
     name = "forcearmor1",
-    forceCost = 150, -- woohoori 20191008 upped from default of 75
+    forceCost = 200, -- woohoori 20191008 upped from default of 75
     duration = 600, -- woohoori 20191008 reduced from default of 900
     --animationCRC = hashCode()
     clientEffect = "clienteffect/pl_force_armor_self.cef",

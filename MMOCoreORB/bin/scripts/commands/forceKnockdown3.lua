@@ -43,12 +43,11 @@
 -- woohoori 20190922 Powers Balance
 ForceKnockdown3Command = {
 	name = "forceknockdown3",
-
-    damageMultiplier = 0,
-	speed = 1.0,
-	-- woohoori 20190924 adjusted force cost for powers balance
-	--forceCost = 200,
-	forceCost = 100,
+  	minDamage = 800, -- 0
+  	maxDamage = 1200, -- 0
+    -- damageMultiplier = 0,
+	speed = 1.5, -- 1.0
+	forceCost = 75, -- 100
 	visMod = 25,
 	accuracySkillMod = "forceknockdown_accuracy",
 	areaAction = true,
@@ -60,7 +59,7 @@ ForceKnockdown3Command = {
 		{ "knockdownRecovery", "lastKnockdown" }, 
 		{ "knockdown_defense" }, 
 		{}, 
-		85, 
+		100, -- 85 
 		0, 
 		0
 	  )
@@ -70,9 +69,10 @@ ForceKnockdown3Command = {
 
 	combatSpam = "forceknockdown3",
 
-	poolsToDamage = NO_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	forceAttack = true,
+	damageType = STUN_DAMAGE,
 
 	range = 32
 }
