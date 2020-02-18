@@ -39,7 +39,8 @@ class AuctionManager extends ManagedService implements Logger {
 	public final static int MAXVENDORPRICE = 99999999;
 	public final static int ITEMSPERPAGE = 100;
 
-	public final static int VENDOREXPIREPERIOD = 2592000; // Seconds
+	// 2020-02-17 - Perkins - Changed from 2592000 seconds to 5184000 (to 60 days)
+	public final static int VENDOREXPIREPERIOD = 5184000; // Seconds
 	public final static int COMMODITYEXPIREPERIOD = 604800; 
 
 	private boolean marketEnabled;
