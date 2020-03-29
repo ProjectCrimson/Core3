@@ -1533,7 +1533,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 						},
 					"Light Side Rank",
 						{
-						"Rank Member", "force_rank_dark_novice",
+						"Rank Member", "force_rank_light_novice",
 						"Sentinel",
 							{
 							"Sentinel I", "force_rank_light_rank_01",
