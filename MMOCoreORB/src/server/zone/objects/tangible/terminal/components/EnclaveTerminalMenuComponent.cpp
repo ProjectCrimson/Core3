@@ -13,7 +13,7 @@ void EnclaveTerminalMenuComponent::fillObjectMenuResponse(SceneObject* sceneObje
 	ManagedReference<BuildingObject*> building = sceneObject->getParentRecursively(SceneObjectType::BUILDING).castTo<BuildingObject*>();
 
 	// 2020-03-26 Perkins - Remove menus on terminals
-	return;
+	//return;
 
 	if (building == NULL || player->isDead() || player->isIncapacitated())
 		return;
@@ -97,7 +97,7 @@ void EnclaveTerminalMenuComponent::fillObjectMenuResponse(SceneObject* sceneObje
 int EnclaveTerminalMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject, CreatureObject* player, byte selectedID) const {
 
 	// 2020-03-26 Perkins - Remove menus on terminals
-	return 0;
+	//return 0;
 
 	if (sceneObject == NULL || !sceneObject->isTangibleObject() || player == NULL || player->isDead() || player->isIncapacitated())
 		return 0;
