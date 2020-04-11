@@ -857,3 +857,6 @@ includeFile("heroics/warren_information_officer.lua")
 -- Player Cities 2019-09-19 (Perkins)
 -- Screenplay for play city static objects
 includeFile("player_cities/tatooine_mos_intrepidus.lua")
+
+-- 2020-04-11 (Perkins) From Tarkin's Revenge
+includeFile("tools/mission_direction_choice.lua")
