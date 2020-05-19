@@ -853,7 +853,8 @@ includeFile("heroics/warren_information_officer.lua")
 -- Ewok Genocide
 -- 2019-09-19 (Perkins) - disable until May 4 event
 -- 2020-04-47 (Perkins) - re-enable for May 4 event
-includeFile("heroics/imperial_genocide_coordinator.lua")
+-- 2020-05-14 (Perkins) - disable until May 4 event
+--includeFile("heroics/imperial_genocide_coordinator.lua")
 
 -- Player Cities 2019-09-19 (Perkins)
 -- Screenplay for play city static objects
