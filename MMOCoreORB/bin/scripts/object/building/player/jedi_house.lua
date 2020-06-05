@@ -46,6 +46,7 @@ object_building_player_jedi_house = object_building_player_shared_jedi_house:new
 	baseMaintenanceRate = 10,
 	allowedZones = {"dantooine", "lok", "tatooine", "naboo", "rori", "corellia", "talus", "chandrila", "kaas", "moraband", "hutta", "lothal"},
 	publicStructure = 0,
+	certificationsRequired = {"force_rank_light_rank_05"}, -- Starkiller - Added force rank certificationsRequired to test for placement ability.
 	skillMods = {
 		{"private_medical_rating", 100},
     {"private_med_wound_health", 100},
