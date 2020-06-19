@@ -758,39 +758,39 @@ int PlayerManagerImplementation::notifyDestruction(TangibleObject* destructor, T
 					PlayerObject* victimGhost = playerCreature->getPlayerObject();
 
 					if (attackerGhost != NULL && victimGhost != NULL) {
-						FrsData* attackerData = attackerGhost->getFrsData();
-						int attackerCouncil = attackerData->getCouncilType();
+						// FrsData* attackerData = attackerGhost->getFrsData();
+						// int attackerCouncil = attackerData->getCouncilType();
 
-						FrsData* victimData = victimGhost->getFrsData();
-						int victimCouncil = victimData->getCouncilType();
+						// FrsData* victimData = victimGhost->getFrsData();
+						// int victimCouncil = victimData->getCouncilType();
 
-						ManagedReference<FrsManager*> strongMan = playerCreature->getZoneServer()->getFrsManager();
+//						ManagedReference<FrsManager*> strongMan = playerCreature->getZoneServer()->getFrsManager();
 						ManagedReference<CreatureObject*> strongRef = playerCreature->asCreatureObject();
 
-						if (attackerCouncil == FrsManager::COUNCIL_DARK && victimCouncil == FrsManager::COUNCIL_DARK) {
-							Core::getTaskManager()->executeTask([strongRef, destructorCreature, attackerCouncil, victimCouncil, strongMan] () {
-								bool isFrsBattle = false;
+						// if (attackerCouncil == FrsManager::COUNCIL_DARK && victimCouncil == FrsManager::COUNCIL_DARK) {
+						// 	Core::getTaskManager()->executeTask([strongRef, destructorCreature, attackerCouncil, victimCouncil, strongMan] () {
+						// 		bool isFrsBattle = false;
 
-								if (attackerCouncil == FrsManager::COUNCIL_DARK && victimCouncil == FrsManager::COUNCIL_DARK)
-									isFrsBattle = strongMan->handleDarkCouncilIncap(destructorCreature, strongRef);
+						// 		if (attackerCouncil == FrsManager::COUNCIL_DARK && victimCouncil == FrsManager::COUNCIL_DARK)
+						// 			isFrsBattle = strongMan->handleDarkCouncilIncap(destructorCreature, strongRef);
 
-								if (!isFrsBattle) {
-									StringIdChatParameter toKiller;
+						// 		if (!isFrsBattle) {
+						// 			StringIdChatParameter toKiller;
 
-									toKiller.setStringId("base_player", "prose_target_incap");
-									toKiller.setTT(strongRef->getDisplayedName());
+						// 			toKiller.setStringId("base_player", "prose_target_incap");
+						// 			toKiller.setTT(strongRef->getDisplayedName());
 
-									destructorCreature->sendSystemMessage(toKiller);
-								}
-							}, "PvPFRSIncapTask");
-						} else {
+						// 			destructorCreature->sendSystemMessage(toKiller);
+						// 		}
+						// 	}, "PvPFRSIncapTask");
+						// } else {
 							StringIdChatParameter toKiller;
 
 							toKiller.setStringId("base_player", "prose_target_incap");
 							toKiller.setTT(playerCreature->getDisplayedName());
 
 							destructorCreature->sendSystemMessage(toKiller);
-						}
+						// }
 					}
 				}
 			}
@@ -864,26 +864,26 @@ void PlayerManagerImplementation::killPlayer(TangibleObject* attacker, CreatureO
 				PlayerObject* attackerGhost = attackerCreature->getPlayerObject();
 				PlayerObject* victimGhost = player->getPlayerObject();
 
-				if (attackerGhost != NULL && victimGhost != NULL) {
-					FrsData* attackerData = attackerGhost->getFrsData();
-					int attackerCouncil = attackerData->getCouncilType();
+				// if (attackerGhost != NULL && victimGhost != NULL) {
+				// 	FrsData* attackerData = attackerGhost->getFrsData();
+				// 	int attackerCouncil = attackerData->getCouncilType();
 
-					FrsData* victimData = victimGhost->getFrsData();
-					int victimCouncil = victimData->getCouncilType();
+				// 	FrsData* victimData = victimGhost->getFrsData();
+				// 	int victimCouncil = victimData->getCouncilType();
 
-					if (attackerCouncil == FrsManager::COUNCIL_DARK && victimCouncil == FrsManager::COUNCIL_DARK) {
-						ManagedReference<FrsManager*> strongMan = player->getZoneServer()->getFrsManager();
-						ManagedReference<CreatureObject*> attackerStrongRef = attackerCreature->asCreatureObject();
-						ManagedReference<CreatureObject*> playerStrongRef = player->asCreatureObject();
+				// 	if (attackerCouncil == FrsManager::COUNCIL_DARK && victimCouncil == FrsManager::COUNCIL_DARK) {
+				// 		ManagedReference<FrsManager*> strongMan = player->getZoneServer()->getFrsManager();
+				// 		ManagedReference<CreatureObject*> attackerStrongRef = attackerCreature->asCreatureObject();
+				// 		ManagedReference<CreatureObject*> playerStrongRef = player->asCreatureObject();
 
-						Reference<ThreatMap*> copyThreatMap = new ThreatMap(*threatMap);
+				// 		Reference<ThreatMap*> copyThreatMap = new ThreatMap(*threatMap);
 
-						Core::getTaskManager()->executeTask([attackerStrongRef, playerStrongRef, strongMan, copyThreatMap] () {
-							if (!strongMan->handleDarkCouncilDeath(attackerStrongRef, playerStrongRef))
-								strongMan->handleSuddenDeathLoss(playerStrongRef, copyThreatMap);
-						}, "PvPFRSKillTask");
-					}
-				}
+				// 		Core::getTaskManager()->executeTask([attackerStrongRef, playerStrongRef, strongMan, copyThreatMap] () {
+				// 			if (!strongMan->handleDarkCouncilDeath(attackerStrongRef, playerStrongRef))
+				// 				strongMan->handleSuddenDeathLoss(playerStrongRef, copyThreatMap);
+				// 		}, "PvPFRSKillTask");
+				// 	}
+				// }
 			}
 		}
 
@@ -1024,12 +1024,12 @@ void PlayerManagerImplementation::sendActivateCloneRequest(CreatureObject* playe
 			cloneMenu->addMenuItem(name, loc->getObjectID());
 		} else if ((cbot->getFacilityType() == CloningBuildingObjectTemplate::LIGHT_JEDI_ONLY && player->hasSkill("force_rank_light_novice")) ||
 				(cbot->getFacilityType() == CloningBuildingObjectTemplate::DARK_JEDI_ONLY && player->hasSkill("force_rank_dark_novice"))) {
-			FrsManager* frsManager = server->getFrsManager();
+			// FrsManager* frsManager = server->getFrsManager();
 
-			if (frsManager->isFrsEnabled()) {
-				String name = "Jedi Enclave (" + String::valueOf((int)loc->getWorldPositionX()) + ", " + String::valueOf((int)loc->getWorldPositionY()) + ")";
-				cloneMenu->addMenuItem(name, loc->getObjectID());
-			}
+			// if (frsManager->isFrsEnabled()) {
+			// 	String name = "Jedi Enclave (" + String::valueOf((int)loc->getWorldPositionX()) + ", " + String::valueOf((int)loc->getWorldPositionY()) + ")";
+			// 	cloneMenu->addMenuItem(name, loc->getObjectID());
+			// }
 		}
 	}
 
@@ -5325,7 +5325,7 @@ void PlayerManagerImplementation::doPvpDeathRatingUpdate(CreatureObject* player,
 	int victimRatingTotalDelta = 0;
 	ManagedReference<CreatureObject*> highDamageAttacker = NULL;
 	uint32 highDamageAmount = 0;
-	FrsManager* frsManager = server->getFrsManager();
+	// FrsManager* frsManager = server->getFrsManager();
 	int frsXpAdjustment = 0;
 
 	for (int i = 0; i < threatMap->size(); ++i) {
@@ -5398,20 +5398,20 @@ void PlayerManagerImplementation::doPvpDeathRatingUpdate(CreatureObject* player,
 
 		float damageContribution = (float) entry->getTotalDamage() / totalDamage;
 
-		if (frsManager != NULL && frsManager->isFrsEnabled() && frsManager->isValidFrsBattle(attacker, player)) {
-			int attackerFrsXp = frsManager->calculatePvpExperienceChange(attacker, player, damageContribution, false);
-			int victimFrsXp = frsManager->calculatePvpExperienceChange(attacker, player, damageContribution, true);
-			frsXpAdjustment += victimFrsXp;
+		// if (frsManager != NULL && frsManager->isFrsEnabled() && frsManager->isValidFrsBattle(attacker, player)) {
+		// 	int attackerFrsXp = frsManager->calculatePvpExperienceChange(attacker, player, damageContribution, false);
+		// 	int victimFrsXp = frsManager->calculatePvpExperienceChange(attacker, player, damageContribution, true);
+		// 	frsXpAdjustment += victimFrsXp;
 
-			ManagedReference<CreatureObject*> attackerRef = attacker;
-			if (attackerFrsXp > 0) {
-				Core::getTaskManager()->executeTask([attackerRef, frsManager, attackerFrsXp] () {
-					Locker locker(attackerRef);
-					Locker clocker(frsManager, attackerRef);
-					frsManager->adjustFrsExperience(attackerRef, attackerFrsXp);
-				}, "FrsExperienceAdjustLambda");
-			}
-		}
+		// 	ManagedReference<CreatureObject*> attackerRef = attacker;
+		// 	if (attackerFrsXp > 0) {
+		// 		Core::getTaskManager()->executeTask([attackerRef, frsManager, attackerFrsXp] () {
+		// 			Locker locker(attackerRef);
+		// 			Locker clocker(frsManager, attackerRef);
+		// 			frsManager->adjustFrsExperience(attackerRef, attackerFrsXp);
+		// 		}, "FrsExperienceAdjustLambda");
+		// 	}
+		// }
 
 		ghost->addToKillerList(attacker->getObjectID());
 
@@ -5457,11 +5457,11 @@ void PlayerManagerImplementation::doPvpDeathRatingUpdate(CreatureObject* player,
 	if (highDamageAttacker == NULL)
 		return;
 
-	if (frsManager != NULL && frsManager->isFrsEnabled() && frsXpAdjustment < 0) {
-		Locker crossLock(frsManager, player);
+	// if (frsManager != NULL && frsManager->isFrsEnabled() && frsXpAdjustment < 0) {
+	// 	Locker crossLock(frsManager, player);
 
-		frsManager->adjustFrsExperience(player, frsXpAdjustment);
-	}
+	// 	frsManager->adjustFrsExperience(player, frsXpAdjustment);
+	// }
 
 	if (defenderPvpRating <= PlayerObject::PVP_RATING_FLOOR) {
 		String stringFile;
