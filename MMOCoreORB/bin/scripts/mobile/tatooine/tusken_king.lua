@@ -2,16 +2,16 @@ tusken_king = Creature:new {
 	objectName = "@mob/creature_names:tusken_king",
 	socialGroup = "tusken_raider",
 	faction = "tusken_raider",
-	level = 100,
-	chanceHit = 1,
-	damageMin = 645,
-	damageMax = 1000,
-	baseXp = 9522,
-	baseHAM = 24000,
-	baseHAMmax = 30000,
+	level = 225, --level = 100,
+	chanceHit = 12.5, --chanceHit = 1,
+	damageMin = 350, --damageMin = 645,
+	damageMax = 950, --damageMax = 1000,
+	baseXp = 18500, --baseXp = 9522,
+	baseHAM = 115000, --baseHAM = 24000,
+	baseHAMmax = 125000, --baseHAMmax = 30000,
 	armor = 1,
 	-- {kinetic,energy,blast,heat,cold,electricity,acid,stun,ls}
-	resists = {45,35,5,80,-1,50,5,5,-1},
+	resists = {50, 85, 20, 85, 85, 95, 60, 50, 35}, --resists = {45,35,5,80,-1,50,5,5,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -25,7 +25,7 @@ tusken_king = Creature:new {
 	creatureBitmask = PACK + STALKER,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
-
+	--Starkiller - Adjusted stats, base stats commented out.
 	templates = {"object/mobile/tusken_raider.iff"},
 	lootGroups = {
 		{
