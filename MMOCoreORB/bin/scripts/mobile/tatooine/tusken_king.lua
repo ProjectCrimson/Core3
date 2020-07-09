@@ -11,7 +11,7 @@ tusken_king = Creature:new {
 	baseHAMmax = 125000, --baseHAMmax = 30000,
 	armor = 1,
 	-- {kinetic,energy,blast,heat,cold,electricity,acid,stun,ls}
-	resists = {50, 85, 20, 85, 85, 95, 60, 50, 35}, --resists = {45,35,5,80,-1,50,5,5,-1},
+	resists = {50,85,20,85,85,95,60,50,35}, --resists = {45,35,5,80,-1,50,5,5,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
