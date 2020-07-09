@@ -2,15 +2,15 @@ mordran = Creature:new {
 	objectName = "@mob/creature_names:mordran",
 	socialGroup = "borvo",
 	faction = "borvo",
-	level = 78,
-	chanceHit = 0.750000,
-	damageMin = 520,
-	damageMax = 750,
-	baseXp = 7484,
-	baseHAM = 26000,
-	baseHAMmax = 31000,
+	level = 225, --level = 78,
+	chanceHit = 12.5, --chanceHit = 0.750000,
+	damageMin = 350, --damageMin = 520,
+	damageMax = 950, --damageMax = 750,
+	baseXp = 18500, --baseXp = 7484,
+	baseHAM = 115000, --baseHAM = 26000,
+	baseHAMmax = 125000, --baseHAMmax = 31000,
 	armor = 0,
-	resists = {0,75,0,45,80,0,0,0,-1},
+	resists = {15,75,15,55,85,85,15,15,25} --resists = {0,75,0,45,80,0,0,0,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -23,7 +23,7 @@ mordran = Creature:new {
 	pvpBitmask = ATTACKABLE + AGGRESSIVE + ENEMY,
 	creatureBitmask = PACK + KILLER,
 	diet = HERBIVORE,
-
+	--Starkiller - Adjusted stats, base stats commented out.
 	templates = {"object/mobile/mordran.iff"},
 	lootGroups = {
 		{
