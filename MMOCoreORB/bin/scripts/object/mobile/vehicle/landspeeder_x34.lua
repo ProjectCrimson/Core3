@@ -44,7 +44,7 @@
 object_mobile_vehicle_landspeeder_x34 = object_mobile_vehicle_shared_landspeeder_x34:new {
 	templateType = VEHICLE,
 	-- woohoori 12042019 decay rate moved to Tier 2
-	decayRate = 10, -- Damage tick per decay cycle
+	decayRate = 5, -- Damage tick per decay cycle --Starkiller - Updated from 10 to 5.
 	decayCycle = 600 -- Time in seconds per cycle
 }
 
