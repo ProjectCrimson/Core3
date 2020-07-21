@@ -10,7 +10,7 @@ mordran = Creature:new {
 	baseHAM = 115000, --baseHAM = 26000,
 	baseHAMmax = 125000, --baseHAMmax = 31000,
 	armor = 0,
-	resists = {15,75,15,55,85,85,15,15,25} --resists = {0,75,0,45,80,0,0,0,-1},
+	resists = {15,75,15,55,85,85,15,15,25}, --resists = {0,75,0,45,80,0,0,0,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
