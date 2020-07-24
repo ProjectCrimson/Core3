@@ -65,11 +65,17 @@ object_tangible_wearables_robe_robe_jedi_light_s05 = object_tangible_wearables_r
 				
 				skillMods = {
 				    {"jedi_force_power_max", 350},
-            {"jedi_force_power_regen", 40},
-            {"force_power_light", 20},
-            {"force_control_light", 20},
-            {"force_manipulation_light", 20}
-				},
+         			    {"jedi_force_power_regen", 40},
+           			    {"force_power_light", 20},
+         			    {"force_control_light", 20},
+        			    {"force_manipulation_light", 20},
+       			            {"lightsaber_toughness", 15},
+         			    {"forceintimidate_accuracy", 15},
+				    {"onehandlightsaber_accuracy", 15},
+				    {"twohandlightsaber_accuracy", 15},
+				    {"forcethrow_accuracy", 5},
+				    {"forceknockdown_accuracy", 5}
+    		    	        },
 
 				noTrade = 1,
 
