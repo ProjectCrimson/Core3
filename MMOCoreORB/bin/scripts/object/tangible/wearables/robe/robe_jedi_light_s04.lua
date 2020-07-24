@@ -69,7 +69,9 @@ object_tangible_wearables_robe_robe_jedi_light_s04 = object_tangible_wearables_r
             {"force_power_light", 15},
             {"force_control_light", 15},
             {"force_manipulation_light", 15}
-				},
+            {"lightsaber_toughness", 5},
+            {"forceintimidate_accuracy", 10}
+        },
 
 				noTrade = 1,
 
@@ -79,3 +81,4 @@ object_tangible_wearables_robe_robe_jedi_light_s04 = object_tangible_wearables_r
 }
 
 ObjectTemplates:addTemplate(object_tangible_wearables_robe_robe_jedi_light_s04, "object/tangible/wearables/robe/robe_jedi_light_s04.iff")
+--Starkiller - Stats added toughness and intim.
