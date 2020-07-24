@@ -64,18 +64,31 @@ object_tangible_wearables_robe_robe_jedi_dark_s04 = object_tangible_wearables_ro
 				"object/creature/player/zabrak_female.iff" },
 				
 				skillMods = {
-				    {"jedi_force_power_max", 350},
-            {"jedi_force_power_regen", 35},
-            {"force_power_dark", 15},
-            {"force_control_dark", 15},
-            {"force_manipulation_dark", 15}
+				         --{"jedi_force_power_max", 350},
+           				 --{"jedi_force_power_regen", 35},
+           				 --{"force_power_dark", 15},
+           				 --{"force_control_dark", 15},
+           				 --{"force_manipulation_dark", 15}
+					 {"jedi_force_power_max", 425},
+           				 {"jedi_force_power_regen", 55},
+           				 {"force_power_dark", 25},
+           				 {"force_control_dark", 25},
+           				 {"force_manipulation_dark", 20},
+					 {"lightsaber_toughness", 20},
+           				 {"forcelightning_accuracy", 25},
+           				 {"twohandlightsaber_accuracy", 25},
+           				 {"polearmlightsaber_accuracy", 25},
+		           		 {"force_choke", 25},
+           				 {"forcethrow_accuracy", 10},
+           				 {"forceknockdown_accuracy", 10}
 				},
 
 				noTrade = 1,
 
 				objectMenuComponent = "RobeObjectMenuComponent",
-				certificationsRequired = {"force_rank_dark_rank_08"},
+				certificationsRequired = {"force_rank_dark_rank_10"},
 				attributeListComponent = "JediRobeAttributeListComponent",
 }
 
 ObjectTemplates:addTemplate(object_tangible_wearables_robe_robe_jedi_dark_s04, "object/tangible/wearables/robe/robe_jedi_dark_s04.iff")
+-- Starkiller - Changed CertReqd from 08 to 10, modified skillmods. Need to rename to Dark Council Robe.
