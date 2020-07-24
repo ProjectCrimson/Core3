@@ -71,8 +71,9 @@ object_tangible_wearables_robe_robe_jedi_light_s01 = object_tangible_wearables_r
 				noTrade = 1,
 
 				objectMenuComponent = "RobeObjectMenuComponent",
-				certificationsRequired = {"force_rank_light_novice"},
+				certificationsRequired = {"force_title_jedi_rank_03"},
 				attributeListComponent = "JediRobeAttributeListComponent",
 }
 
 ObjectTemplates:addTemplate(object_tangible_wearables_robe_robe_jedi_light_s01, "object/tangible/wearables/robe/robe_jedi_light_s01.iff")
+--Starkiller - Changed cert to allow non-FRS Knights to wear Knight Robe.
