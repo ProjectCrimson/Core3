@@ -76,4 +76,4 @@ object_tangible_wearables_robe_robe_jedi_dark_s01 = object_tangible_wearables_ro
 }
 
 ObjectTemplates:addTemplate(object_tangible_wearables_robe_robe_jedi_dark_s01, "object/tangible/wearables/robe/robe_jedi_dark_s01.iff")
---Starkiller - Changed cert to allow non-FRS Knights to wear Knight Robe.force_title_jedi_rank_03
+--Starkiller - Changed cert to allow non-FRS Knights to wear Knight Robe.
