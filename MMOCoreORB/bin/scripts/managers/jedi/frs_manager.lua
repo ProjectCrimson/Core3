@@ -29,7 +29,8 @@ missedVotePenalty = 100 -- FRS XP
 
 -- { rank, skillName, requiredExperience, playerCap, robe }
 lightRankingData = {
-	{ 0, "force_rank_light_novice", 0, -1, "object/tangible/wearables/robe/robe_jedi_light_s01.iff" },
+	--{ 0, "force_rank_light_novice", 0, -1, "object/tangible/wearables/robe/robe_jedi_light_s01.iff" },
+	{ 0, "force_title_jedi_rank_03", 0, -1, "object/tangible/wearables/robe/robe_jedi_light_s01.iff" },
 	{ 1, "force_rank_light_rank_01", 5000, 10, "object/tangible/wearables/robe/robe_jedi_light_s02.iff" },
 	{ 2, "force_rank_light_rank_02", 15000, 10, "object/tangible/wearables/robe/robe_jedi_light_s02.iff" },
 	{ 3, "force_rank_light_rank_03", 25000, 10, "object/tangible/wearables/robe/robe_jedi_light_s02.iff" },
@@ -41,7 +42,7 @@ lightRankingData = {
 	{ 9, "force_rank_light_rank_09", 180000, 8, "object/tangible/wearables/robe/robe_jedi_light_s04.iff" },
 	{ 10, "force_rank_light_rank_10", 250000, 11, "object/tangible/wearables/robe/robe_jedi_light_s05.iff" },
 	{ 11, "force_rank_light_master", 400000, 1, "object/tangible/wearables/robe/robe_jedi_light_s05.iff" },
-
+	
 --[[
 	{ 0, "force_rank_light_novice", 0, -1, "object/tangible/wearables/robe/robe_jedi_light_s01.iff" },
 	{ 1, "force_rank_light_rank_01", 5000, 3, "object/tangible/wearables/robe/robe_jedi_light_s02.iff" },
@@ -60,7 +61,8 @@ lightRankingData = {
 }
 
 darkRankingData = {
-	{ 0, "force_rank_dark_novice", 0, -1, "object/tangible/wearables/robe/robe_jedi_dark_s01.iff" },
+	--{ 0, "force_rank_dark_novice", 0, -1, "object/tangible/wearables/robe/robe_jedi_dark_s01.iff" },
+	{ 0, "force_title_jedi_rank_03", 0, -1, "object/tangible/wearables/robe/robe_jedi_dark_s01.iff" },
 	{ 1, "force_rank_dark_rank_01", 5000, 10, "object/tangible/wearables/robe/robe_jedi_dark_s02.iff" },
 	{ 2, "force_rank_dark_rank_02", 15000, 10, "object/tangible/wearables/robe/robe_jedi_dark_s02.iff" },
 	{ 3, "force_rank_dark_rank_03", 25000, 10, "object/tangible/wearables/robe/robe_jedi_dark_s02.iff" },
@@ -160,3 +162,4 @@ frsExperienceValues = {
 	{ "rank11_win", 9750, 9750, 9750, 9750, 9750, 9750, 9750, 9750, 9750, 9750, 9750, 9750 },
 	{ "rank11_lose", 100, 250, 500, 900, 1300, 1750, 2250, 2750, 3500, 4150, 4750, 5500 },
 }
+--Starkiller - Changed rank 0 to allow Knight Robe usable by non-FRS.
