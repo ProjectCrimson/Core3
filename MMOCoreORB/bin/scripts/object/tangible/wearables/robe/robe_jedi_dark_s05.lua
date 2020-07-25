@@ -64,18 +64,29 @@ object_tangible_wearables_robe_robe_jedi_dark_s05 = object_tangible_wearables_ro
 				"object/creature/player/zabrak_female.iff" },
 				
 				skillMods = {
-				    {"jedi_force_power_max", 350},
-            {"jedi_force_power_regen", 40},
-            {"force_power_dark", 20},
-            {"force_control_dark", 20},
-            {"force_manipulation_dark", 20}
+			       	        --{"jedi_force_power_max", 350},
+            				--{"jedi_force_power_regen", 40},
+            				--{"force_power_dark", 20},
+            				--{"force_control_dark", 20},
+            				--{"force_manipulation_dark", 20},
+			       	        {"jedi_force_power_max", 350},
+            				{"jedi_force_power_regen", 35},
+            				{"force_power_dark", 15},
+            				{"force_control_dark", 15},
+            				{"force_manipulation_dark", 15},
+			       	        {"lightsaber_toughness", 15},
+            				{"forcelightning_accuracy", 15},
+            				{"twohandlightsaber_accuracy", 5},
+            				{"polearmlightsaber_accuracy", 5},
+            				{"force_choke", 5}
 				},
 
 				noTrade = 1,
 
 				objectMenuComponent = "RobeObjectMenuComponent",
-				certificationsRequired = {"force_rank_dark_rank_10"},
+				certificationsRequired = {"force_rank_dark_rank_08"},
 				attributeListComponent = "JediRobeAttributeListComponent",
 }
 
 ObjectTemplates:addTemplate(object_tangible_wearables_robe_robe_jedi_dark_s05, "object/tangible/wearables/robe/robe_jedi_dark_s05.iff")
+--Starkiller - Changed CertReqd from 10 to 08, modified SkillMods. Need to rename to Sith Overlord Robe.
