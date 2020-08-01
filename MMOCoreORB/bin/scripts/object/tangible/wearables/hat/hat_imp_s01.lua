@@ -43,7 +43,9 @@
 
 object_tangible_wearables_hat_hat_imp_s01 = object_tangible_wearables_hat_shared_hat_imp_s01:new {
 	faction = "Imperial",
-	
+				
+  	objectMenuComponent = "ArmorObjectMenuComponent", 
+  	
 	playerRaces = { "object/creature/player/human_male.iff",
 				"object/creature/player/zabrak_male.iff",
 				"object/mobile/vendor/human_male.iff",
