@@ -67,7 +67,7 @@ object_draft_schematic_structure_installation_mining_ore_advanced = object_draft
 	ingredientTitleNames = {"load_bearing_frame", "body_shell_structure", "body_casing", "structure_foundation", "bore_mechanism", "ore_storage_tank", "boreing_mechanism_buffers_and_bushings", "power_supply_unit", "ore_storage_unit", "resource_handling_system"},
 	ingredientSlotType = {0, 0, 2, 0, 0, 2, 0, 1, 1, 1},
 	resourceTypes = {"steel", "metal", "object/tangible/component/structure/shared_wall_module.iff", "metal", "metal", "object/tangible/component/structure/shared_wall_module.iff", "chemical", "object/tangible/component/structure/shared_generator_turbine.iff", "object/tangible/component/structure/shared_structure_small_storage_section.iff", "object/tangible/component/structure/shared_ore_mining_unit_advanced.iff"},
-	resourceQuantities = {490, 800, 1, 300, 330, 6, 440, 3, 6, 2},
+	resourceQuantities = {245, 400, 1, 150, 165, 6, 220, 3, 6, 2},
 	contribution = {100, 100, 100, 100, 100, 100, 100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/deed/harvester_deed/harvester_ore_advanced_deed.iff",
