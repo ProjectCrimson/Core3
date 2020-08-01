@@ -45,9 +45,7 @@ object_tangible_wearables_armor_stormtrooper_armor_stormtrooper_helmet = object_
 	templateType = ARMOROBJECT,
 
 	faction = "Imperial",
-			
-  	objectMenuComponent = "ArmorObjectMenuComponent", 
-  	
+
 	playerRaces = { "object/creature/player/human_male.iff",
 				"object/creature/player/human_female.iff",
 				"object/creature/player/zabrak_male.iff",

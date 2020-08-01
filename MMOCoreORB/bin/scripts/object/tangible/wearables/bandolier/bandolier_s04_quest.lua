@@ -42,9 +42,6 @@
 
 
 object_tangible_wearables_bandolier_bandolier_s04_quest = object_tangible_wearables_bandolier_shared_bandolier_s04_quest:new {
-		
-  	objectMenuComponent = "ArmorObjectMenuComponent", 
-  	
 	playerRaces = { 
 		"object/creature/player/bothan_male.iff",
 		"object/creature/player/bothan_female.iff",

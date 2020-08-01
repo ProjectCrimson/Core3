@@ -43,9 +43,7 @@
 
 object_tangible_wearables_armor_deathtrooper_armor_deathtrooper_standard_chest_plate = object_tangible_wearables_armor_deathtrooper_shared_armor_deathtrooper_standard_chest_plate:new {
 	templateType = ARMOROBJECT,
-                        
-        objectMenuComponent = "ArmorObjectMenuComponent", 
-        
+
 	--faction = "Imperial",
 
 	playerRaces = { "object/creature/player/bothan_male.iff",

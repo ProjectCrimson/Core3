@@ -1,9 +1,7 @@
 object_tangible_wearables_armor_infiltrator_armor_infiltrator_s01_bicep_l = object_tangible_wearables_armor_infiltrator_shared_armor_infiltrator_s01_bicep_l:new {
 
 	templateType = ARMOROBJECT,
-            
-    objectMenuComponent = "ArmorObjectMenuComponent", 
-    
+
 
 	playerRaces = { "object/creature/player/bothan_male.iff",
         "object/creature/player/bothan_female.iff",

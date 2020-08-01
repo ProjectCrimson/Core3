@@ -43,9 +43,9 @@
 
 object_tangible_wearables_armor_clone_trooper_armor_clone_trooper_imperial_s01_boots = object_tangible_wearables_armor_clone_trooper_shared_armor_clone_trooper_imperial_s01_boots:new {
 	templateType = ARMOROBJECT,
-            
-    objectMenuComponent = "ArmorObjectMenuComponent", 
-    
+
+	--objectMenuComponent = {"cpp", "ArmorObjectMenuComponent"},
+
 	faction = "Imperial",
 
 	playerRaces = { "object/creature/player/bothan_male.iff",

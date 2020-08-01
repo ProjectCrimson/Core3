@@ -42,9 +42,6 @@
 
 
 object_tangible_wearables_necklace_necklace_reebo_charm = object_tangible_wearables_necklace_shared_necklace_reebo_charm:new {
-					
-  	objectMenuComponent = "ArmorObjectMenuComponent", 
-  	
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
 				"object/creature/player/human_male.iff",

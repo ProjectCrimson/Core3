@@ -43,9 +43,7 @@
 
 object_tangible_wearables_armor_galactic_marine_armor_galactic_marine_belt = object_tangible_wearables_armor_galactic_marine_shared_armor_galactic_marine_belt:new {
 	templateType = ARMOROBJECT,
-            
-    objectMenuComponent = "ArmorObjectMenuComponent", 
-    
+
 	faction = "Imperial",
 
 	playerRaces = { "object/creature/player/bothan_male.iff",

@@ -43,9 +43,7 @@
 
 object_tangible_wearables_armor_deathtrooper_armor_deathtrooper_standard_bracer_l = object_tangible_wearables_armor_deathtrooper_shared_armor_deathtrooper_standard_bracer_l:new {
 	templateType = ARMOROBJECT,
-                        
-        objectMenuComponent = "ArmorObjectMenuComponent", 
-        
+
 	--faction = "Imperial",
 
 	playerRaces = { "object/creature/player/bothan_male.iff",

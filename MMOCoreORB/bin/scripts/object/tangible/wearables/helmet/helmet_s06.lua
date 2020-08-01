@@ -42,9 +42,6 @@
 
 
 object_tangible_wearables_helmet_helmet_s06 = object_tangible_wearables_helmet_shared_helmet_s06:new {
-				
-  	objectMenuComponent = "ArmorObjectMenuComponent", 
-  	
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
 				"object/creature/player/human_male.iff",

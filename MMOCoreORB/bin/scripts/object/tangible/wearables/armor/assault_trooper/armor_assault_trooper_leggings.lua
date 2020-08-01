@@ -47,9 +47,7 @@ object_tangible_wearables_armor_assault_trooper_armor_assault_trooper_leggings =
 
 
   faction = "Imperial",
-            
-    objectMenuComponent = "ArmorObjectMenuComponent", 
-    
+
 	playerRaces = { "object/creature/player/bothan_male.iff",
         "object/creature/player/bothan_female.iff",
         "object/creature/player/human_male.iff",
