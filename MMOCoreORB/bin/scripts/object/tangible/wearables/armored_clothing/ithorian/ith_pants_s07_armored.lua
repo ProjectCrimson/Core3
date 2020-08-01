@@ -1,8 +1,6 @@
 object_tangible_wearables_armored_clothing_ithorian_ith_pants_s07_armored = object_tangible_wearables_armored_clothing_ithorian_shared_ith_pants_s07_armored:new {
 	templateType = ARMOROBJECT,
-	 
-    objectMenuComponent = "ArmorObjectMenuComponent", 
-  
+	
 	playerRaces = { "object/creature/player/ithorian_male.iff",
         "object/creature/player/ithorian_female.iff",
         "object/mobile/vendor/ithorian_female.iff",
