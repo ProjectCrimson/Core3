@@ -67,7 +67,7 @@ object_draft_schematic_structure_component_structure_harvesting_mechanism = obje
 	ingredientTitleNames = {"manipulator_unit", "bio_controller", "fluid_hoses", "pump_unit", "sealant_and_shock_absorbing_buffers"},
 	ingredientSlotType = {0, 0, 0, 0, 0},
 	resourceTypes = {"steel", "steel", "chemical", "metal", "chemical"},
-	resourceQuantities = {80, 125, 200, 35, 100},
+	resourceQuantities = {8, 13, 20, 4, 10},
 	contribution = {100, 100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/component/structure/harvesting_mechanism.iff",
