@@ -67,7 +67,7 @@ object_draft_schematic_structure_component_structure_storage_section = object_dr
 	ingredientTitleNames = {"storage_unit_frame", "storage_unit"},
 	ingredientSlotType = {0, 0},
 	resourceTypes = {"steel", "metal"},
-	resourceQuantities = {50, 200},
+	resourceQuantities = {5, 20},
 	contribution = {100, 100},
 
 	targetTemplate = "object/tangible/component/structure/structure_storage_section.iff",

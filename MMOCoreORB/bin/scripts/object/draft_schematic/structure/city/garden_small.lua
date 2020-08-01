@@ -67,7 +67,7 @@ object_draft_schematic_structure_city_garden_small = object_draft_schematic_stru
 	ingredientTitleNames = {"decorative_flora", "foundation", "wall_sections"},
 	ingredientSlotType = {0, 0, 2},
 	resourceTypes = {"flora_resources", "ore", "object/tangible/component/structure/shared_wall_module.iff"},
-	resourceQuantities = {1000, 500, 4},
+	resourceQuantities = {500, 250, 4},
 	contribution = {100, 100, 100},
 
 	targetTemplate = "object/tangible/deed/city_deed/garden_corellia_sml_01_deed.iff",

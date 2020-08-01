@@ -67,7 +67,7 @@ object_draft_schematic_structure_component_structure_ore_mining_unit_advanced = 
 	ingredientTitleNames = {"bore_head", "bore_positioning_arm", "ore_transport_auger_and_conveyors", "load_bearing_joints_and_fittings", "charge_and_thermal_regulation_medium", "geonosian_power_cube"},
 	ingredientSlotType = {0, 0, 0, 0, 0, 1},
 	resourceTypes = {"steel", "steel", "metal", "steel", "gas_inert", "object/tangible/component/weapon/shared_geonosian_power_cube.iff"},
-	resourceQuantities = {300, 250, 190, 220, 125, 1},
+	resourceQuantities = {30, 25, 19, 22, 13, 1},
 	contribution = {100, 100, 100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/component/structure/ore_mining_unit_advanced.iff",
