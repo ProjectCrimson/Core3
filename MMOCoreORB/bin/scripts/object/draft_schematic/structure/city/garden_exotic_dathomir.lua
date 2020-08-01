@@ -67,7 +67,7 @@ object_draft_schematic_structure_city_garden_exotic_dathomir = object_draft_sche
 	ingredientTitleNames = {"decorative_flora", "foundation", "wall_sections"},
 	ingredientSlotType = {0, 0, 2},
 	resourceTypes = {"vegetable_fungi_dathomir", "ore_siliclastic", "object/tangible/component/structure/shared_wall_module.iff"},
-	resourceQuantities = {3000, 1500, 14},
+	resourceQuantities = {1500, 750, 14},
 	contribution = {100, 100, 100},
 
 	targetTemplate = "object/tangible/deed/city_deed/garden_dathomir_lrg_01_deed.iff",

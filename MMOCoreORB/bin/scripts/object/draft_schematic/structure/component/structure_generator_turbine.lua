@@ -67,7 +67,7 @@ object_draft_schematic_structure_component_structure_generator_turbine = object_
 	ingredientTitleNames = {"energy_gathering_array", "turbine_cradle", "magnetic_reaction_mass", "cradle_fittings", "charge_leakage_insulation_material", "turbine_rotor", "reaction_mass"},
 	ingredientSlotType = {0, 0, 0, 0, 0, 0, 0},
 	resourceTypes = {"copper", "steel", "ore_carbonate", "metal_nonferrous", "chemical", "aluminum", "gas_reactive"},
-	resourceQuantities = {250, 50, 250, 150, 50, 500, 200},
+	resourceQuantities = {25, 5, 25, 15, 5, 50, 20},
 	contribution = {100, 100, 100, 100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/component/structure/generator_turbine.iff",
