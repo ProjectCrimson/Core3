@@ -67,7 +67,7 @@ object_draft_schematic_structure_component_structure_turbo_fluidic_drilling_pump
 	ingredientTitleNames = {"bore_head", "well_head_positioning_and_piping", "fluid_hoses", "pump_unit", "sealant_and_shock_absorbing_buffers"},
 	ingredientSlotType = {0, 0, 0, 0, 0},
 	resourceTypes = {"steel", "metal", "chemical", "metal", "chemical"},
-	resourceQuantities = {12, 15, 24, 6, 12},
+	resourceQuantities = {120, 150, 240, 60, 120},
 	contribution = {100, 100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/component/structure/turbo_fluidic_drilling_pumping_unit.iff",

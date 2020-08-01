@@ -67,7 +67,7 @@ object_draft_schematic_structure_city_cityhall_naboo = object_draft_schematic_st
 	ingredientTitleNames = {"load_bearing_structure_and_shell", "insulation_and_covering", "foundation", "wall_sections", "power_supply_unit", "storage_space"},
 	ingredientSlotType = {0, 0, 0, 2, 1, 1},
 	resourceTypes = {"metal", "ore", "ore", "object/tangible/component/structure/shared_wall_module.iff", "object/tangible/component/structure/shared_power_core_unit.iff", "object/tangible/component/structure/shared_structure_storage_section.iff"},
-	resourceQuantities = {900, 2000, 200, 20, 6, 6},
+	resourceQuantities = {1800, 4000, 400, 20, 6, 6},
 	contribution = {100, 100, 100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/deed/city_deed/cityhall_naboo_deed.iff",

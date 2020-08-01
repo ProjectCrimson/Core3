@@ -67,7 +67,7 @@ object_draft_schematic_structure_component_structure_small_storage_section = obj
 	ingredientTitleNames = {"storage_unit_frame", "storage_unit"},
 	ingredientSlotType = {0, 0},
 	resourceTypes = {"steel", "metal"},
-	resourceQuantities = {5, 8},
+	resourceQuantities = {50, 80},
 	contribution = {100, 100},
 
 	targetTemplate = "object/tangible/component/structure/structure_small_storage_section.iff",

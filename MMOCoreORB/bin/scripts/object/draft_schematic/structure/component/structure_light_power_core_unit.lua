@@ -67,7 +67,7 @@ object_draft_schematic_structure_component_structure_light_power_core_unit = obj
 	ingredientTitleNames = {"sub_assembly_frame", "micro_turbine_and_charge_accumulator", "shock_and_vibration_isolation_assembly", "thermal_insulator_and_charge_leakage_preventor", "super_mini_turbo_generator", "energy_flow_modulator_and_filter", "energy_distribution_net"},
 	ingredientSlotType = {0, 0, 0, 0, 0, 0, 0},
 	resourceTypes = {"metal", "metal", "chemical", "ore", "metal", "metal", "metal"},
-	resourceQuantities = {8, 9, 9, 6, 5, 8, 8},
+	resourceQuantities = {15, 85, 18, 60, 50, 15, 15},
 	contribution = {100, 100, 100, 100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/component/structure/light_power_core_unit.iff",
