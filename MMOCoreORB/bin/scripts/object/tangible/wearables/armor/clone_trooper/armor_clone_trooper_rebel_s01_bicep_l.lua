@@ -43,9 +43,9 @@
 
 object_tangible_wearables_armor_clone_trooper_armor_clone_trooper_rebel_s01_bicep_l = object_tangible_wearables_armor_clone_trooper_shared_armor_clone_trooper_rebel_s01_bicep_l:new {
 	templateType = ARMOROBJECT,
-
-	--objectMenuComponent = {"cpp", "ArmorObjectMenuComponent"},
-
+            
+    objectMenuComponent = "ArmorObjectMenuComponent", 
+    
 	faction = "Rebel",
 
 	playerRaces = { "object/creature/player/bothan_male.iff",

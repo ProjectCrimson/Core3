@@ -1,7 +1,9 @@
 object_tangible_wearables_armor_infiltrator_armor_infiltrator_s02_gloves = object_tangible_wearables_armor_infiltrator_shared_armor_infiltrator_s02_gloves:new {
 
 	templateType = ARMOROBJECT,
-
+            
+    objectMenuComponent = "ArmorObjectMenuComponent", 
+    
 
 	playerRaces = { "object/creature/player/bothan_male.iff",
         "object/creature/player/bothan_female.iff",

@@ -44,7 +44,9 @@
 object_tangible_wearables_armor_mandalorian_sabine_armor_mandalorian_sabine_boots = object_tangible_wearables_armor_mandalorian_sabine_shared_armor_mandalorian_sabine_boots:new {
 
 	templateType = ARMOROBJECT,
-	
+	           
+    objectMenuComponent = "ArmorObjectMenuComponent", 
+    
 
 
 	playerRaces = { "object/creature/player/bothan_male.iff",

@@ -67,7 +67,7 @@ object_draft_schematic_structure_component_structure_heavy_harvesting_mechanism 
 	ingredientTitleNames = {"manipulator_unit", "bio_controller", "fluid_hoses", "pump_unit", "sealant_and_shock_absorbing_buffers"},
 	ingredientSlotType = {0, 0, 0, 0, 0},
 	resourceTypes = {"steel", "steel", "chemical", "metal", "chemical"},
-	resourceQuantities = {100, 150, 250, 50, 120},
+	resourceQuantities = {10, 15, 25, 5, 12},
 	contribution = {100, 100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/component/structure/heavy_harvesting_mechanism.iff",
