@@ -42,7 +42,9 @@
 
 
 object_tangible_wearables_robe_robe_jedi_dark_s05 = object_tangible_wearables_robe_shared_robe_jedi_dark_s05:new {
-					
+	
+	customObjectName = "Sith Overlord Robe",
+	
   	objectMenuComponent = "ArmorObjectMenuComponent", 
   	
 	playerRaces = { "object/creature/player/bothan_male.iff",
