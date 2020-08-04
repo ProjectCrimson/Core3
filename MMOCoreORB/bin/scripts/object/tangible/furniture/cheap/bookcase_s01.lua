@@ -42,8 +42,9 @@
 
 
 object_tangible_furniture_cheap_bookcase_s01 = object_tangible_furniture_cheap_shared_bookcase_s01:new {
-
-
+		
+  		objectMenuComponent = "ArmorObjectMenuComponent", 
+  	
 	numberExperimentalProperties = {1, 1, 1, 2},
 	experimentalProperties = {"XX", "XX", "XX", "DR", "OQ"},
 	experimentalWeights = {1, 1, 1, 1, 1},
