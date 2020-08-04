@@ -62,12 +62,12 @@ object_draft_schematic_clothing_clothing_backpack_field_03 = object_draft_schema
    customizationStringNames = {},
    customizationDefaults = {},
 
-   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
-   ingredientTitleNames = {"primary_pocket", "secondary_pocket", "strap_pad", "strap_adjustment"},
-   ingredientSlotType = {0, 0, 0, 0},
-   resourceTypes = {"fiberplast", "hide", "hide", "metal"},
-   resourceQuantities = {20, 10, 10, 5},
-   contribution = {100, 100, 100, 100},
+   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   ingredientTitleNames = {"primary_pocket", "secondary_pocket", "strap_pad", "strap_adjustment", "synthetic_cloth_enhancement", "reinforced_fiber_panel_enchancement"},
+   ingredientSlotType = {0, 0, 0, 0, 3, 3},
+   resourceTypes = {"fiberplast", "hide", "hide", "metal", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_reinforced_fiber_panels.iff"},
+   resourceQuantities = {20, 10, 10, 5, 1, 1},
+   contribution = {100, 100, 100, 100, 100, 100},
 
 
    targetTemplate = "object/tangible/wearables/backpack/backpack_s03.iff",
