@@ -43,8 +43,7 @@
 
 object_tangible_furniture_jedi_frn_all_banner_dark = object_tangible_furniture_jedi_shared_frn_all_banner_dark:new {
 
-	customName = "Dark Jedi Tapestry",
-	 	objectMenuComponent = "ArmorObjectMenuComponent", 
+	customName = "Dark Jedi Tapestry"
 
 }
 

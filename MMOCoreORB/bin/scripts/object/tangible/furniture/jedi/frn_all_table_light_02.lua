@@ -43,8 +43,7 @@
 
 object_tangible_furniture_jedi_frn_all_table_light_02 = object_tangible_furniture_jedi_shared_frn_all_table_light_02:new {
 
-	customName = "Small Light Jedi Table",
-	 	objectMenuComponent = "ArmorObjectMenuComponent", 
+	customName = "Small Light Jedi Table"
 
 }
 
