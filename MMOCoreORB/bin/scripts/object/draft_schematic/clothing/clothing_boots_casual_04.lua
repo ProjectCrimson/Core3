@@ -62,12 +62,12 @@ object_draft_schematic_clothing_clothing_boots_casual_04 = object_draft_schemati
    customizationStringNames = {"/private/index_color_1"},
    customizationDefaults = {19},
 
-   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
-   ingredientTitleNames = {"boots", "binding_and_hardware", "sole", "synthetic_cloth_enhancement", "reinforced_fiber_panel_enchancement"},
-   ingredientSlotType = {0, 0, 0, 3, 3},
-   resourceTypes = {"hide", "petrochem_inert", "petrochem_inert", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_reinforced_fiber_panels.iff"},
-   resourceQuantities = {20, 10, 15, 1, 1},
-   contribution = {100, 100, 100, 100, 100},
+   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   ingredientTitleNames = {"boots", "binding_and_hardware", "sole"},
+   ingredientSlotType = {0, 0, 0},
+   resourceTypes = {"hide", "petrochem_inert", "petrochem_inert"},
+   resourceQuantities = {20, 10, 15},
+   contribution = {100, 100, 100},
 
 
    targetTemplate = "object/tangible/wearables/boots/boots_s04.iff",

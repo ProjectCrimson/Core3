@@ -62,12 +62,12 @@ object_draft_schematic_clothing_clothing_jewelry_bracelet_05 = object_draft_sche
    customizationStringNames = {"/private/index_color_1"},
    customizationDefaults = {0},
 
-   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
-   ingredientTitleNames = {"clasp", "band", "jewelry_setting"},
-   ingredientSlotType = {0, 0, 0}
-   resourceTypes = {"steel", "steel", "gemstone_crystalline"},
-   resourceQuantities = {5, 10, 5},
-   contribution = {100, 100, 100},
+   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   ingredientTitleNames = {"clasp", "band", "jewelry_setting", "synthetic_cloth_enhancement", "reinforced_fiber_panel_enchancement"},
+   ingredientSlotType = {0, 0, 0, 3, 3}
+   resourceTypes = { "steel", "steel", "gemstone_crystalline", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_reinforced_fiber_panels.iff" },
+   resourceQuantities = {5, 10, 5, 1, 1},
+   contribution = {100, 100, 100, 100, 100},
 
 
    targetTemplate = "object/tangible/wearables/bracelet/bracelet_s05_r.iff",
