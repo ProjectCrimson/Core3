@@ -42,8 +42,7 @@
 
 
 object_tangible_furniture_cheap_chair_s01 = object_tangible_furniture_cheap_shared_chair_s01:new {
-		
-  		objectMenuComponent = "ArmorObjectMenuComponent", 
+
 
 	numberExperimentalProperties = {1, 1, 1, 2},
 	experimentalProperties = {"XX", "XX", "XX", "DR", "OQ"},

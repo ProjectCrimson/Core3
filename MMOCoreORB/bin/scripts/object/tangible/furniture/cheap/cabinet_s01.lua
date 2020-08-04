@@ -42,8 +42,7 @@
 
 
 object_tangible_furniture_cheap_cabinet_s01 = object_tangible_furniture_cheap_shared_cabinet_s01:new {
-		
-  		objectMenuComponent = "ArmorObjectMenuComponent", 
+
 }
 
 ObjectTemplates:addTemplate(object_tangible_furniture_cheap_cabinet_s01, "object/tangible/furniture/cheap/cabinet_s01.iff")
