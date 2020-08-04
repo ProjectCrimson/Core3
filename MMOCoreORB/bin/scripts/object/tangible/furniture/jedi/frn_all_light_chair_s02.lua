@@ -42,7 +42,7 @@
 
 
 object_tangible_furniture_jedi_frn_all_light_chair_s02 = object_tangible_furniture_jedi_shared_frn_all_light_chair_s02:new {
-
+ 	objectMenuComponent = "ArmorObjectMenuComponent", 
 }
 
 ObjectTemplates:addTemplate(object_tangible_furniture_jedi_frn_all_light_chair_s02, "object/tangible/furniture/jedi/frn_all_light_chair_s02.iff")

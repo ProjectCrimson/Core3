@@ -43,7 +43,8 @@
 
 object_tangible_furniture_jedi_frn_all_table_dark_01 = object_tangible_furniture_jedi_shared_frn_all_table_dark_01:new {
 
-	customName = "Long Dark Jedi Table"
+	customName = "Long Dark Jedi Table",
+	 	objectMenuComponent = "ArmorObjectMenuComponent", 
 
 }
 
