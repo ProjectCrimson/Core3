@@ -1096,11 +1096,11 @@ void MissionManagerImplementation::randomizeGenericBountyMission(CreatureObject*
 		}
 
 		if (level == 1) {
-			reward = creoLevel * (200 + System::random(200));
+			reward = creoLevel * (1200 + System::random(1200));
 		} else if (level == 2) {
-			reward = creoLevel * (250 + System::random(250));
+			reward = creoLevel * (1250 + System::random(1250));
 		} else if (level == 3) {
-			reward = creoLevel * (300 + System::random(300));
+			reward = creoLevel * (1300 + System::random(1300));
 		}
 
 		mission->setRewardCredits(reward);
