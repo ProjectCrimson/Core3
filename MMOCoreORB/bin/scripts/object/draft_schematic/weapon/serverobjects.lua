@@ -142,3 +142,9 @@ includeFile("draft_schematic/weapon/sword_marauder.lua")
 
 -- Afterlife schematics
 includeFile("draft_schematic/weapon/sword_acid.lua")
+includeFile("draft_schematic/weapon/carbine_mcdxr6.lua")
+includeFile("draft_schematic/weapon/carbine_mcee3.lua")
+includeFile("draft_schematic/weapon/carbine_mcelite.lua")
+includeFile("draft_schematic/weapon/rifle_mcdc15.lua")
+includeFile("draft_schematic/weapon/rifle_mcsg82.lua")
+includeFile("draft_schematic/weapon/rifle_mct21.lua")

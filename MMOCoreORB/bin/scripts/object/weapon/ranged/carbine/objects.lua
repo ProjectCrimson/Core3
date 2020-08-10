@@ -901,4 +901,27 @@ object_weapon_ranged_carbine_shared_som_carbine_republic_sfor = SharedWeaponObje
 
 ObjectTemplates:addClientTemplate(object_weapon_ranged_carbine_shared_som_carbine_republic_sfor, "object/weapon/ranged/carbine/shared_som_carbine_republic_sfor.iff")
 ------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+object_weapon_ranged_carbine_shared_carbine_mcdxr6 = SharedWeaponObjectTemplate:new {
+  clientTemplateFileName = "object/weapon/ranged/carbine/shared_carbine_mcdxr6.iff"
+  
+}
 
+ObjectTemplates:addClientTemplate(object_weapon_ranged_carbine_shared_carbine_mcdxr6, "object/weapon/ranged/carbine/shared_carbine_mcdxr6.iff")
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+object_weapon_ranged_carbine_shared_carbine_mcee3 = SharedWeaponObjectTemplate:new {
+  clientTemplateFileName = "object/weapon/ranged/carbine/shared_carbine_mcee3.iff"
+  
+}
+
+ObjectTemplates:addClientTemplate(object_weapon_ranged_carbine_shared_carbine_mcee3, "object/weapon/ranged/carbine/shared_carbine_mcee3.iff")
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+object_weapon_ranged_carbine_shared_carbine_mcelite = SharedWeaponObjectTemplate:new {
+  clientTemplateFileName = "object/weapon/ranged/carbine/shared_carbine_mcelite.iff"
+  
+}
+
+ObjectTemplates:addClientTemplate(object_weapon_ranged_carbine_shared_carbine_mcelite, "object/weapon/ranged/carbine/shared_carbine_mcelite.iff")
+------------------------------------------------------------------------------------------------

@@ -2114,5 +2114,11 @@ schematics = {
 
   -- Afterlife Schematics
   {path="object/draft_schematic/weapon/sword_acid.iff"},
-  
+  {path="object/draft_schematic/weapon/carbine_mcdxr6.iff"},
+  {path="object/draft_schematic/weapon/carbine_mcee3.iff"},
+  {path="object/draft_schematic/weapon/carbine_mcelite.iff"},
+  {path="object/draft_schematic/weapon/rifle_mcdc15.iff"},
+  {path="object/draft_schematic/weapon/rifle_mcsg82.iff"},
+  {path="object/draft_schematic/weapon/rifle_mct21.iff"},
+
 }

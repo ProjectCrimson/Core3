@@ -4128,3 +4128,39 @@ object_draft_schematic_weapon_shared_sword_acid = SharedDraftSchematicObjectTemp
 	clientTemplateFileName = "object/draft_schematic/weapon/shared_sword_acid.iff"
 }
 ObjectTemplates:addClientTemplate(object_draft_schematic_weapon_shared_sword_acid, "object/draft_schematic/weapon/shared_sword_acid.iff")
+
+----
+object_draft_schematic_weapon_shared_carbine_mcdxr6 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/weapon/shared_carbine_mcdxr6.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_weapon_shared_carbine_mcdxr6, "object/draft_schematic/weapon/shared_carbine_mcdxr6.iff")
+
+----
+object_draft_schematic_weapon_shared_carbine_mcee3 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/weapon/shared_carbine_mcee3.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_weapon_shared_carbine_mcee3, "object/draft_schematic/weapon/shared_carbine_mcee3.iff")
+
+----
+object_draft_schematic_weapon_shared_carbine_mcelite = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/weapon/shared_carbine_mcelite.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_weapon_shared_carbine_mcelite, "object/draft_schematic/weapon/shared_carbine_mcelite.iff")
+
+----
+object_draft_schematic_weapon_shared_rifle_mcdc15 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/weapon/shared_rifle_mcdc15.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_weapon_shared_rifle_mcdc15, "object/draft_schematic/weapon/shared_rifle_mcdc15.iff")
+
+----
+object_draft_schematic_weapon_shared_rifle_mcsg82 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/weapon/shared_rifle_mcsg82.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_weapon_shared_rifle_mcsg82, "object/draft_schematic/weapon/shared_rifle_mcsg82.iff")
+
+----
+object_draft_schematic_weapon_shared_rifle_mct21 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/weapon/shared_rifle_mct21.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_weapon_shared_rifle_mct21, "object/draft_schematic/weapon/shared_rifle_mct21.iff")

@@ -147,3 +147,9 @@ includeFile("tangible/loot/loot_schematic/ns_boots_schematic.lua")
 
 -- Afterlife Schematics
 includeFile("tangible/loot/loot_schematic/sword_acid_schematic.lua")
+includeFile("tangible/loot/loot_schematic/carbine_mcdxr6_schematic.lua")
+includeFile("tangible/loot/loot_schematic/carbine_mcee3_schematic.lua")
+includeFile("tangible/loot/loot_schematic/carbine_mcelite_schematic.lua")
+includeFile("tangible/loot/loot_schematic/rifle_mcdc15_schematic.lua")
+includeFile("tangible/loot/loot_schematic/rifle_mcsg82_schematic.lua")
+includeFile("tangible/loot/loot_schematic/rifle_mct21_schematic.lua")

@@ -4963,3 +4963,40 @@ object_tangible_loot_loot_schematic_shared_sword_acid_schematic = SharedTangible
 	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_sword_acid_schematic.iff"
 }
 ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_sword_acid_schematic, "object/tangible/loot/loot_schematic/shared_sword_acid_schematic.iff")
+
+----
+object_tangible_loot_loot_schematic_shared_carbine_mcdxr6_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_carbine_mcdxr6_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_carbine_mcdxr6_schematic, "object/tangible/loot/loot_schematic/shared_carbine_mcdxr6_schematic.iff")
+
+----
+object_tangible_loot_loot_schematic_shared_carbine_mcee3_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_carbine_mcee3_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_carbine_mcee3_schematic, "object/tangible/loot/loot_schematic/shared_carbine_mcee3_schematic.iff")
+
+----
+object_tangible_loot_loot_schematic_shared_carbine_mcelite_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_carbine_mcelite_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_carbine_mcelite_schematic, "object/tangible/loot/loot_schematic/shared_carbine_mcelite_schematic.iff")
+
+----
+object_tangible_loot_loot_schematic_shared_rifle_mcdc15_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_rifle_mcdc15_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_rifle_mcdc15_schematic, "object/tangible/loot/loot_schematic/shared_rifle_mcdc15_schematic.iff")
+
+----
+object_tangible_loot_loot_schematic_shared_rifle_mcsg82_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_rifle_mcsg82_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_rifle_mcsg82_schematic, "object/tangible/loot/loot_schematic/shared_rifle_mcsg82_schematic.iff")
+
+----
+object_tangible_loot_loot_schematic_shared_rifle_mct21_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_rifle_mct21_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_rifle_mct21_schematic, "object/tangible/loot/loot_schematic/shared_rifle_mct21_schematic.iff")
+
