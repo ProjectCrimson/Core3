@@ -11,4 +11,4 @@ mastercrafted_dc15_rifle_schematic = {
 	customizationValues = {}
 }
 
-addLootItemTemplate("mastercrafted_dc15_rifle_schematic", mastercrafted_dc15_rifle_schematic)
+addLootItemTemplate("mastercrafted_dc15_schematic", mastercrafted_dc15_schematic)

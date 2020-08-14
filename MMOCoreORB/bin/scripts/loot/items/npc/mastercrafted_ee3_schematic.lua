@@ -11,4 +11,4 @@ mastercrafted_ee3_carbine_schematic = {
 	customizationValues = {}
 }
 
-addLootItemTemplate("mastercrafted_ee3_carbine_schematic", mastercrafted_ee3_carbine_schematic)
+addLootItemTemplate("mastercrafted_ee3_schematic", mastercrafted_ee3_schematic)
