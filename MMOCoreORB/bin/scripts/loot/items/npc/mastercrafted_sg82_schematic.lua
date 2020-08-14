@@ -11,4 +11,4 @@ mastercrafted_sg82_rifle_schematic = {
 	customizationValues = {}
 }
 
-addLootItemTemplate("mastercrafted_sg82_schematic", mastercrafted_sg82_schematic)
+addLootItemTemplate("mastercrafted_sg82_rifle_schematic", mastercrafted_sg82_rifle_schematic)

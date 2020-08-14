@@ -11,4 +11,4 @@ mastercrafted_t21_rifle_schematic = {
 	customizationValues = {}
 }
 
-addLootItemTemplate("mastercrafted_t21_schematic", mastercrafted_t21_schematic)
+addLootItemTemplate("mastercrafted_t21_rifle_schematic", mastercrafted_t21_rifled_schematic)

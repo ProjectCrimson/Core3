@@ -11,4 +11,4 @@ mastercrafted_dxr6_carbine_schematic = {
 	customizationValues = {}
 }
 
-addLootItemTemplate("mastercrafted_dxr6_schematic", mastercrafted_dxr6_schematic)
+addLootItemTemplate("mastercrafted_dxr6_carbine_schematic", mastercrafted_dxr6_carbine_schematic)
