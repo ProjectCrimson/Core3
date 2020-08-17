@@ -66,9 +66,10 @@ object_draft_schematic_clothing_clothing_hat_twilek_casual_02 = object_draft_sch
    ingredientTitleNames = {"shell", "binding_and_weatherproofing", "liner"},
    ingredientSlotType = {1, 0, 1},
    resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "petrochem_inert_polymer", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
-   resourceQuantities = {2, 40, 2},
+   --resourceQuantities = {2, 40, 2},
+   resourceQuantities = {1, 40, 1},
    contribution = {100, 100, 100},
-
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/hat/hat_twilek_s02.iff",
 
