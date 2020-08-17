@@ -64,11 +64,14 @@ object_draft_schematic_clothing_clothing_hat_casual_14 = object_draft_schematic_
 
    ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
    ingredientTitleNames = {"shell", "binding_and_weatherproofing", "liner"},
-   ingredientSlotType = {0, 0, 0},
-   resourceTypes = {"fiberplast", "petrochem_inert", "fiberplast"},
-   resourceQuantities = {10, 6, 6},
+   --ingredientSlotType = {0, 0, 0},
+   ingredientSlotType = {1, 0, 1},
+   --resourceTypes = {"fiberplast", "petrochem_inert", "fiberplast"},
+   resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "petrochem_inert", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
+   --resourceQuantities = {10, 6, 6},
+   resourceQuantities = {1, 20, 1},
    contribution = {100, 100, 100},
-
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/hat/hat_s14.iff",
 
