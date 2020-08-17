@@ -62,13 +62,19 @@ object_draft_schematic_clothing_clothing_bikini_casual_01 = object_draft_schemat
    customizationStringNames = {"/private/index_color_1"},
    customizationDefaults = {63},
 
-   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
-   ingredientTitleNames = {"bikini_fabric", "bikini_reinforcement", "padded_straps"},
-   ingredientSlotType = {1, 0, 0},
-   resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "copper", "hide_wooly"},
-   resourceQuantities = {2, 50, 50},
-   contribution = {100, 100, 100},
-
+   --ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   --ingredientTitleNames = {"bikini_fabric", "bikini_reinforcement", "padded_straps"},
+   --ingredientSlotType = {1, 0, 0},
+   --resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "copper", "hide_wooly"},
+   --resourceQuantities = {2, 50, 50},
+   --contribution = {100, 100, 100},
+   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n" "craft_clothing_ingredients_n"},
+   ingredientTitleNames = {"bikini_fabric", "lining", "bikini_reinforcement", "padded_straps"},
+   ingredientSlotType = {1, 1, 0, 0},
+   resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "copper", "hide_wooly"},
+   resourceQuantities = {1, 1, 50, 50},
+   contribution = {100, 100, 100, 100},
+ --Starkiller - Equalized BE tissue across clothing.  
 
    targetTemplate = "object/tangible/wearables/bikini/bikini_s01.iff",
 
