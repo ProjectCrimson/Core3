@@ -66,9 +66,10 @@ object_draft_schematic_clothing_clothing_bikini_casual_04 = object_draft_schemat
    ingredientTitleNames = {"bikini_fabric", "bikini_reinforcement", "padded_straps"},
    ingredientSlotType = {1, 1, 0},
    resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "hide_wooly"},
-   resourceQuantities = {3, 2, 30},
+   --resourceQuantities = {3, 2, 30},
+   resourceQuantities = {1, 1, 30},
    contribution = {100, 100, 100},
-
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/bikini/bikini_s04.iff",
 
