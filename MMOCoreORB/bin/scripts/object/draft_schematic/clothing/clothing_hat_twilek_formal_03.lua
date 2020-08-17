@@ -66,9 +66,10 @@ object_draft_schematic_clothing_clothing_hat_twilek_formal_03 = object_draft_sch
    ingredientTitleNames = {"shell", "binding_and_weatherproofing", "liner", "green_diamond_crusting", "green_diamond_support"},
    ingredientSlotType = {1, 0, 1, 0, 0},
    resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "petrochem_inert", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "crystalline_green_diamond", "armophous_plexite"},
-   resourceQuantities = {3, 20, 3, 10, 10},
+   --resourceQuantities = {3, 20, 3, 10, 10},
+   resourceQuantities = {1, 20, 1, 10, 10},
    contribution = {100, 100, 100, 100, 100},
-
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/hat/hat_twilek_s03.iff",
 
