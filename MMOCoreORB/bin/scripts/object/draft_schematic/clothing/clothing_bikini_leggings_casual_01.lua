@@ -62,13 +62,13 @@ object_draft_schematic_clothing_clothing_bikini_leggings_casual_01 = object_draf
    customizationStringNames = {"/private/index_color_1", "/private/index_color_2"},
    customizationDefaults = {63, 227},
 
-   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
-   ingredientTitleNames = {"bikini_fabric", "bikini_reinforcement"},
-   ingredientSlotType = {1, 0},
-   resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "copper"},
-   resourceQuantities = {4, 50},
-   contribution = {100, 100},
-
+   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   ingredientTitleNames = {"bikini_fabric", "lining", "bikini_reinforcement"},
+   ingredientSlotType = {1, 1, 0},
+   resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "copper"},
+   resourceQuantities = {1, 1, 50},
+   contribution = {100, 100, 100},
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/bikini/bikini_leggings_s01.iff",
 
