@@ -64,11 +64,14 @@ object_draft_schematic_clothing_clothing_pants_casual_09 = object_draft_schemati
 
    ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
    ingredientTitleNames = {"shell", "binding_and_hardware", "colorizable_cloth_panel"},
-   ingredientSlotType = {0, 1, 0},
-   resourceTypes = {"hide", "object/tangible/component/clothing/shared_metal_fasteners.iff", "hide"},
-   resourceQuantities = {50, 2, 50},
+   --ingredientSlotType = {0, 1, 0},
+   ingredientSlotType = {1, 1, 1},
+   --resourceTypes = {"hide", "object/tangible/component/clothing/shared_metal_fasteners.iff", "hide"},
+   resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_metal_fasteners.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
+   --resourceQuantities = {50, 2, 50},
+   resourceQuantities = {1, 2, 1},
    contribution = {100, 100, 100},
-
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/pants/pants_s09.iff",
 
