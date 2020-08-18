@@ -62,13 +62,19 @@ object_draft_schematic_clothing_clothing_pants_casual_10 = object_draft_schemati
    customizationStringNames = {"/private/index_color_1"},
    customizationDefaults = {15},
 
-   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
-   ingredientTitleNames = {"binding_and_hardware", "colorizable_cloth_panel"},
-   ingredientSlotType = {0, 1},
-   resourceTypes = {"petrochem_inert", "object/tangible/component/clothing/shared_fiberplast_panel.iff"},
-   resourceQuantities = {13, 1},
-   contribution = {100, 100},
-
+   --ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   --ingredientTitleNames = {"binding_and_hardware", "colorizable_cloth_panel"},
+   ingredientTitleNames = {"body", "binding_and_hardware", "colorizable_cloth_panel"},
+   --ingredientSlotType = {0, 1},
+   ingredientSlotType = {1, 0, 1},
+   --resourceTypes = {"petrochem_inert", "object/tangible/component/clothing/shared_fiberplast_panel.iff"},
+   resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "petrochem_inert", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
+   --resourceQuantities = {13, 1},
+   resourceQuantities = {1, 13, 1},
+   --contribution = {100, 100},
+   contribution = {100, 100, 100},
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/pants/pants_s10.iff",
 
