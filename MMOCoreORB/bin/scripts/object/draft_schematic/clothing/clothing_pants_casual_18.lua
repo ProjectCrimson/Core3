@@ -66,9 +66,10 @@ object_draft_schematic_clothing_clothing_pants_casual_18 = object_draft_schemati
    ingredientTitleNames = {"body", "binding_and_reinforcement", "hardware", "lining"},
    ingredientSlotType = {1, 0, 1, 1},
    resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "petrochem_inert", "object/tangible/component/clothing/shared_metal_fasteners.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
-   resourceQuantities = {1, 40, 3, 2},
+   --resourceQuantities = {1, 40, 3, 2},
+   resourceQuantities = {1, 40, 3, 1},
    contribution = {100, 100, 100, 100},
-
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/pants/pants_s18.iff",
 
