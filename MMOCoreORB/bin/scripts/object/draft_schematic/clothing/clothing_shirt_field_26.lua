@@ -69,7 +69,7 @@ object_draft_schematic_clothing_clothing_shirt_field_26 = object_draft_schematic
    --resourceTypes = {"object/tangible/component/clothing/shared_reinforced_fiber_panels.iff", "fiberplast", "metal"},
    resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "metal"},
    --resourceQuantities = {1, 20, 10},
-   resourceQuantities = {1, 2, 30}
+   resourceQuantities = {1, 1, 30}
    contribution = {100, 100, 100},
 --Starkiller - Equalized BE tissue across clothing.
 
