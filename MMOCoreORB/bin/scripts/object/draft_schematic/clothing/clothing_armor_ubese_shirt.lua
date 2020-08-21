@@ -52,7 +52,7 @@ object_draft_schematic_clothing_clothing_armor_ubese_shirt = object_draft_schema
    size = 4, 
 
    xpType = "crafting_clothing_armor", 
-   xp = 120, 
+   xp = 12000, 
 
    assemblySkill = "armor_assembly", 
    experimentingSkill = "armor_experimentation", 
@@ -62,13 +62,13 @@ object_draft_schematic_clothing_clothing_armor_ubese_shirt = object_draft_schema
    customizationStringNames = {"/private/index_color_1"},
    customizationDefaults = {0},
 
-   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
-   ingredientTitleNames = {"auxilary_coverage", "body", "liner"},
-   ingredientSlotType = {0, 0, 0},
-   resourceTypes = {"iron", "steel", "fiberplast"},
-   resourceQuantities = {20, 30, 10},
-   contribution = {100, 100, 100},
-
+   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   ingredientTitleNames = {"auxilary_coverage", "body", "padding", "liner"},
+   ingredientSlotType = {0, 0, 1, 1},
+   resourceTypes = {"steel", "fiberplast", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
+   resourceQuantities = {20, 30, 1, 1},
+   contribution = {100, 100, 100, 100},
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/armor/ubese/armor_ubese_shirt.iff",
 
