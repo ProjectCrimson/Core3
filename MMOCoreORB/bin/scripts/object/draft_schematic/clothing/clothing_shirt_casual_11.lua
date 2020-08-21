@@ -66,9 +66,10 @@ object_draft_schematic_clothing_clothing_shirt_casual_11 = object_draft_schemati
    ingredientTitleNames = {"body", "trim", "binding_and_hardware"},
    ingredientSlotType = {1, 1, 0},
    resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "fiberplast"},
-   resourceQuantities = {3, 3, 20},
+   --resourceQuantities = {3, 3, 20},
+   resourceQuantities = {1, 1, 20},
    contribution = {100, 100, 100},
-
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/shirt/shirt_s11.iff",
 
