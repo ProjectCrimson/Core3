@@ -62,13 +62,19 @@ object_draft_schematic_clothing_clothing_pants_field_07 = object_draft_schematic
    customizationStringNames = {"/private/index_color_1", "/private/index_color_2"},
    customizationDefaults = {36, 47},
 
-   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
-   ingredientTitleNames = {"shell", "binding_and_hardware", "colorizable_cloth_panel"},
-   ingredientSlotType = {0, 1, 0},
-   resourceTypes = {"hide", "object/tangible/component/clothing/shared_metal_fasteners.iff", "hide"},
-   resourceQuantities = {50, 2, 50},
-   contribution = {100, 100, 100},
-
+   --ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   --ingredientTitleNames = {"shell", "binding_and_hardware", "colorizable_cloth_panel"},
+   ingredientTitleNames = {"shell", "binding_and_hardware", "lining", "colorizable_cloth_panel"},
+   --ingredientSlotType = {0, 1, 0},
+   ingredientSlotType = {0, 1, 1, 1},
+   --resourceTypes = {"hide", "object/tangible/component/clothing/shared_metal_fasteners.iff", "hide"},
+   resourceTypes = {"hide", "object/tangible/component/clothing/shared_metal_fasteners.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
+   --resourceQuantities = {50, 2, 50},
+   resourceQuantities = {50, 2, 1, 1},
+   --contribution = {100, 100, 100},
+   contribution = {100, 100, 100, 100},
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/pants/pants_s07.iff",
 
