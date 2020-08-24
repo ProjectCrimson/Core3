@@ -65,10 +65,12 @@ object_draft_schematic_clothing_clothing_robe_formal_01 = object_draft_schematic
    ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
    ingredientTitleNames = {"trim_and_binding", "extra_trim", "jewelry_setting", "hardware", "inner_gown", "outer_gown"},
    ingredientSlotType = {0, 1, 1, 0, 1, 1},
-   resourceTypes = {"hide", "object/tangible/component/clothing/shared_trim.iff", "object/tangible/component/clothing/shared_jewelry_setting.iff", "metal", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
-   resourceQuantities = {80, 3, 2, 40, 3, 3},
+   --resourceTypes = {"hide", "object/tangible/component/clothing/shared_trim.iff", "object/tangible/component/clothing/shared_jewelry_setting.iff", "metal", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
+   resourceTypes = {"hide", "object/tangible/component/clothing/shared_trim.iff", "object/tangible/component/clothing/shared_jewelry_setting.iff", "metal", "object/tangible/component/clothing/shared_reinforced_fiber_panels.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
+   --resourceQuantities = {80, 3, 2, 40, 3, 3},
+   resourceQuantities = {80, 3, 2, 40, 1, 1},
    contribution = {100, 100, 100, 100, 100, 100},
-
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/robe/robe_s01.iff",
 
