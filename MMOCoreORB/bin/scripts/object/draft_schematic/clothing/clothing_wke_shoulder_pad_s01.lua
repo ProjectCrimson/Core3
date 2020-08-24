@@ -62,13 +62,19 @@ object_draft_schematic_clothing_clothing_wke_shoulder_pad_s01 = object_draft_sch
    customizationStringNames = {"/private/index_color_1", "/private/index_color_2"},
    customizationDefaults = {5, 29},
 
+   --ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
    ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
-   ingredientTitleNames = {"body", "binding_and_hardware"},
-   ingredientSlotType = {0, 0},
-   resourceTypes = {"fiberplast", "bone"},
-   resourceQuantities = {15, 15},
-   contribution = {100, 100},
-
+   --ingredientTitleNames = {"body", "binding_and_hardware"},
+   ingredientTitleNames = {"body", "lining", "binding", "hardware"},
+   --ingredientSlotType = {0, 0},
+   ingredientSlotType = {1, 1, 0, 0},
+   --resourceTypes = {"fiberplast", "bone"},
+   resourceTypes = {"object/tangible/component/clothing/shared_reinforced_fiber_panels.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "fiberplast", "bone"},
+   --resourceQuantities = {15, 15},
+   resourceQuantities = {1, 1, 15, 15},
+   --contribution = {100, 100},
+   contribution = {100, 100, 100, 100},
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/wookiee/wke_shoulder_pad_s01.iff",
 
