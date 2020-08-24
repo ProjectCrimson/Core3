@@ -62,13 +62,19 @@ object_draft_schematic_clothing_clothing_wke_skirt_s04 = object_draft_schematic_
    customizationStringNames = {},
    customizationDefaults = {},
 
-   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
-   ingredientTitleNames = {"body", "binding_and_reinforcement"},
-   ingredientSlotType = {0, 0},
-   resourceTypes = {"hide", "petrochem_inert"},
-   resourceQuantities = {15, 5},
-   contribution = {100, 100},
-
+   --ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   --ingredientTitleNames = {"body", "binding_and_reinforcement"},
+   ingredientTitleNames = {"body", "lining", "binding_and_reinforcement"},
+   --ingredientSlotType = {0, 0},
+   ingredientSlotType = {1, 1, 0},
+   --resourceTypes = {"hide", "petrochem_inert"},
+   resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "petrochem_inert"},
+   --resourceQuantities = {15, 5},
+   resourceQuantities = {1, 1, 20},
+   --contribution = {100, 100},
+   contribution = {100, 100, 100},
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/wookiee/wke_skirt_s04.iff",
 
