@@ -62,13 +62,19 @@ object_draft_schematic_clothing_clothing_wke_hood_s03 = object_draft_schematic_c
    customizationStringNames = {},
    customizationDefaults = {},
 
-   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
-   ingredientTitleNames = {"shell_half", "shell_half2"},
-   ingredientSlotType = {0, 0},
-   resourceTypes = {"hide", "hide"},
-   resourceQuantities = {15, 10},
-   contribution = {100, 100},
-
+   --ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   --ingredientTitleNames = {"shell_half", "shell_half2"},
+   ingredientTitleNames = {"shell_half", "lining", "shell_half2"},
+   --ingredientSlotType = {0, 0},
+   ingredientSlotType = {1, 0, 1},
+   --resourceTypes = {"hide", "hide"},
+   resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "hide", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
+   --resourceQuantities = {15, 10},
+   resourceQuantities = {1, 35, 1},
+   --contribution = {100, 100},
+   contribution = {100, 100, 100},
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/wookiee/wke_hood_s03.iff",
 
