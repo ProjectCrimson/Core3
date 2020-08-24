@@ -62,13 +62,19 @@ object_draft_schematic_clothing_clothing_shirt_formal_32 = object_draft_schemati
    customizationStringNames = {"/private/index_color_1", "/private/index_color_2"},
    customizationDefaults = {79, 52},
 
-   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
-   ingredientTitleNames = {"body", "trim", "binding_and_hardware"},
-   ingredientSlotType = {1, 1, 0},
-   resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_trim.iff", "metal"},
-   resourceQuantities = {1, 3, 10},
-   contribution = {100, 100, 100},
-
+   --ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   --ingredientTitleNames = {"body", "trim", "binding_and_hardware"},
+   ingredientTitleNames = {"body", "lining", "trim", "binding_and_hardware"},
+   --ingredientSlotType = {1, 1, 0},
+   ingredientSlotType = {1, 1, 1, 0},
+   --resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_trim.iff", "metal"},
+   resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_trim.iff", "metal"},
+   --resourceQuantities = {1, 3, 10},
+   resourceQuantities = {1, 1, 3, 10},
+   --contribution = {100, 100, 100},
+   contribution = {100, 100, 100, 100},
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/shirt/shirt_s32.iff",
 
