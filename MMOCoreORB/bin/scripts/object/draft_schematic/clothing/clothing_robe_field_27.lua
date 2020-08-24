@@ -62,13 +62,19 @@ object_draft_schematic_clothing_clothing_robe_field_27 = object_draft_schematic_
    customizationStringNames = {"/private/index_color_1"},
    customizationDefaults = {4},
 
-   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
-   ingredientTitleNames = {"body", "linksteel_reinforcement"},
-   ingredientSlotType = {1, 0},
-   resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "metal"},
-   resourceQuantities = {4, 40},
-   contribution = {100, 100},
-
+   --ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   --ingredientTitleNames = {"body", "linksteel_reinforcement"},
+   ingredientTitleNames = {"body", "lining", "linksteel_reinforcement"},
+   --ingredientSlotType = {1, 0},
+   ingredientSlotType = {1, 1, 0},
+   --resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "metal"},
+   resourceTypes = {"object/tangible/component/clothing/shared_reinforced_fiber_panels.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "metal"},
+   --resourceQuantities = {4, 40},
+   resourceQuantities = {1, 1, 40},
+   --contribution = {100, 100},
+   contribution = {100, 100, 100},
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/robe/robe_s27.iff",
 
