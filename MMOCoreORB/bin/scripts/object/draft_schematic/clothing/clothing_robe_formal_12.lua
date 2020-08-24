@@ -66,9 +66,10 @@ object_draft_schematic_clothing_clothing_robe_formal_12 = object_draft_schematic
    ingredientTitleNames = {"trim_and_binding", "extra_trim", "jewelry_setting", "hardware", "inner_gown", "outer_gown"},
    ingredientSlotType = {1, 1, 1, 0, 1, 0},
    resourceTypes = {"object/tangible/component/clothing/shared_fiberplast_panel.iff", "object/tangible/component/clothing/shared_trim.iff", "object/tangible/component/clothing/shared_jewelry_setting.iff", "metal", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "hide"},
-   resourceQuantities = {4, 4, 2, 160, 2, 120},
+   --resourceQuantities = {4, 4, 2, 160, 2, 120},
+   resourceQuantities = {1, 4, 2, 160, 1, 120},
    contribution = {100, 100, 100, 100, 100, 100},
-
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/robe/robe_s12.iff",
 
