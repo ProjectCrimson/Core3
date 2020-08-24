@@ -63,12 +63,14 @@ object_draft_schematic_clothing_clothing_skirt_formal_14 = object_draft_schemati
    customizationDefaults = {5, 19},
 
    ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
-   ingredientTitleNames = {"skirt", "trim", "extra_trim", "hardware"},
+   --ingredientTitleNames = {"skirt", "trim", "extra_trim", "hardware"},
+   ingredientTitleNames = {"skirt", "lining", "trim", "hardware"},
    ingredientSlotType = {1, 1, 1, 0},
-   resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_trim.iff", "object/tangible/component/clothing/shared_trim.iff", "metal"},
+   --resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_trim.iff", "object/tangible/component/clothing/shared_trim.iff", "metal"},
+   resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_trim.iff", "metal"},
    resourceQuantities = {1, 1, 1, 10},
    contribution = {100, 100, 100, 100},
-
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/skirt/skirt_s14.iff",
 
