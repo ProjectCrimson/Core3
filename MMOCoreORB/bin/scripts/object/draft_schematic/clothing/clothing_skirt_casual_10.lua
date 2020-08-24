@@ -62,13 +62,19 @@ object_draft_schematic_clothing_clothing_skirt_casual_10 = object_draft_schemati
    customizationStringNames = {"/private/index_color_1", "/private/index_color_2"},
    customizationDefaults = {25, 62},
 
-   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
-   ingredientTitleNames = {"trim_and_binding", "hardware", "skirt"},
-   ingredientSlotType = {0, 0, 0},
-   resourceTypes = {"fiberplast", "metal", "fiberplast"},
-   resourceQuantities = {10, 5, 15},
-   contribution = {100, 100, 100},
-
+   --ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   --ingredientTitleNames = {"trim_and_binding", "hardware", "skirt"},
+   ingredientTitleNames = {"trim_and_binding", "hardware", "skirt", "lining"},
+   --ingredientSlotType = {0, 0, 0},
+   ingredientSlotType = {0, 0, 1, 1},
+   --resourceTypes = {"fiberplast", "metal", "fiberplast"},
+   resourceTypes = {"fiberplast", "metal", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
+   --resourceQuantities = {10, 5, 15},
+   resourceQuantities = {35, 5, 1, 1},
+   --contribution = {100, 100, 100},
+   contribution = {100, 100, 100, 100}
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/skirt/skirt_s10.iff",
 
