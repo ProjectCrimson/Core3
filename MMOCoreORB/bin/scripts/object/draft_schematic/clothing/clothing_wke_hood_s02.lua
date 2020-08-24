@@ -62,13 +62,19 @@ object_draft_schematic_clothing_clothing_wke_hood_s02 = object_draft_schematic_c
    customizationStringNames = {"/private/index_color_1", "/private/index_color_2"},
    customizationDefaults = {47, 10},
 
-   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
-   ingredientTitleNames = {"shell_half", "shell_half2", "binding_and_weatherproofing", "liner_half", "liner_half2"},
-   ingredientSlotType = {1, 1, 0, 1, 1},
-   resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "hide", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
-   resourceQuantities = {1, 1, 25, 1, 1},
-   contribution = {100, 100, 100, 100, 100},
-
+   --ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   --ingredientTitleNames = {"shell_half", "shell_half2", "binding_and_weatherproofing", "liner_half", "liner_half2"},
+   ingredientTitleNames = {"shell", "binding_and_weatherproofing", "liner"},
+   --ingredientSlotType = {1, 1, 0, 1, 1},
+   ingredientSlotType = {1, 0, 1},
+   --resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "hide", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
+   resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "hide", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
+   --resourceQuantities = {1, 1, 25, 1, 1},
+   resourceQuantities = {1, 25, 1},
+   --contribution = {100, 100, 100, 100, 100},
+   contribution = {100, 100, 100},
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/wookiee/wke_hood_s02.iff",
 
