@@ -62,13 +62,19 @@ object_draft_schematic_clothing_clothing_wke_shirt_s01 = object_draft_schematic_
    customizationStringNames = {"/private/index_color_1", "/private/index_color_2"},
    customizationDefaults = {8, 22},
 
-   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
-   ingredientTitleNames = {"heavy_shell", "binding_and_weatherproofing"},
-   ingredientSlotType = {0, 0},
-   resourceTypes = {"fiberplast", "petrochem_inert_polymer"},
-   resourceQuantities = {18, 2},
-   contribution = {100, 100},
-
+   --ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   --ingredientTitleNames = {"heavy_shell", "binding_and_weatherproofing"},
+   ingredientTitleNames = {"heavy_shell", "lining", "binding_and_weatherproofing"},
+   --ingredientSlotType = {0, 0},
+   ingredientSlotType = {1, 1, 0},
+   --resourceTypes = {"fiberplast", "petrochem_inert_polymer"},
+   resourceTypes = {"object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "petrochem_inert_polymer"},
+   --resourceQuantities = {18, 2},
+   resourceQuantities = {1, 1, 20},
+   --contribution = {100, 100},
+   contribution = {100, 100, 100},
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/wookiee/wke_shirt_s01.iff",
 
