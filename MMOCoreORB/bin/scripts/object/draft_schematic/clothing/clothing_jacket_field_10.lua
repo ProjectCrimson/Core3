@@ -66,9 +66,10 @@ object_draft_schematic_clothing_clothing_jacket_field_10 = object_draft_schemati
    ingredientTitleNames = {"heavy_shell", "binding_and_weatherproofing", "liner", "reinforcement"},
    ingredientSlotType = {1, 0, 1, 0},
    resourceTypes = {"object/tangible/component/clothing/shared_reinforced_fiber_panels.iff", "petrochem_inert", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "metal"},
-   resourceQuantities = {2, 20, 1, 35},
+   --resourceQuantities = {2, 20, 1, 35},
+   resourceQuantities = {1, 20, 1, 35},
    contribution = {100, 100, 100, 100},
-
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/jacket/jacket_s10.iff",
 
