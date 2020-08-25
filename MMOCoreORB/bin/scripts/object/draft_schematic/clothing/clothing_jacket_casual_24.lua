@@ -63,12 +63,16 @@ object_draft_schematic_clothing_clothing_jacket_casual_24 = object_draft_schemat
    customizationDefaults = {67},
 
    ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
-   ingredientTitleNames = {"binding_and_hardware", "liner", "shell"},
-   ingredientSlotType = {0, 0, 1},
-   resourceTypes = {"petrochem_inert", "hide_bristley", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
-   resourceQuantities = {30, 70, 3},
+   --ingredientTitleNames = {"binding_and_hardware", "liner", "shell"},
+   ingredientTitleNames = {"shell", "binding_and_hardware", "liner"},
+   --ingredientSlotType = {0, 0, 1},
+   ingredientSlotType = {1, 0, 1},
+   --resourceTypes = {"petrochem_inert", "hide_bristley", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
+   resourceTypes = {"object/tangible/component/clothing/shared_reinforced_fiber_panels.iff", "hide_bristley", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
+   --resourceQuantities = {30, 70, 3},
+   resourceQuantities = {1, 100, 1},
    contribution = {100, 100, 100},
-
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/jacket/jacket_s24.iff",
 
