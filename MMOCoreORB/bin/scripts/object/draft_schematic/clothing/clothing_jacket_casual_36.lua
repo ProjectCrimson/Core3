@@ -70,7 +70,7 @@ object_draft_schematic_clothing_clothing_jacket_casual_36 = object_draft_schemat
    --resourceTypes = {"petrochem_inert", "hide_bristley", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
    resourceTypes = {"object/tangible/component/clothing/shared_reinforced_fiber_panels.iff", "hide_bristley", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
    --resourceQuantities = {30, 70, 3},
-   resourceQuantities = {1, 100, 3},
+   resourceQuantities = {1, 100, 1},
    contribution = {100, 100, 100},
 --Starkiller - Equalized BE tissue across clothing.
 
