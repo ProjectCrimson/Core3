@@ -64,11 +64,14 @@ object_draft_schematic_clothing_clothing_bandolier_field_07 = object_draft_schem
 
    ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
    ingredientTitleNames = {"hardware", "load_bearing_harness", "reinforcement"},
-   ingredientSlotType = {1, 0, 1},
-   resourceTypes = {"object/tangible/component/clothing/shared_metal_fasteners.iff", "fiberplast", "object/tangible/component/clothing/shared_fiberplast_panel.iff"},
-   resourceQuantities = {1, 15, 1},
+   --ingredientSlotType = {1, 0, 1},
+   ingredientSlotType = {1, 1, 1},
+   --resourceTypes = {"object/tangible/component/clothing/shared_metal_fasteners.iff", "fiberplast", "object/tangible/component/clothing/shared_fiberplast_panel.iff"},
+   resourceTypes = {"object/tangible/component/clothing/shared_metal_fasteners.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
+   --resourceQuantities = {1, 15, 1},
+   resourceQuantities = {1, 1, 1},
    contribution = {100, 100, 100},
-
+--Starkiller - Equalized BE tissue across clothing.
 
    targetTemplate = "object/tangible/wearables/bandolier/bandolier_s07.iff",
 
